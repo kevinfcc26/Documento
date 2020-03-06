@@ -1,0 +1,58 @@
+\input{EncabezadoTesisMSc}
+
+\begin{document}
+\pagenumbering{roman}
+\include{0Preliminares/Preliminares}
+\renewcommand{\tablename}{\textbf{Tabla}}
+\renewcommand{\figurename}{\textbf{Figura}}
+\renewcommand{\listtablename}{Lista de Tablas}
+\renewcommand{\listfigurename}{Lista de Figuras}
+\renewcommand{\contentsname}{Contenido}
+
+
+\newpage{\cleardoublepage}
+\addcontentsline{toc}{chapter}{\numberline{}Lista de Figuras}
+\listoffigures
+
+\newpage{\cleardoublepage}
+\addcontentsline{toc}{chapter}{\numberline{}Lista de tablas}
+\listoftables
+
+
+\newpage{\cleardoublepage}
+\addcontentsline{toc}{chapter}{\numberline{}Lista de Símbolos y Abreviaciones}
+\newlist{abbrv}{itemize}{1}
+\setlist[abbrv,1]{label=,labelwidth=1in,align=parleft,itemsep=0.1\baselineskip,leftmargin=!}
+\chapter*{Lista de Símbolos y Abreviaciones}
+\chaptermark{Lista de Símbolos y Abreviaciones}
+
+\begin{abbrv}
+\item[THD]		Distorsión Armónica Total
+\item[PF]		Factor de Potencia
+\end{abbrv}
+
+
+
+%\newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
+\newpage{\cleardoublepage}
+\tableofcontents
+
+\newpage{\cleardoublepage}
+%\include{Tab_Simbolos/TabSimbolosMSc}
+%\include{Resumen}%\newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
+\pagenumbering{arabic}
+\setcounter{page}{2}
+\include{1Introduccion/Introduccion}
+\include{2Marco/Marco}
+%\include{3Proyecto/Proyecto}
+%\include{4Resultados/Resultados}
+%\include{5Impacto/Impacto}
+%\include{6Conclusiones/Conclusiones}
+\addcontentsline{toc}{chapter}{\numberline{}Bibliograf\'{\i}a}
+\newpage{\cleardoublepage}
+\bibliographystyle{unsrt}
+\nocite{*} 
+\bibliography{BibliMSc}
+\newpage{\cleardoublepage}
+\include{Anexos/Anexos}
+\end{document}
