@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.2.20)  11 MAR 2020 19:47
 =======
 This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  11 MAR 2020 19:41
 >>>>>>> afbd74e77db8193831478779a18a4ec17d6255ec
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  11 MAR 2020 19:47
+>>>>>>> ca6872cab78af3b2b2e1a7a1a5879a6ad8816af7
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2599,8 +2603,12 @@ st/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
+<<<<<<< HEAD
 Output written on TesisMSc.pdf (43 pages, 236270 bytes).
 >>>>>>> afbd74e77db8193831478779a18a4ec17d6255ec
+=======
+Output written on TesisMSc.pdf (43 pages, 236226 bytes).
+>>>>>>> ca6872cab78af3b2b2e1a7a1a5879a6ad8816af7
 PDF statistics:
  196 PDF objects out of 1000 (max. 8388607)
  133 compressed objects within 2 object streams
