@@ -1,30 +1,24 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.2.20)  11 MAR 2020 17:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.2.20)  11 MAR 2020 18:10
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**TesisMSc.tex
-(./TesisMSc.tex
+**/home/kfcc26/Tesis/Monografia/TesisMSc.tex
+(/home/kfcc26/Tesis/Monografia/TesisMSc.tex
 LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
-(./EncabezadoTesisMSc.tex
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbook.cls
+(/home/kfcc26/Tesis/Monografia/EncabezadoTesisMSc.tex (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbook.cls
 Document Class: scrbook 2017/09/07 v3.24 KOMA-Script document class (book)
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrkbase.sty
-Package: scrkbase 2017/09/07 v3.24 KOMA-Script package (KOMA-Script-dependent b
-asics and keyval usage)
-
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbase.sty
-Package: scrbase 2017/09/07 v3.24 KOMA-Script package (KOMA-Script-independent 
-basics and keyval usage)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: scrkbase 2017/09/07 v3.24 KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
+ (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2017/09/07 v3.24 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
-)
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile.sty
 Package: scrlfile 2017/09/07 v3.24 KOMA-Script package (loading files)
-)))
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/tocbasic.sty
+))) (/usr/share/texlive/texmf-dist/tex/latex/koma-script/tocbasic.sty
 Package: tocbasic 2017/09/07 v3.24 KOMA-Script package (handling toc-files)
 \scr@dte@tocline@numberwidth=\skip41
 \scr@dte@tocline@numbox=\box26
@@ -38,16 +32,14 @@ Package tocbasic Info: omitting babel extension for `lof'
 Package tocbasic Info: omitting babel extension for `lot'
 (tocbasic)             because of feature `nobabel' available
 (tocbasic)             for `lot' on input line 138.
-Package tocbasic Info: defining new hook before heading of `' on input line 162
-3.
+Package tocbasic Info: defining new hook before heading of `' on input line 1623.
 Package scrbook Info: You've used standard option `12pt'.
 (scrbook)             This is correct!
 (scrbook)             Internally I'm using `fontsize=12pt'.
 (scrbook)             If you'd like to set the option with \KOMAoptions,
 (scrbook)             you'd have to use `fontsize=12pt' there
 (scrbook)             instead of `12pt', too.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/fleqn.clo
+ (/usr/share/texlive/texmf-dist/tex/latex/base/fleqn.clo
 File: fleqn.clo 2016/12/29 v1.2a Standard LaTeX option (flush left equations)
 \mathindent=\dimen102
 Applying: [2015/01/01] Make \[ robust on input line 50.
@@ -63,14 +55,10 @@ Class scrbook Info: You've used standard option `openany'.
 (scrbook)           If you'd like to set the option with \KOMAoptions,
 (scrbook)           you'd have to use `open=any' there
 (scrbook)           instead of `openany', too.
-Class scrbook Info: File `scrsize12pt.clo' used to setup font sizes on input li
-ne 2296.
-
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrsize12pt.clo
-File: scrsize12pt.clo 2017/09/07 v3.24 KOMA-Script font size class option (12pt
-)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/typearea.sty
+Class scrbook Info: File `scrsize12pt.clo' used to setup font sizes on input line 2296.
+ (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrsize12pt.clo
+File: scrsize12pt.clo 2017/09/07 v3.24 KOMA-Script font size class option (12pt)
+) (/usr/share/texlive/texmf-dist/tex/latex/koma-script/typearea.sty
 Package: typearea 2017/09/07 v3.24 KOMA-Script package (type area)
 \ta@bcor=\skip42
 \ta@div=\count79
@@ -124,22 +112,17 @@ LaTeX Info: Redefining \textsubscript on input line 4966.
 \c@table=\count88
 Class scrbook Info: Redefining `\numberline' on input line 6142.
 \bibindent=\dimen103
-)
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2018/02/14 3.18 The Babel package
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
 File: switch.def 2018/02/14 3.18 Babel switching mechanism
-)
-(/usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf
+) (/usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf
 Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2018/02/14 3.18 Babel common definitions
 \babel@savecnt=\count89
 \U@D=\dimen104
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@dirlevel=\count90
 )
 \es@quottoks=\toks15
@@ -148,20 +131,17 @@ Package babel Info: Making " an active character on input line 561.
 Package babel Info: Making . an active character on input line 662.
 Package babel Info: Making < an active character on input line 707.
 Package babel Info: Making > an active character on input line 707.
-))
-(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+ (/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
 File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
@@ -401,8 +381,7 @@ File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
 )
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
 File: ot1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
@@ -442,8 +421,7 @@ File: ot1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
 )
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
 File: omsenc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -466,11 +444,9 @@ Now handling font encoding U ...
    defining Unicode char U+2026 (decimal 8230)
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
-))
-(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
@@ -489,8 +465,7 @@ Class scrbook Warning: Usage of package `fancyhdr' together
 (scrbook)              package `fancyhdr' on input line 8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
-s
+Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footers
 \f@nch@headwidth=\skip56
 \f@nch@O@elh=\skip57
 \f@nch@O@erh=\skip58
@@ -500,25 +475,19 @@ s
 \f@nch@O@erf=\skip62
 \f@nch@O@olf=\skip63
 \f@nch@O@orf=\skip64
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen105
@@ -526,8 +495,7 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 )
 \epsfxsize=\dimen107
 \epsfysize=\dimen108
-)
-(/usr/share/texlive/texmf-dist/tex/latex/eepic/epic.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/eepic/epic.sty
 Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
 \@@multicnt=\count92
 \d@lta=\count93
@@ -548,31 +516,24 @@ Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
 ) (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/sectsty/sectsty.sty
-Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
-les
-)
-(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/sectsty/sectsty.sty
+Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading styles
+) (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 \c@lips@count=\count100
-)
-(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip65
 \enit@outerparindent=\dimen115
 \enit@toks=\toks18
 \enit@inbox=\box29
 \enitdp@description=\count101
-)
-(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-))
-(/usr/share/texlive/texmf-dist/tex/latex/pslatex/pslatex.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/pslatex/pslatex.sty
 Package: pslatex 1996/07/24 v1.2 pslatex emulation (DPC)
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 65.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -606,8 +567,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 75.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 75.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/eepic/eepic.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/eepic/eepic.sty
 Extension to Epic and LaTeX. Version 1.1e - Released Dec 21, 1999
 \@gphlinewidth=\count102
 \@eepictcnt=\count103
@@ -621,17 +581,14 @@ Package: amsmath 2017/09/02 v2.17a AMS math features
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks19
 \ex@=\dimen118
-))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen119
-)
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count104
@@ -671,38 +628,30 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \mathdisplay@stack=\toks23
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/ncctools/nccmath.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/ncctools/nccmath.sty
 Package: nccmath 2005/02/21 v1.2 Additional Math Commands (NCC)
 \NCC@fracrulewidth=\dimen127
-)
-(/usr/share/texlive/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
 \@tempboxb=\box33
-)
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amscd.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amscd.sty
 Package: amscd 2017/04/14 v2.1 AMS Commutative Diagrams
 \athelp@=\toks24
 \minaw@=\dimen128
 \bigaw@=\dimen129
 \minCDarrowwidth=\dimen130
-)
-(/usr/share/texlive/texmf-dist/tex/latex/here/here.sty)
-(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/here/here.sty) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count116
 \float@exts=\toks25
 \float@box=\box34
 \@float@everytoks=\toks26
 \@floatcapt=\box35
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
-
-(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \col@sep=\dimen131
 \extrarowheight=\dimen132
@@ -717,8 +666,7 @@ Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \TX@delta=\dimen137
 \TX@cols=\count117
 \TX@ftn=\toks28
-)
-(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip71
 \subfigcapskip=\skip72
@@ -737,8 +685,7 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 (/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
 \subfig@top=\skip75
 \subfig@bottom=\skip76
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip77
 \LTright=\skip78
@@ -757,21 +704,17 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LT@p@ftn=\toks29
 )
 Class scrbook Info: longtable captions redefined on input line 28.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup6
 \symAMSb=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \c@r@tfl@t=\count127
@@ -779,18 +722,14 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \rotFPbot=\skip82
 \rot@float@box=\box40
 \rot@mess@toks=\toks30
-)
-(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
-)
-(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count128
@@ -805,15 +744,14 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen147
 \Gm@layoutvoffset=\dimen148
 \Gm@dimlist=\toks31
-) (./Befehle.sty)) (./TesisMSc.aux (./0Preliminares/Preliminares.aux)
+) (/home/kfcc26/Tesis/Monografia/Befehle.sty)) (/home/kfcc26/Tesis/Monografia/TesisMSc.aux (/home/kfcc26/Tesis/Monografia/0Preliminares/Preliminares.aux)
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
-
-(./1Introduccion/Introduccion.aux) (./2Marco/Marco.aux
+ (/home/kfcc26/Tesis/Monografia/1Introduccion/Introduccion.aux) (/home/kfcc26/Tesis/Monografia/2Marco/Marco.aux
 
 LaTeX Warning: Label `EQ41' multiply defined.
 
-) (./Anexos/Anexos.aux))
+) (/home/kfcc26/Tesis/Monografia/Anexos/Anexos.aux))
 \openout1 = `TesisMSc.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -824,9 +762,7 @@ LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 3.
 LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 3.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omspzccm.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omspzccm.fd
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
 LaTeX Font Info:    ... okay on input line 3.
@@ -836,8 +772,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Info: Redefining \. on input line 3.
 LaTeX Info: Redefining \% on input line 3.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count131
 \scratchdimen=\dimen149
@@ -852,29 +787,21 @@ LaTeX Info: Redefining \% on input line 3.
 \everyMPtoPDFconversion=\toks33
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)))
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+))) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -882,25 +809,19 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
-)))
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
-)
+))) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO)
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -938,7 +859,7 @@ e
 
 \openout2 = `0Preliminares/Preliminares.aux'.
 
-(./0Preliminares/Preliminares.tex
+(/home/kfcc26/Tesis/Monografia/0Preliminares/Preliminares.tex
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 4.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
@@ -990,21 +911,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--50
 
  []
 
-LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 51
-.
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 51.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 51
-.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptmcm.fd
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 51.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptmcm.fd
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+psycm on input line 51
-.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxpsycm.fd
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 51.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxpsycm.fd
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
@@ -1014,13 +930,11 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 51.
 LaTeX Font Info:    Try loading font information for U+msa on input line 51.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 51.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [3] [4
 
@@ -1093,7 +1007,7 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 15.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 22.39185pt on input line 15.
- (./TesisMSc.lof
+ (/home/kfcc26/Tesis/Monografia/TesisMSc.lof
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
@@ -1105,7 +1019,7 @@ LaTeX Info: Redefining \% on input line 1.
 ] [8
 
 
-] (./TesisMSc.lot
+] (/home/kfcc26/Tesis/Monografia/TesisMSc.lot
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
@@ -1124,8 +1038,7 @@ LaTeX Info: Redefining \% on input line 1.
 ] [12
 
 
-]
-(./TesisMSc.toc
+] (/home/kfcc26/Tesis/Monografia/TesisMSc.toc
 Package tocbasic Info: Using my definition of `\numberline' on input line 1.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 10.79993pt on input line 1.
@@ -1171,7 +1084,7 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 51.
 ]
 \openout2 = `1Introduccion/Introduccion.aux'.
 
- (./1Introduccion/Introduccion.tex
+ (/home/kfcc26/Tesis/Monografia/1Introduccion/Introduccion.tex
 chapter 1.
 
 Class scrbook Warning: \float@addtolists detected!
@@ -1307,7 +1220,7 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 ]
 \openout2 = `2Marco/Marco.aux'.
 
- (./2Marco/Marco.tex [6
+ (/home/kfcc26/Tesis/Monografia/2Marco/Marco.tex [6
 
 
 
@@ -1352,7 +1265,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
 [7
 
- <./2Marco/CargaRL.JPG>]
+ </home/kfcc26/Tesis/Monografia/2Marco/CargaRL.JPG>]
 <2Marco/distorsin.JPG, id=86, 503.63156pt x 145.29282pt>
 File: 2Marco/distorsin.JPG Graphic file (type jpg)
 <use 2Marco/distorsin.JPG>
@@ -1391,7 +1304,7 @@ LaTeX Info: Redefining \. on input line 69.
 LaTeX Info: Redefining \% on input line 69.
 LaTeX Info: Redefining \. on input line 69.
 LaTeX Info: Redefining \% on input line 69.
-[8 <./2Marco/distorsin.JPG>]
+[8 </home/kfcc26/Tesis/Monografia/2Marco/distorsin.JPG>]
 Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
  []
@@ -1544,7 +1457,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 201--202
 File: 2Marco/triangulopotencias.JPG Graphic file (type jpg)
 <use 2Marco/triangulopotencias.JPG>
 Package pdftex.def Info: 2Marco/triangulopotencias.JPG  used on input line 205.
-
 (pdftex.def)             Requested size: 318.4389pt x 314.67485pt.
 
 Underfull \vbox (badness 6332) has occurred while \output is active []
@@ -1602,7 +1514,7 @@ LaTeX Info: Redefining \. on input line 225.
 LaTeX Info: Redefining \% on input line 225.
 LaTeX Info: Redefining \. on input line 225.
 LaTeX Info: Redefining \% on input line 225.
-[13 <./2Marco/triangulopotencias.JPG>]
+[13 </home/kfcc26/Tesis/Monografia/2Marco/triangulopotencias.JPG>]
 Underfull \hbox (badness 10000) in paragraph at lines 226--227
 
  []
@@ -1872,7 +1784,7 @@ LaTeX Info: Redefining \. on input line 519.
 LaTeX Info: Redefining \% on input line 519.
 LaTeX Info: Redefining \. on input line 519.
 LaTeX Info: Redefining \% on input line 519.
-[21 <./2Marco/intergeo.JPG>]
+[21 </home/kfcc26/Tesis/Monografia/2Marco/intergeo.JPG>]
 Underfull \hbox (badness 10000) in paragraph at lines 519--520
 
  []
@@ -1883,11 +1795,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 525--526
  []
 
 )
-LaTeX Info: Redefining \. on input line 47.
-LaTeX Info: Redefining \% on input line 47.
-LaTeX Info: Redefining \. on input line 47.
-LaTeX Info: Redefining \% on input line 47.
- [22] (./TesisMSc.bbl) [23
+LaTeX Info: Redefining \. on input line 48.
+LaTeX Info: Redefining \% on input line 48.
+LaTeX Info: Redefining \. on input line 48.
+LaTeX Info: Redefining \% on input line 48.
+ [22] (/home/kfcc26/Tesis/Monografia/TesisMSc.bbl) [23
 
 
 
@@ -1898,7 +1810,7 @@ LaTeX Info: Redefining \% on input line 47.
 ]
 \openout2 = `Anexos/Anexos.aux'.
 
- (./Anexos/Anexos.tex
+ (/home/kfcc26/Tesis/Monografia/Anexos/Anexos.tex
 
 Class scrbook Warning: You are using `\begin{appendix}...\end{appendix}'.
 (scrbook)              You should note, that `\appendix' is a mostly globally
@@ -1975,37 +1887,26 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 [26
 
 ])
-LaTeX Info: Redefining \. on input line 58.
-LaTeX Info: Redefining \% on input line 58.
- [27] (./TesisMSc.aux (./0Preliminares/Preliminares.aux)
+LaTeX Info: Redefining \. on input line 59.
+LaTeX Info: Redefining \% on input line 59.
+ [27] (/home/kfcc26/Tesis/Monografia/TesisMSc.aux (/home/kfcc26/Tesis/Monografia/0Preliminares/Preliminares.aux)
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
-
-(./1Introduccion/Introduccion.aux) (./2Marco/Marco.aux) (./Anexos/Anexos.aux))
+ (/home/kfcc26/Tesis/Monografia/1Introduccion/Introduccion.aux) (/home/kfcc26/Tesis/Monografia/2Marco/Marco.aux) (/home/kfcc26/Tesis/Monografia/Anexos/Anexos.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8651 strings out of 492982
- 127870 string characters out of 6134896
+ 8656 strings out of 492982
+ 129340 string characters out of 6134896
  398388 words of memory out of 5000000
  11915 multiletter control sequences out of 15000+600000
  106734 words of font info for 131 fonts, out of 8000000 for 9000
  1151 hyphenation exceptions out of 8191
- 51i,12n,66p,8846b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
-w/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usy
-r.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/urw/times/utmri8a.pfb>
-Output written on TesisMSc.pdf (43 pages, 236208 bytes).
+ 51i,12n,66p,8876b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on /home/kfcc26/Tesis/Monografia/TesisMSc.pdf (43 pages, 236221 bytes).
 PDF statistics:
  196 PDF objects out of 1000 (max. 8388607)
  133 compressed objects within 2 object streams
