@@ -50,6 +50,8 @@
 \contentsline {subsubsection}{\nonumberline Factor de potencia aritm\IeC {\'e}tico y del vector}{24}% 
 \contentsline {subsubsection}{\nonumberline Potencia aparente efectiva}{24}% 
 \contentsline {subsubsection}{\nonumberline Factor de potencia efectiva}{25}% 
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliograf\'{\i }a}{26}% 
-\contentsline {chapter}{\numberline {A}Anexo: Nombrar el anexo A de acuerdo con su contenido}{29}% 
-\contentsline {chapter}{\numberline {B}Anexo: Nombrar el anexo B de acuerdo con su contenido}{30}% 
+\contentsline {section}{\numberline {4.4}Ejercicio Pr\IeC {\'a}ctico}{25}% 
+\contentsline {subsubsection}{\nonumberline An\IeC {\'a}lisis de datos obtenidos de tres cargas no lineales}{25}% 
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliograf\'{\i }a}{33}% 
+\contentsline {chapter}{\numberline {A}Anexo: Nombrar el anexo A de acuerdo con su contenido}{35}% 
+\contentsline {chapter}{\numberline {B}Anexo: Nombrar el anexo B de acuerdo con su contenido}{36}% 
