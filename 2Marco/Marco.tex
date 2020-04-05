@@ -223,6 +223,15 @@ $i_{1}=\sqrt{2I_{1}}sin(\omega t - \beta_{1})$\\\\
 $v_{H}=V_{0}+\sqrt{2}\sum_{h\neq 1}^{}V_{h}sin(h\omega t-\alpha_{h})$\\\\
 $i_{H}=I_{0}+\sqrt{2}\sum_{h\neq 1}^{}I_{h}sin(h\omega t-\beta_{h})$\\\\
 
+Los valores valores rms al cuadrado son los siguientes:
+
+\begin{equation}\label{EQ59}
+\begin{split}
+V^2 = {V_{1}}^2 + {V_{H}}^2 \\
+I^2 = {I_{1}}^2 + {I_{H}}^2
+\end{split}
+\end{equation}
+
 Las formas de ondas distorsionadas de a menudo contienen componentes de frecuencias llamadas armónicos. Un grupo especial de inter-armónicos es caracterizado por $h<1$. Estos armónicos tienen periodos más largos que el periodo $T$ de la frecuencia fundamental.\cite{A30}\\
 
 Si la onda de corriente o voltaje distorsionada está compuesta únicamente, la medición en intervalos de tiempo $kT$, no permitirá una medición correcta de rms y valores de potencia. \cite{A30}\\
@@ -284,11 +293,21 @@ También se puede expresar mediante la siguiente ecuación:
 S^2_{N}=D^2_{I}+D^2_{V}+S^2_{H}\\
 \end{equation}
 
-Donde\\
+\subsubsection{Potencia de la Distorsión de Corriente (var)}
+\begin{equation} \label{EQ60}
+D_{1}=V_{1}I_{H}=S_{1}(THD_{I})
+\end{equation}
 
-$D_{1}=V_{1}I_{H}=S_{1}(THD_{I})$           Es la potencia de corriente de distorsión (var).\\
-$D_{v}=V_{H}I_{1}=S_{1}(THD_{V})$           Es la potencia de voltaje de distorsión (var).\\
-$S_{H}=V_{H}I_{H}=S_{1}(THD_{I})(THD_{V})$  Es la potencia de corriente de distorsión (VA).\\
+\subsubsection{Potencia de la Distorsión de Volatje (var)}
+\begin{equation} \label{EQ61}
+D_{v}=V_{H}I_{1}=S_{1}(THD_{V})
+\end{equation}
+
+\subsubsection{Potencia de la Armónica Aparente (VA)}
+\begin{equation} \label{EQ62}
+S_{H}=V_{H}I_{H}=S_{1}(THD_{I})(THD_{V})
+\end{equation}
+
 
 \subsubsection{Potencia de distorsión armónica (var)}
 
@@ -314,7 +333,6 @@ Este radio, facilita la evaluación de las condiciones del flujo energía.\cite{
 
 \subsubsection{Factor de potencia}
 
-
 \begin{equation}\label{EQ33}
 PF=\frac{P}{S}
 \end{equation}
@@ -327,7 +345,125 @@ Cuando el $THD_{v}<5\%$ y $THD_{i}>40\%$, es conveniente usar la siguiente ecuac
 PF=\frac{1}{\sqrt{1+THD^2_{I}}}PF_{1}\\
 \end{equation}
 
+\subsection{Ejemplo monofásico}
 
+En un circuito de alimentación monofásico se tienen las siguientes medidas tomadas por un analizador de redes eléctricas: $V_{Total}=120 V$;  $THD_{i}= 45\%$; $THD_{v}= 4\%$; $S_{1}= 200 + j40 VA$.\\
+
+Estimar de acuerdo a los criterios de la norma IEEE 1459 las magnitudes de los siguientes parámetros: $V_{1}$, $I_{1}$, $P_{1}$, $Q_{1}$, $S_{T}$, $P_{T}$, $V_{h}$, $I_{h}$, $D_{V}$, $D_{i}$, $S_{h}$.\\
+
+Según la ecuación \ref{EQ19}:\\
+
+$S_{1} = \sqrt{P^2 + Q^2}; \;\;\;\;\;\; S_{1} = \sqrt{200^2 + 40^2} $\\
+
+\textbf{* }$S_{1} = 203,9608 VA$\\
+
+Según la ecuación \ref{EQ23}:\\
+
+$THD_{v}=\sqrt{\left(\frac{V}{V_{1}}\right)^2-1} ;  \;\;\;\;\;\; {THD_{v}}^2=\left(\frac{V}{V_{1}}\right)^2 - 1;  \;\;\;\;\;\;
+{THD_{v1}}^2=\frac{{V}^2 - {{V}_{1}}^2}{{V_{1}}^2} $\\
+
+${THD_{v1}}^2*{{V_{1}}^2}={{V}^2 - {{V}_{1}}^2}; \;\;\;\;\;\;
+{THD_{v1}}^2*{{V_{1}}^2} + {{V}_{1}}^2={{V}^2}; \;\;\;\;\;\;
+{V_{1}}^2 ({THD_{v1}}^2 + 1)={{V}^2}; \;\;\;\;\;\;$\\
+
+${V_{1}}^2 = \frac{{{V}^2}}{{THD_{v1}}^2 + 1}; \;\;\;\;\;\;
+V_{1} = \sqrt{\frac{{{V}^2}}{{THD_{v1}}^2 + 1}}; \;\;\;\;\;\;
+V_{1} = \sqrt{\frac{{{120V}^2}}{{0.04}^2 + 1}}$\\
+
+\textbf{* }$V_{1} = 119.9041V$\\
+
+$V_{H} = THD_{v}*V_{1};  \;\;\;\;\;\;
+V_{H} = 0.04 * 119.9041V$\\
+
+\textbf{* }$V_{H} = 4,7962 V$\\
+
+Según la ecuación \ref{EQ28}:\\
+
+$S_{1} = V_{1}*I_{1}; \;\;\;\;\;\;
+I_{1} = \frac{S_{1}}{V_{1}}; \;\;\;\;\;\;
+I_{1} = \frac{203,9608VA}{119,9041V}$\\
+
+\textbf{* }$I_{1} = 1,7010A$\\
+
+$I_{H} = THD_{I} * I_{1}; \;\;\;\;\;\;
+I_{H} = 0,45 * 1,7010A$\\
+
+\textbf{* }$I_{H} = 0,7654A$\\
+
+Según la ecuación \ref{EQ59}:\\
+
+$I^2 = {I_{1}}^2 + {I_{H}}^2; \;\;\;\;\;\;
+I = \sqrt{{I_{1}}^2 + {I_{H}}^2}; \;\;\;\;\;\;
+I = \sqrt{{1,7010A}^2 + {0,7654A}^2}$\\
+
+\textbf{* }$I = 1,8653A$\\
+
+Según la ecuación \ref{EQ28}: \\
+
+$S = V*I; \;\;\;\;\;\;
+S = 119,9041V * 1,8653A$\\
+
+\textbf{* }$S = 223,836VA$\\
+
+$S_{H} = V_{H}*I_{H}; \;\;\;\;\;\;
+\textbf{* }S_{H} = 4,7962V * 0,7654A = 3,6710VA$\\
+
+Según la ecuación \ref{EQ29}: \\
+
+$S_{N} = \sqrt{{S}^2 - {{S}_{1}}^2}; \;\;\;\;\;\;
+S_{N} =  \sqrt{{223,836VA}^2 - {203,9608VA}^2}$\\
+
+\textbf{* }$S_{N} = 92,2094VA$\\
+
+Según la ecuación \ref{EQ60}: \\
+
+\textbf{* }$D_{1} = V_{1}*I_{H} = 119,9041V * 0,7654A = 91,7745VA$\\
+
+\textbf{* }$D_{v} = V_{H}*I_{1} = 4.7962V *1,7010A = 8,1583VA$\\
+
+Según la ecuación \ref{EQ26}: \\
+
+$P_{1} = V_{1}*I_{1}*cos \theta_{1}; \;\;\;\;\;\; 
+\theta_{1} =  cos^{-1}(\frac{P_{1}}{V_{1}*I_{1}}); \;\;\;\;\;\; 
+\theta_{1} =  cos^{-1}(\frac{200VA}{119,9041V*1,7010A})$\\
+
+\textbf{* }$\theta_{1} = 11,3044º$\\
+
+Según la ecuación \ref{EQ33}: \\
+
+$PF_{1} = \frac{P_{1}}{S_{1}}; \;\;\;\;\;\; PF_{1} = \frac{203,9608VA}{200VA};$\\
+
+\textbf{* }$PF_{1} = 0,9805$
+
+Según la ecuación ref{EQ34}: \\
+
+$PF=\frac{1}{\sqrt{1+THD^2_{I}}}PF_{1}; \;\;\;\;\;\; PF=\frac{1}{\sqrt{1+0,45^2}}0,9805$ \\
+
+\textbf{* } $PF= 0,8941$
+
+Según la ecuación \ref{EQ33}: \\
+
+$PF= \frac{P}{S}; \;\;\;\;\;\; P = PF * S; \;\;\;\;\;\; P = 0,8941 * 223,836 VA$\\
+
+\textbf{* } $P = 200,1317VA$ \\
+
+Según la ecuación \ref{EQ32}: \\
+
+$N=\sqrt{S^2-P^2}; \;\;\;\;\;\; \sqrt{223,836VA^2-200,1317VA^2}$\\
+
+\textbf{* }$N = 100,2489 VAR$\\
+
+Según la ecuación \ref{EQ25}: \\
+
+$P_{H} = P - P_{1}; \;\;\;\;\;\;\; P_{H} = 200,1317VA - 200VA$\\
+
+\textbf{* }$P_{H} = 0,1317VA$
+
+Según la ecuación \ref{EQ31}: \\
+
+$D_{H}=\sqrt{S^2_{H}-P^2{H}}; \;\;\;\;\;\;\; D_{H} = \sqrt{3,6710VA^2 - 0,1317VA^2}$\\
+
+\textbf{* }$D_{H} = 3,6686VAR$
 
 \subsection{Sistema trifásico sinusoidal balanceado }
 
