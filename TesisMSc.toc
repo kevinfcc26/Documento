@@ -1,6 +1,56 @@
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Dedicatoria}{\es@scroman {iii}}% 
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Agradecimientos}{\es@scroman {v}}% 
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Dedicatoria}{\es@scroman {iii}}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Agradecimientos}{\es@scroman {v}}
 \babel@toc {spanish}{}
+<<<<<<< HEAD
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Lista de Figuras}{\es@scroman {vii}}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Lista de tablas}{\es@scroman {ix}}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Lista de S\IeC {\'\i }mbolos y Abreviaciones}{\es@scroman {xi}}
+\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{1}
+\contentsline {chapter}{\numberline {2}Justificaci\IeC {\'o}n}{3}
+\contentsline {chapter}{\numberline {3}Objetivos}{5}
+\contentsline {section}{\numberline {3.1}Objetivo General}{5}
+\contentsline {section}{\numberline {3.2}Objetivos Espec\IeC {\'\i }ficos}{5}
+\contentsline {chapter}{\numberline {4}Marco te\'{o}rico}{7}
+\contentsline {section}{\numberline {4.1}Factor de potencia y distorsi\IeC {\'o}n de la onda.}{7}
+\contentsline {section}{\numberline {4.2}Distorci\IeC {\'o}n arm\IeC {\'o}nica total (THD) y valor RMS de la corriente distorsionada}{8}
+\contentsline {section}{\numberline {4.3}Definiciones del STD IEEE 1459 para la medici\IeC {\'o}n de calidad energ\IeC {\'e}tica bajo condiciones balanceadas y des balanceadas}{10}
+\contentsline {subsection}{\numberline {4.3.1}Mono-fase}{10}
+\contentsline {subsubsection}{\nonumberline Mono-fase sinusoidal}{10}
+\contentsline {subsubsection}{\nonumberline Potencia activa(W)}{11}
+\contentsline {subsubsection}{\nonumberline Potencia Reactiva (var)}{11}
+\contentsline {subsubsection}{\nonumberline Potencia Aparente (VA)}{11}
+\contentsline {subsubsection}{\nonumberline Factor de potencia}{12}
+\contentsline {subsubsection}{\nonumberline Potencia Compleja (VA)}{12}
+\contentsline {subsection}{\numberline {4.3.2}Mono-fase no sinusoidal}{13}
+\contentsline {subsubsection}{\nonumberline Distorsi\IeC {\'o}n Total Arm\IeC {\'o}nica (THD)}{14}
+\contentsline {subsubsection}{\nonumberline Potencia Activa (W)}{14}
+\contentsline {subsubsection}{\nonumberline Potencia activa fundamental (W)}{15}
+\contentsline {subsubsection}{\nonumberline Potencia Aparente (VA)}{15}
+\contentsline {subsubsection}{\nonumberline Potencia aparente fundamental (VA)}{15}
+\contentsline {subsubsection}{\nonumberline Potencia Aparente no fundamental}{15}
+\contentsline {subsubsection}{\nonumberline Potencia de distorsi\IeC {\'o}n arm\IeC {\'o}nica (var)}{15}
+\contentsline {subsubsection}{\nonumberline Potencia no activa (var)}{16}
+\contentsline {subsubsection}{\nonumberline Factor de potencia fundamental}{16}
+\contentsline {subsubsection}{\nonumberline Factor de potencia}{16}
+\contentsline {subsection}{\numberline {4.3.3}Sistema trif\IeC {\'a}sico sinusoidal balanceado}{16}
+\contentsline {subsubsection}{\nonumberline Potencia activa (w)}{17}
+\contentsline {subsubsection}{\nonumberline Potencia reactiva}{17}
+\contentsline {subsubsection}{\nonumberline Potencia aparente}{17}
+\contentsline {subsubsection}{\nonumberline Factor de potencia}{17}
+\contentsline {subsection}{\numberline {4.3.4}Sistema trif\IeC {\'a}sico sinusoidal no balanceada}{18}
+\contentsline {subsubsection}{\nonumberline Potencia Activa}{18}
+\contentsline {subsubsection}{\nonumberline Potencias activa en secuencias positivas, negativas y cero (w)}{19}
+\contentsline {subsubsection}{\nonumberline Potencia reactiva (var)}{19}
+\contentsline {subsubsection}{\nonumberline Potencias aparentes en fase}{20}
+\contentsline {subsubsection}{\nonumberline Potencia aparente aritm\IeC {\'e}tica}{20}
+\contentsline {subsubsection}{\nonumberline Potencia aparente del vector}{20}
+\contentsline {subsubsection}{\nonumberline Factor de potencia aritm\IeC {\'e}tico y del vector}{21}
+\contentsline {subsubsection}{\nonumberline Potencia aparente efectiva}{21}
+\contentsline {subsubsection}{\nonumberline Factor de potencia efectiva}{22}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliograf\'{\i }a}{23}
+\contentsline {chapter}{\numberline {A}Anexo: Nombrar el anexo A de acuerdo con su contenido}{25}
+\contentsline {chapter}{\numberline {B}Anexo: Nombrar el anexo B de acuerdo con su contenido}{26}
+=======
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }Lista de Figuras}{\es@scroman {vii}}% 
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }Lista de tablas}{\es@scroman {ix}}% 
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }Lista de S\IeC {\'\i }mbolos y Abreviaciones}{\es@scroman {xi}}% 
@@ -53,3 +103,4 @@
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliograf\'{\i }a}{26}% 
 \contentsline {chapter}{\numberline {A}Anexo: Nombrar el anexo A de acuerdo con su contenido}{29}% 
 \contentsline {chapter}{\numberline {B}Anexo: Nombrar el anexo B de acuerdo con su contenido}{30}% 
+>>>>>>> 90ca458166e4d57dbf138970502a97dd94162fb9
