@@ -899,3 +899,51 @@ La programación orientada a objetos (OOP) es un paradigma de programación  bas
 \subsubsection{Desarrollo Web}
 
 El desarrollo web es una área del desarrollo de software la cuál construye, crea y mantiene sitios web. Dentro de su funcionamiento incluye el diseño web, publicación web y administración de base de datos. \cite{A33}
+
+\section{Fourier}
+\subsection{Transformada de Fourier}
+La transformada de Fourier transforma una señal que depende del tiempo en una señal que depende de la frecuencia (tiempo continuo a tiempo discreto).
+\begin{equation}
+F(g(t))=G(f)=\int_{-\infty}^{\infty}g(t)e^{-i2\pi ft}dt   
+\end{equation}
+Se define como la transformada de Fourier. \cite{A34}
+\begin{equation}
+F^{-1}(G(f))=g(t)=\int_{-\infty}^{\infty}G(f)e^{i2\pi ft}df   
+\end{equation} 
+Se define como  la inversa de Fourier. \cite{A34}
+
+\subsection{Teorema de muestreo de Nyquist-Shannon}
+Sea una señal de \textit{x(t)} de  finita y de banda  limitada  a B, entonces:
+\\
+
+$x(t)=\dfrac{1}{\pi}\sum_{n=-\infty}^{\infty} x(\dfrac{n}{2B})\dfrac{\sin(\pi(2Bt-n)) }{2Bt-n}$
+\cite{A35}\\
+
+para reconstruir una señal limitada entre la banda B es necesario tener una señal de muestreo de 2B, esta frecuencia se denomina frecuencia de Nyquist.
+
+\begin{equation}
+F_{min}>2f
+\end{equation}
+Donde:\\
+F$_{min}$ = Frecuencia mínima de muestreo.\\
+f = Frecuencia fundamental de la señal.
+
+\subsection{Transformada rápida de Fourier (FFT) }
+Todas las señales periódicas pueden ser representadas en sumatorias de Fourier, de esta sumatoria de Fourier se puede sacar la transformada de Fourier discreta calculando un tiempo finito, esta transformada se define como:
+\begin{equation}
+X[k]=\sum_{n=0}^{N-1}x[n]W_{N}^{kn} ; \\   k = 0,1,2,3...N-1
+\end{equation}
+donde $W_{N}=e^{-j\dfrac{2\pi}{N}}$\\
+La FFT surge en dividir el tiempo, es decir en la descomposición en transformadas de Fourier Discretas mas simples, para esto se asume que la N es potencia de 2, descomponiendo la como: 
+
+\begin{equation}
+X[k]=\sum_{r=0}^{N/2-1}x[2r](W_{N/2})^rk + W_{N}^K \sum_{r=0}^{N/2-1}x[2r+1](W_{N/2})^rk
+\end{equation}
+
+donde $W_{N/2}=e^{-j\dfrac{2\pi}{N/2}}$, N siendo el número de muestras. \cite{A36}\\
+
+Esta manera es la que usan la mayoría de conversares análogos digitales y procesadores. 
+
+
+\section{Convertidores ADC}
+El convertido análogo digital (ADC) fue creado para representar en una palabra digital el nivel de voltaje existente en una en una entrada análoga, transformándola en una señal binaria de un número de muestras (N), en la electrónica la resolución de la señal de entrada la da la cantidad de bits disponibles para la conversión, entre mas grande sea la cantidad de bits, mayor es la resolución de la señal y mas confiable es esta. 
