@@ -1,30 +1,247 @@
 \newpage{\cleardoublepage}
-\chapter{Diseño y ejecución del proyecto}
+\chapter{Desarrollo y ejecución del proyecto}
+\section{Arquitectura del proyecto}
+\begin{figure}[H]
+\centering
+\includegraphics[width = 15cm]{3Proyecto/arquitectura}
+\caption{Arquitectura del proyecto} 
+\label{fig:arquitectura-proyecto}
+\end{figure} 
+En primera medida se planteó el diseño electrónico del medidor, iniciando por las cargas donde se conectan a un convertidor de señal análoga a digital, estas señales se pasan a un procesador digital de señales, dónde se aplica los parámetros matemáticos establecidos en el estándar IEEE 1459 del 2010, el cual da la medición de la potencia eléctrica en cualquier tipo de condición.\\\\
+Dicho esto, la información se envía a un procesador de datos, este se encarga de administrar el manejo que se le da a los datos como lo es su lectura, escritura y filtración de los datos. El procesador debe contar con conexión a internet ya sea por wifi o ethernet con el fin de guardar la información en una base datos que está alojada en un servidor en la nube, la comunicación que tiene el procesador de datos con el servidor es por protocolo HTTPS.\\\\
+Por lo tanto, el servidor en la nube que se planteó es Heroku ya que tiene la opción de una cuenta gratuita y así hostear la base de datos y la aplicación web sin ningún costo. Por ende las restricciones que tiene este plan, es que no se puede escoger el dominio de la página y hay un límite de espacio de 512MB pero es más que suficiente para el peso que tiene la base de datos de 21.5MB y la aplicación web de 65.2MB.\\\\
+Una vez configurado el servidor, se escogió el framework javascript Angular 7 para el desarrollo de la aplicación web, ya que por medio del lenguaje de programación Typescript, el cual es un lenguaje tipado y robusto, nos permite tener mayor manipulación y consistencia en los datos; la aplicación utiliza una arquitectura RESTful y este permite, realizar peticiones HTTPS a la base de datos.\\\\
+Finalmente, la información se visualiza de forma gráfica y númerica en una página web, en donde se pueden ver los valores de voltaje (V), corriente (A), potencia activa(W), potencia aparente (VA), potencia reactiva(VAR) y porcentaje de distorsión armónica en corriente y voltaje en cada fase.\\\\
 
 
-\section{Ejemplo de presentaci\'{o}n y citaci\'{o}n de tablas y cuadros}
+\section{Fase de integración}
+Considerando las fases y la magnitud del proyecto se decidió investigar e integrar un dispositivo que hiciera el análisis de las señales aplicando las ecuaciones del STD IEEE 1459 del 2010. Durante la búsqueda se encontró que los dispositivos más cercanos son los siguientes:\\
+\begin{enumerate}
+    \itemsep0em
+    \item EVM430-F6779-3 Phase Electronic Watt-Hour EVM
+    \item EVAL-ADE 7978
+    \item 78M6631 3-Phase PowerMeasurement IC
+\end{enumerate}
 
-De esta participaci\'{o}n aproximadamente el 60 \% proviene de biomasa
-(Tabla \ref{EMundo1}).
+A continuación se detalla las tarjetas mencionadas:\\
+\subsubsection{EVM430-F6779-3 Phase Electronic Watt-Hour EVM}
+\begin{figure}
+\centering
+\includegraphics[width = 3cm]{3Proyecto/EVM430-F6779}
+\caption{Tarjeta EVM430-F6779-3} 
+\label{fig:EVM430-F6779-3}
+\end{figure} 
+\begin{itemize}
+\itemsep0em
+\item Es posible ejecutar aplicaciones de medición en tiempo real.
+\item Viene con software de medición.
+\item Se puede conectar a cualquier sistema de prueba o voltaje AC.
+\item Fuentes de alimentación capacitaras y aisladas presentes
+\item Fácil visualización de resultados y calibración a través de RS-232
+\item Pantalla LCD de 160 segmentos
+\item Conectores RF para soporte AMR / AMI
+\item Soporte RTC de 32 kHz (cabecera disponible para calibración RTC)
+\item Encabezados para alimentación MSP430 o solo  RTC a través de fuentes de alimentación auxiliares
+\end{itemize}
+\subsubsection{EVAL-ADE 7978}
+\begin{figure}[H]
+\centering
+\includegraphics[width = 3cm]{3Proyecto/EVAL-ADE7978}
+\caption{Tarjeta EVAL-ADE7978} 
+\label{fig:EVAL-ADE7978}
+\end{figure}
+\begin{itemize}
+\itemsep0em
+\item Permite sensores Shunt en medidores de energía polifásica. 
+\item Inmune a la manipulación magnética.
+\item Alta precisión; admite EN 50470-1, EN 50470-3, IEC 62053-21, IEC 62053-22, IEC 62053-23, ANSI C12.20, y la estándar IEEE 1459.
+\item Compatible con 3 fases, 3 o 4 lineas (Delta o estrella).
+\item Calcula la energia Activa, Pasiva y Aparente en cada fase y en el sistema general.
+\item Menos del 0.2\% de error en energía activa y reactiva en un rango dinámico de 2000 a 1 a TA = 25$^{\circ}$C
+\item Menos del 0.1\% de error en voltaje rms en un rango dinámico de 500 a 1 a TA = 25$^{\circ}$C.
+\item Menos del 0.25\% de error en corriente rms en un rango dinámico de 500 a 1 a TA = 25$^{\circ}$C.
+\item Mediciones de calidad  de , incluida  la distorsión armónica total (THD).
+\item Suministro de 3.3 V.
+\item Temperatura de funcionamiento: -40$^{\circ}$C a +85$^{\circ}$C. 
+\item Interfaces seriales flexibles I2C, SPI y HSDC.
+\end{itemize}
+\subsubsection{78M6631 3-Phase PowerMeasurement IC}
+\begin{figure}[H]
+\centering
+\includegraphics[width = 3cm]{3Proyecto/78M6631-EVM-DSL}
+\caption{Tarjeta 78M6631-EVM-DSL}
+\label{fig:78M6631-EVM-DSL}
+\end{figure}
+\begin{itemize}
+\itemsep0em
+\item 0.5 \% de precisión de vatios sobre 2000 : 1 corriente Rango y temperatura exclusiva
+\item Excede los estándares IEC 62053 / ANSI C12.20.
+\item Referencia de voltaje <40 ppm/ $^{\circ}$C.
+\item Seis entradas analógicas que admiten entradas de medición de corriente y voltaje trifásico.
+\item Configuración delta o estrella.
+\item ADC Delta-Sigma de 22 bits con motor de cómputo (CE) independiente de 32 bits.
+\item MPU de 8 bits (80515), un ciclo de reloj por instrucción con 4 KB MPU XRAM.
+\item 128 KB Flash con seguridad.
+\item Base de tiempo de 32 kHz con temporizador de vigilancia de hardware
+\item Opciones de interfaz de host UART, I2C y High-Speed Slave SPI.
+\item 17 pines I/O tolerante a 5V de uso general.
+\end{itemize}
 
+Teniendo encenta las características encontradas en las tres tarjetas, se decidió escoger el dispositivo ADE 7978 ya que cumple con la norma IEEE 1459 y tiene una medición precisa, ademas de esto la resolución del dispositivo es mucho mejor que el de los otros ( 24 bits ).
+\section{Desarrollo del Hardware}
+\subsection{Configuración inicial}
+\subsubsection{Materiales}
+\begin{itemize}
+\itemsep0em
+\item 4 resistencias Shunt.
+\item 1m de cable 7 hilos 22 AWG azul - V1PIN.
+\item 1m de cable 7 hilos 22 AWG cafe - GND.
+\item 1m de cable 7 hilos 22 AWG amarillo - IMIN.
+\item 1m de cable 7 hilos 22 AWG rojo - IPIN.
+\item 2m de cable duplex 2x10 AWG blanco
+\item 10 TYP UK2.50.
+\item Carril de aluminio.
+\item lamina de acetato.
+\item 20 terminales.
+\item 4 postes Met 10mm.
+  
+\end{itemize}
+
+\begin{figure}[H]
 \begin{center}
-\begin{threeparttable}
-\centering%
-\caption{Participaci\'{o}n de las energ\'{\i}as renovables en el suministro
-total de energ\'{\i}a primaria .}\label{EMundo1}
-\begin{tabular}{|l|c|c|}\hline
-&\multicolumn{2}{c|}{Participaci\'{o}n en el suministro de energ\'{\i}a primaria /\% (Mtoe)\;$\tnote{1}$}\\\cline{2-3}%
-\arr{Region}&Energ\'{\i}as renovables &Participaci\'{o}n de la biomasa\\\hline%
-Latinoam\'{e}rica&28,9 (140)&62,4 (87,4)\\\hline%
-\:Colombia&27,7 (7,6)&54,4 (4,1)\\\hline%
-Alemania&3,8 (13,2)&65,8 (8,7)\\\hline%
-Mundial&13,1 (1404,0)&79,4 (1114,8)\\\hline
-\end{tabular}
-\begin{tablenotes}
-\item[1] \footnotesize{1 kg oe=10000 kcal=41,868 MJ}
-\end{tablenotes}
-\end{threeparttable}
+\includegraphics[width = 3cm]{3Proyecto/Cableado}
+\caption{ ADE 7978 configurado con las resistencias Shunt} 
+\label{fig:Cableado}
 \end{center}
+\end{figure}
+Para configurar la tarjeta fue necesario encontrar una resistencia Shunt que se ajustará a las especificaciones del circuito a implementar, sin embargo este trabajo fue mas complicado, ya que las resistencias Shunt disponibles en el mercado son costosas y la mayoría de ellas vienen con resistencias bajas, elevando el voltaje de salida y ampliando el rango de medición del medidor ($\dfrac{I}{R}=V$), se decidió comprar 4 resistencias Shunt caseras las cuales tenían un costo de tan solo \$4.000 COP muy bajo comparado con las importadas o fabricadas industrial mente, en las que su valor esta entre \$50.000 COP - \$ 200.000 COP.\\
+Teniendo todos los materiales, se realiza el cableado según las recomendaciones del fabricante, utilizando el cable azul para el pin V1PIN, el cable café para el pin GND, el cable amarillo para el pin IMIN, el cable rojo para el pin IPIN y el cable blanco para conectar las shunt con el bloque de terminales, todo el montaje puesto sobre una lamina de acetato elevando la tarjeta con los 4 postes Met como se muestra en la figura \ref{fig:Cableado}\\
 
-NOTA: en el caso en que el contenido de la tabla o cuadro sea muy extenso, se puede cambiar el tama\~{n}o de la letra, siempre y cuando \'{e}sta sea visible por el lector.\\
+\subsection{Caracterización de la resistencia Shunt}
+\subsection{Conversión de voltaje}
+\subsection{Conversión de corriente}
+\begin{table} [H]
+    \begin{center}
+    \begin{tabular}{ |c|c|c|c|c|c|c|c|c| }
+        \hline 
+        Corriente (A) & 0.552 & 0.558 & 0.565 & 0.566 & 0.575 & 0.583 & 0.586 & 0.597\\
+        \hline
+        Volatje (V) & 0.00105 & 0.00105 & 0.00107 & 0.00107 & 0.00107 & 0.00108 & 0.00109 & 0.00109\\
+        \hline
+        \hline 
+        Corriente (A) & 0.609 & 0.621 & 0.639 & 0.651 & 0.68 & 0.7 & 0.73 & 0.757\\
+        \hline
+        Volatje (V) & 0.00111 & 0.00113 & 0.00115 & 0.00117 & 0.0012 & 0.00122 & 0.00125 & 0.0013\\
+        \hline
+        \hline 
+        Corriente (A) & 0.784 & 0.813 & 0.85 & 0.888 & 0.935 & 1.02 & 1.06 & 1.12\\
+        \hline
+        Volatje (V) & 0.00134 & 0.00136 & 0.00143 & 0.00148 & 0.00153 & 0.00162 & 0.0017 & 0.00179\\
+        \hline
+        \hline 
+        Corriente (A) & 1.21 & 1.28 & 1.38 & 1.45 & 1.59 & 1.63 & 1.75 & 1.8\\
+        \hline
+        Volatje (V) & 0.0019 & 0.002 & 0.0022 & 0.00226 & 0.00246 & 0.00254 & 0.0027 & 0.00277\\
+        \hline
+        \hline 
+        Corriente (A) & 1.75 & 1.67 & 1.5 & 1.42 & 1.35 & 1.24 & 1.18 & 1.1\\
+        \hline
+        Volatje (V) & 0.00269 & 0.00257 & 0.00233 & 0.00222 & 0.00211 & 0.00196 & 0.00187 & 0.00176\\
+        \hline
+        \hline 
+        Corriente (A) & 1.06 & 1.01 & 0.97 & 0.92 & 0.879 & 0.84 & 0.816 & 0.777\\
+        \hline
+        Volatje (V) & 0.00169 & 0.00163 & 0.00158 & 0.00151 & 0.00145 & 0.0014 & 0.00137 & 0.00131\\
+        \hline
+        \hline 
+        Corriente (A) & 0.753 & 0.734 & 0.71 & 0.693 & 0.67 & 0.652 & 0.629 & 0.616\\
+        \hline
+        Volatje (V) & 0.00127 & 0.00125 & 0.00122 & 0.00119 & 0.00116 & 0.00115 & 0.00112 & 0.00111\\
+        \hline
+        \hline
+        Corriente (A) & 0.605 & 0.591 & 0.575 & 0.562 & 0.555 \\
+        \hline
+        Volatje (V) & 0.0011 & 0.00108 & 0.00107 & 0.00105 & 0.00104 \\ 
+        \hline
+    \end{tabular}
+\end{center}
+\caption{Shunt A}
+\label{tab:shuntA}
+\end{table}
+
+
+
+
+\begin{table} [H]
+    \begin{center}
+    \begin{tabular}{ |c|c|c|c|c|c|c|c|c| }
+        \hline
+        Corriente (A) & 0.549 & 0.574 & 0.606 & 0.633 & 0.67 & 0.698 & 0.744 & 0.77\\
+        \hline
+        Volatje (V) & 0.00107 & 0.00111 & 0.00112 & 0.00115 & 0.00119 & 0.00125 & 0.0013 & 0.00133\\
+        \hline
+        \hline
+        Corriente (A) & 0.823 & 0.867 & 0.922 & 0.99 & 1.05 & 1.15 & 1.23 & 1.36\\
+        \hline
+        Volatje (V) & 0.0014 & 0.00145 & 0.00152 & 0.0016 & 0.0017 & 0.00186 & 0.00196 & 0.00213\\
+        \hline
+        \hline
+        Corriente (A) & 1.48 & 1.69 & 1.8 & 1.7 & 1.48 & 1.35 & 1.22 & 1.15\\
+        \hline
+        Volatje (V) & 0.0023 & 0.0026 & 0.00278 & 0.00262 & 0.0023 & 0.00214 & 0.00194 & 0.00182\\
+        \hline
+        \hline
+        Corriente (A) & 1.05 & 0.977 & 0.913 & 0.85 & 0.811 & 0.76 & 0.728 & 0.685\\
+        \hline
+        Volatje (V) & 0.0017 & 0.00162 & 0.00151 & 0.00143 & 0.00139 & 0.00132 & 0.00127 & 0.0012\\
+        \hline
+        \hline
+        Corriente (A) & 0.662 & 0.635 & 0.611 & 0.599 & 0.58 & 0.557\\
+        \hline
+        Volatje (V) & 0.00119 & 0.00116 & 0.00113 & 0.0011 & 0.00109 & 0.00108\\
+        \hline
+    \end{tabular}
+\end{center}
+\caption{Shunt B}
+\label{tab:shuntB}
+\end{table}
+
+
+\begin{table} [H]
+    \begin{center}
+    \begin{tabular}{ |c|c|c|c|c|c|c|c|c| }
+        \hline
+        Corriente (A) & 0.557 & 0.573 & 0.593 & 0.631 & 0.654 & 0.69 & 0.717 & 0.752\\
+        \hline
+        Voltaje (V) & 0.00106 & 0.00108 & 0.0011 & 0.00115 & 0.00117 & 0.00122 & 0.00126 & 0.00131\\
+        \hline
+        \hline
+        Corriente (A) & 0.8 & 0.838 & 0.896 & 0.95 & 1.03 & 1.09 & 1.19 & 1.29\\
+        \hline
+        Voltaje (V) & 0.00137 & 0.00141 & 0.00149 & 0.00155 & 0.00166 & 0.00175 & 0.00189 & 0.00205\\
+        \hline
+        \hline
+        Corriente (A) & 1.47 & 1.59 & 1.8 & 1.63 & 1.52 & 1.37 & 1.27 & 1.15\\
+        \hline
+        Voltaje (V) & 0.0023 & 0.00246 & 0.00276 & 0.00251 & 0.00237 & 0.00215 & 0.00199 & 0.00183\\
+        \hline
+        \hline
+        Corriente (A) & 1.07 & 0.98 & 0.925 & 0.86 & 0.816 & 0.766 & 0.737 & 0.697\\
+        \hline
+        Voltaje (V) & 0.00172 & 0.0016 & 0.00153 & 0.00144 & 0.00138 & 0.00131 & 0.0013 & 0.00121\\
+        \hline
+        \hline
+        Corriente (A) & 0.661 & 0.633 & 0.616 & 0.599 & 0.558\\
+        \hline
+        Voltaje (V) & 0.00119 & 0.00115 & 0.00113 & 0.00111 & 0.00107\\
+        \hline
+    \end{tabular}
+\end{center}
+\caption{Shunt C}
+\label{tab:shuntC}
+\end{table}
+
+
+
+
 

@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{A28}
 V~Vera.
@@ -18,5 +18,53 @@ IEEE Power.
   quantities under sinusoidal, nonsinusoidal, balanced, or unbalanced
   conditions.
 \newblock {\em IEEE}, 2010.
+
+\bibitem{A31}
+IBM Research.
+\newblock Software development.
+\newblock url{ https://www.ibm.com/topics/software-development}, 2019.
+
+\bibitem{A32}
+Margaret Rouse.
+\newblock object-oriented programming (oop).
+\newblock url{
+  https://searchapparchitecture.techtarget.com/definition/object-oriented-programming-OOP},
+  2020.
+
+\bibitem{A33}
+P.~Christensson.
+\newblock Web development.
+\newblock url{ https://techterms.com}, 2013.
+
+\bibitem{A37}
+Alex Rodriguez.
+\newblock Restful wev services: The basics.
+\newblock {\em IBM developeWorks}, 2008.
+
+\bibitem{A34}
+pjbevel@gmail.com.
+\newblock the fourier trabsform.
+\newblock http://www.thefouriertransform.com, 2010.
+
+\bibitem{A35}
+José~García Fernández.
+\newblock El teorema de muestreo y sus aplicaciones.
+\newblock {\em UNIVERSIDAD DE SEVILLA}, 2010.
+
+\bibitem{A36}
+Ana~Lucía Schmidt.
+\newblock Fft: Transformada rápida de fourier.
+\newblock {\em Universidad Nacional del Sur, Avda. Alem 1253, Argentina}, 2013.
+
+\bibitem{A38}
+Gonzalo~Salgueiro David~Hanes.
+\newblock {\em IoT Fundamentals: NEtworking Technologies, Protocols, and Use
+  Cases for he Internet of Things}.
+\newblock CISCO, 2017.
+
+\bibitem{A39}
+Raspberry Pi.
+\newblock Datasheet raspberry pi 4 model b.
+\newblock {\em Raspberry Pi}, 2019.
 
 \end{thebibliography}

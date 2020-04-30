@@ -1,0 +1,150 @@
+\newpage{\cleardoublepage}
+\chapter{Desarrollo y ejecución del proyecto}
+\section{Arquitectura del proyecto}
+\begin{figure}[H]
+\centering
+\includegraphics[width = 15cm]{3Proyecto/arquitectura}
+\caption{Arquitectura del proyecto} 
+\label{fig:arquitectura-proyecto}
+\end{figure} 
+En primera medida se planteó el diseño electrónico del medidor, iniciando por las cargas donde se conectan a un convertidor de señal análoga a digital, estas señales se pasan a un procesador digital de señales, dónde se aplica los parámetros matemáticos establecidos en el estándar IEEE 1459 del 2010, el cual da la medición de la potencia eléctrica en cualquier tipo de condición.\\\\
+Dicho esto, la información se envía a un procesador de datos, este se encarga de administrar el manejo que se le da a los datos como lo es su lectura, escritura y filtración de los datos. El procesador debe contar con conexión a internet ya sea por wifi o ethernet con el fin de guardar la información en una base datos que está alojada en un servidor en la nube, la comunicación que tiene el procesador de datos con el servidor es por protocolo HTTPS.\\\\
+Por lo tanto, el servidor en la nube que se planteó es Heroku ya que tiene la opción de una cuenta gratuita y así hostear la base de datos y la aplicación web sin ningún costo. Por ende las restricciones que tiene este plan, es que no se puede escoger el dominio de la página y hay un límite de espacio de 512MB pero es más que suficiente para el peso que tiene la base de datos de 21.5MB y la aplicación web de 65.2MB.\\\\
+Una vez configurado el servidor, se escogió el framework javascript Angular 7 para el desarrollo de la aplicación web, ya que por medio del lenguaje de programación Typescript, el cual es un lenguaje tipado y robusto, nos permite tener mayor manipulación y consistencia en los datos; la aplicación utiliza una arquitectura RESTful y este permite, realizar peticiones HTTPS a la base de datos.\\\\
+Finalmente, la información se visualiza de forma gráfica y númerica en una página web, en donde se pueden ver los valores de voltaje (V), corriente (A), potencia activa(W), potencia aparente (VA), potencia reactiva(VAR) y porcentaje de distorsión armónica en corriente y voltaje en cada fase.\\\\
+
+
+\section{Fase de integración}
+Considerando las fases y la magnitud del proyecto se decidió investigar e integrar un dispositivo que hiciera el análisis de las señales aplicando las ecuaciones del STD IEEE 1459 del 2010. Durante la búsqueda se encontró que los dispositivos más cercanos son los siguientes:\\
+\begin{enumerate}
+    \itemsep0em
+    \item EVM430-F6779-3 Phase Electronic Watt-Hour EVM
+    \item EVAL-ADE 7978
+    \item 78M6631 3-Phase PowerMeasurement IC
+\end{enumerate}
+
+A continuación se detalla las tarjetas mencionadas:\\
+\subsubsection{EVM430-F6779-3 Phase Electronic Watt-Hour EVM}
+\begin{figure}
+\centering
+\includegraphics[width = 3cm]{3Proyecto/EVM430-F6779}
+\caption{Tarjeta EVM430-F6779-3} 
+\label{fig:EVM430-F6779-3}
+\end{figure} 
+\begin{itemize}
+\itemsep0em
+\item Es posible ejecutar aplicaciones de medición en tiempo real.
+\item Viene con software de medición.
+\item Se puede conectar a cualquier sistema de prueba o voltaje AC.
+\item Fuentes de alimentación capacitaras y aisladas presentes
+\item Fácil visualización de resultados y calibración a través de RS-232
+\item Pantalla LCD de 160 segmentos
+\item Conectores RF para soporte AMR / AMI
+\item Soporte RTC de 32 kHz (cabecera disponible para calibración RTC)
+\item Encabezados para alimentación MSP430 o solo  RTC a través de fuentes de alimentación auxiliares
+\end{itemize}
+\subsubsection{EVAL-ADE 7978}
+\begin{figure}
+    \centering
+    \includegraphics[width = 3cm]{3Proyecto/EVM430-F6779}
+    \caption{Tarjeta EVM430-F6779-3} 
+    \label{fig:EVM430-F6779-3}
+    \end{figure} 
+\begin{center}
+\includegraphics[width = 3cm]{3Proyecto/EVAL-ADE7978} 
+\end{center}
+\begin{itemize}
+\itemsep0em
+\item Permite sensores Shunt en medidores de energía polifásica. 
+\item Inmune a la manipulación magnética.
+\item Alta precisión; admite EN 50470-1, EN 50470-3, IEC 62053-21, IEC 62053-22, IEC 62053-23, ANSI C12.20, y la estándar IEEE 1459.
+\item Compatible con 3 fases, 3 o 4 lineas (Delta o estrella).
+\item Calcula la energia Activa, Pasiva y Aparente en cada fase y en el sistema general.
+\item Menos del 0.2\% de error en energía activa y reactiva en un rango dinámico de 2000 a 1 a TA = 25$^{\circ}$C
+\item Menos del 0.1\% de error en voltaje rms en un rango dinámico de 500 a 1 a TA = 25$^{\circ}$C.
+\item Menos del 0.25\% de error en corriente rms en un rango dinámico de 500 a 1 a TA = 25$^{\circ}$C.
+\item Mediciones de calidad  de , incluida  la distorsión armónica total (THD).
+\item Suministro de 3.3 V.
+\item Temperatura de funcionamiento: -40$^{\circ}$C a +85$^{\circ}$C. 
+\item Interfaces seriales flexibles I2C, SPI y HSDC.
+\end{itemize}
+\subsubsection{78M6631 3-Phase PowerMeasurement IC}
+\begin{center}
+\includegraphics[width = 3cm]{3Proyecto/78M6631-EVM_DSL} 
+\end{center}
+\begin{itemize}
+\itemsep0em
+\item 0.5 \% de precisión de vatios sobre 2000 : 1 corriente Rango y temperatura exclusiva
+\item Excede los estándares IEC 62053 / ANSI C12.20.
+\item Referencia de voltaje <40 ppm/ $^{\circ}$C.
+\item Seis entradas analógicas que admiten entradas de medición de corriente y voltaje trifásico.
+\item Configuración delta o estrella.
+\item ADC Delta-Sigma de 22 bits con motor de cómputo (CE) independiente de 32 bits.
+\item MPU de 8 bits (80515), un ciclo de reloj por instrucción con 4 KB MPU XRAM.
+\item 128 KB Flash con seguridad.
+\item Base de tiempo de 32 kHz con temporizador de vigilancia de hardware
+\item Opciones de interfaz de host UART, I2C y High-Speed Slave SPI.
+\item 17 pines I/O tolerante a 5V de uso general.
+\end{itemize}
+
+Teniendo encenta las características encontradas en las tres tarjetas, se decidió escoger el dispositivo ADE 7978 ya que cumple con la norma IEEE 1459 y tiene una medición precisa, ademas de esto la resolución del dispositivo es mucho mejor que el de los otros ( 24 bits ).
+\section{Desarrollo del Hardware}
+\subsection{Configuración inicial}
+\subsubsection{Materiales}
+\begin{itemize}
+\itemsep0em
+\item 4 resistencias Shunt.
+\item 1m de cable 7 hilos 22 AWG azul - V1PIN.
+\item 1m de cable 7 hilos 22 AWG cafe - GND.
+\item 1m de cable 7 hilos 22 AWG amarillo - IMIN.
+\item 1m de cable 7 hilos 22 AWG rojo - IPIN.
+\item 2m de cable duplex 2x10 AWG blanco
+\item 10 TYP UK2.50.
+\item Carril de aluminio.
+\item lamina de acetato.
+\item 20 terminales.
+\item 4 postes Met 10mm.
+  
+\end{itemize}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width = 3cm]{3Proyecto/Cableado}
+\caption{ ADE 7978 configurado con las resistencias Shunt} 
+\label{fig:Cableado}
+\end{center}
+\end{figure}
+Para configurar la tarjeta fue necesario encontrar una resistencia Shunt que se ajustará a las especificaciones del circuito a implementar, sin embargo este trabajo fue mas complicado, ya que las resistencias Shunt disponibles en el mercado son costosas y la mayoría de ellas vienen con resistencias bajas, elevando el voltaje de salida y ampliando el rango de medición del medidor ($\dfrac{I}{R}=V$), se decidió comprar 4 resistencias Shunt caseras las cuales tenían un costo de tan solo \$4.000 COP muy bajo comparado con las importadas o fabricadas industrial mente, en las que su valor esta entre \$50.000 COP - \$ 200.000 COP.\\
+Teniendo todos los materiales, se realiza el cableado según las recomendaciones del fabricante, utilizando el cable azul para el pin V1PIN, el cable café para el pin GND, el cable amarillo para el pin IMIN, el cable rojo para el pin IPIN y el cable blanco para conectar las shunt con el bloque de terminales, todo el montaje puesto sobre una lamina de acetato elevando la tarjeta con los 4 postes Met como se muestra en la figura \ref{fig:Cableado}\\
+\begin{table} [H]
+    \begin{center}
+    \begin{tabular}{ |c|c|c|c|c|c|c|c| }
+        \hline
+        Corriente (A) &  0.552 &  0.552 &  0.552 &  0.552 &  0.552 &  0.552 &  0.552\\
+        \hline
+        Voltaje(V) & 0.00105 & 0.00105 & 0.00105 & 0.00105 & 0.00105 & 0.00105 & 0.00105\\
+        \hline
+        \hline
+        Corriente (A) &  0.552 &  0.552 &  0.552 &  0.552 &  0.552 &  0.552 &  0.552\\
+        \hline
+        Voltaje(V) & 0.00105 & 0.00105 & 0.00105 & 0.00105 & 0.00105 & 0.00105 & 0.00105\\
+        \hline
+        \hline
+        Corriente (A) &  0.552 &  0.552 &  0.552 &  0.552 &  0.552 &  0.552 &  0.552\\
+        \hline
+        Voltaje(V) & 0.00105 & 0.00105 & 0.00105 & 0.00105 & 0.00105 & 0.00105 & 0.00105\\
+        \hline
+        \hline
+        Corriente (A) &  0.552 &  0.552 &  0.552 &  0.552 &  0.552 &  0.552 &  0.552\\
+        \hline
+        Voltaje(V) & 0.00105 & 0.00105 & 0.00105 & 0.00105 & 0.00105 & 0.00105 & 0.00105\\
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+
+
+
+
+
