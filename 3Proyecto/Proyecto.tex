@@ -90,6 +90,17 @@ A continuación se detalla las tarjetas mencionadas:\\
 Teniendo encenta las características encontradas en las tres tarjetas, se decidió escoger el dispositivo ADE 7978 ya que cumple con la norma IEEE 1459 y tiene una medición precisa, ademas de esto la resolución del dispositivo es mucho mejor que el de los otros ( 24 bits ).
 \section{Desarrollo del Hardware}
 \subsection{Configuración inicial}
+
+La conexión que se realizó, fue una configuración de 3 fases, 4 hilos, distribución estrella. El diagrama de conexión se ve en la figura \ref{fig:configuracion}
+
+\begin{figure}[H]
+    \begin{center}
+    \includegraphics[width = 9cm]{3Proyecto/configuration}
+    \caption{ Esquema de conexión para una distribución en Y, 3 fases, 4 hilos.} 
+    \label{fig:configuracion}
+    \end{center}
+    \end{figure}
+
 \subsubsection{Materiales}
 \begin{itemize}
 \itemsep0em
@@ -115,7 +126,7 @@ Teniendo encenta las características encontradas en las tres tarjetas, se decid
 \end{center}
 \end{figure}
 Para configurar la tarjeta fue necesario encontrar una resistencia Shunt que se ajustará a las especificaciones del circuito a implementar, sin embargo este trabajo fue mas complicado, ya que las resistencias Shunt disponibles en el mercado son costosas y la mayoría de ellas vienen con resistencias bajas, elevando el voltaje de salida y ampliando el rango de medición del medidor ($\dfrac{I}{R}=V$), se decidió comprar 4 resistencias Shunt caseras las cuales tenían un costo de tan solo \$4.000 COP muy bajo comparado con las importadas o fabricadas industrial mente, en las que su valor esta entre \$50.000 COP - \$ 200.000 COP.\\
-Teniendo todos los materiales, se realiza el cableado según las recomendaciones del fabricante, utilizando el cable azul para el pin V1PIN, el cable café para el pin GND, el cable amarillo para el pin IMIN, el cable rojo para el pin IPIN y el cable blanco para conectar las shunt con el bloque de terminales, todo el montaje puesto sobre una lamina de acetato elevando la tarjeta con los 4 postes Met como se muestra en la figura \ref{fig:Cableado}\\
+Teniendo todos los materiales, se realiza la conexión de la figura \ref{fig:configuracion}, utilizando el cable azul para el pin V1PIN, el cable café para el pin GND, el cable amarillo para el pin IMIN, el cable rojo para el pin IPIN y el cable blanco para conectar las shunt con el bloque de terminales, todo el montaje puesto sobre una lamina de acetato elevando la tarjeta con los 4 postes Met como se muestra en la figura \ref{fig:Cableado}\\
 
 \subsection{Caracterización de la resistencia Shunt}
 \begin{table} [H]
@@ -124,46 +135,46 @@ Teniendo todos los materiales, se realiza el cableado según las recomendaciones
         \hline 
         Corriente (A) & 0.552 & 0.558 & 0.565 & 0.566 & 0.575 & 0.583 & 0.586 & 0.597\\
         \hline
-        Volatje (V) & 0.00105 & 0.00105 & 0.00107 & 0.00107 & 0.00107 & 0.00108 & 0.00109 & 0.00109\\
+        Voltaje (V) & 0.00105 & 0.00105 & 0.00107 & 0.00107 & 0.00107 & 0.00108 & 0.00109 & 0.00109\\
         \hline
         \hline 
         Corriente (A) & 0.609 & 0.621 & 0.639 & 0.651 & 0.68 & 0.7 & 0.73 & 0.757\\
         \hline
-        Volatje (V) & 0.00111 & 0.00113 & 0.00115 & 0.00117 & 0.0012 & 0.00122 & 0.00125 & 0.0013\\
+        Voltaje (V) & 0.00111 & 0.00113 & 0.00115 & 0.00117 & 0.0012 & 0.00122 & 0.00125 & 0.0013\\
         \hline
         \hline 
         Corriente (A) & 0.784 & 0.813 & 0.85 & 0.888 & 0.935 & 1.02 & 1.06 & 1.12\\
         \hline
-        Volatje (V) & 0.00134 & 0.00136 & 0.00143 & 0.00148 & 0.00153 & 0.00162 & 0.0017 & 0.00179\\
+        Voltaje (V) & 0.00134 & 0.00136 & 0.00143 & 0.00148 & 0.00153 & 0.00162 & 0.0017 & 0.00179\\
         \hline
         \hline 
         Corriente (A) & 1.21 & 1.28 & 1.38 & 1.45 & 1.59 & 1.63 & 1.75 & 1.8\\
         \hline
-        Volatje (V) & 0.0019 & 0.002 & 0.0022 & 0.00226 & 0.00246 & 0.00254 & 0.0027 & 0.00277\\
+        Voltaje (V) & 0.0019 & 0.002 & 0.0022 & 0.00226 & 0.00246 & 0.00254 & 0.0027 & 0.00277\\
         \hline
         \hline 
         Corriente (A) & 1.75 & 1.67 & 1.5 & 1.42 & 1.35 & 1.24 & 1.18 & 1.1\\
         \hline
-        Volatje (V) & 0.00269 & 0.00257 & 0.00233 & 0.00222 & 0.00211 & 0.00196 & 0.00187 & 0.00176\\
+        Voltaje (V) & 0.00269 & 0.00257 & 0.00233 & 0.00222 & 0.00211 & 0.00196 & 0.00187 & 0.00176\\
         \hline
         \hline 
         Corriente (A) & 1.06 & 1.01 & 0.97 & 0.92 & 0.879 & 0.84 & 0.816 & 0.777\\
         \hline
-        Volatje (V) & 0.00169 & 0.00163 & 0.00158 & 0.00151 & 0.00145 & 0.0014 & 0.00137 & 0.00131\\
+        Voltaje (V) & 0.00169 & 0.00163 & 0.00158 & 0.00151 & 0.00145 & 0.0014 & 0.00137 & 0.00131\\
         \hline
         \hline 
         Corriente (A) & 0.753 & 0.734 & 0.71 & 0.693 & 0.67 & 0.652 & 0.629 & 0.616\\
         \hline
-        Volatje (V) & 0.00127 & 0.00125 & 0.00122 & 0.00119 & 0.00116 & 0.00115 & 0.00112 & 0.00111\\
+        Voltaje (V) & 0.00127 & 0.00125 & 0.00122 & 0.00119 & 0.00116 & 0.00115 & 0.00112 & 0.00111\\
         \hline
         \hline
         Corriente (A) & 0.605 & 0.591 & 0.575 & 0.562 & 0.555 \\
         \hline
-        Volatje (V) & 0.0011 & 0.00108 & 0.00107 & 0.00105 & 0.00104 \\ 
+        Voltaje (V) & 0.0011 & 0.00108 & 0.00107 & 0.00105 & 0.00104 \\ 
         \hline
     \end{tabular}
 \end{center}
-\caption{Corriente vs Volatje en la resitencia shunt A}
+\caption{Corriente vs Voltaje en la resitencia shunt A}
 \label{tab:shuntA}
 \end{table}
 
@@ -176,31 +187,31 @@ Teniendo todos los materiales, se realiza el cableado según las recomendaciones
         \hline
         Corriente (A) & 0.549 & 0.574 & 0.606 & 0.633 & 0.67 & 0.698 & 0.744 & 0.77\\
         \hline
-        Volatje (V) & 0.00107 & 0.00111 & 0.00112 & 0.00115 & 0.00119 & 0.00125 & 0.0013 & 0.00133\\
+        Voltaje (V) & 0.00107 & 0.00111 & 0.00112 & 0.00115 & 0.00119 & 0.00125 & 0.0013 & 0.00133\\
         \hline
         \hline
         Corriente (A) & 0.823 & 0.867 & 0.922 & 0.99 & 1.05 & 1.15 & 1.23 & 1.36\\
         \hline
-        Volatje (V) & 0.0014 & 0.00145 & 0.00152 & 0.0016 & 0.0017 & 0.00186 & 0.00196 & 0.00213\\
+        Voltaje (V) & 0.0014 & 0.00145 & 0.00152 & 0.0016 & 0.0017 & 0.00186 & 0.00196 & 0.00213\\
         \hline
         \hline
         Corriente (A) & 1.48 & 1.69 & 1.8 & 1.7 & 1.48 & 1.35 & 1.22 & 1.15\\
         \hline
-        Volatje (V) & 0.0023 & 0.0026 & 0.00278 & 0.00262 & 0.0023 & 0.00214 & 0.00194 & 0.00182\\
+        Voltaje (V) & 0.0023 & 0.0026 & 0.00278 & 0.00262 & 0.0023 & 0.00214 & 0.00194 & 0.00182\\
         \hline
         \hline
         Corriente (A) & 1.05 & 0.977 & 0.913 & 0.85 & 0.811 & 0.76 & 0.728 & 0.685\\
         \hline
-        Volatje (V) & 0.0017 & 0.00162 & 0.00151 & 0.00143 & 0.00139 & 0.00132 & 0.00127 & 0.0012\\
+        Voltaje (V) & 0.0017 & 0.00162 & 0.00151 & 0.00143 & 0.00139 & 0.00132 & 0.00127 & 0.0012\\
         \hline
         \hline
         Corriente (A) & 0.662 & 0.635 & 0.611 & 0.599 & 0.58 & 0.557\\
         \hline
-        Volatje (V) & 0.00119 & 0.00116 & 0.00113 & 0.0011 & 0.00109 & 0.00108\\
+        Voltaje (V) & 0.00119 & 0.00116 & 0.00113 & 0.0011 & 0.00109 & 0.00108\\
         \hline
     \end{tabular}
 \end{center}
-\caption{Corriente vs Volatje en la resitencia shunt B}
+\caption{Corriente vs Voltaje en la resitencia shunt B}
 \label{tab:shuntB}
 \end{table}
 
@@ -235,10 +246,73 @@ Teniendo todos los materiales, se realiza el cableado según las recomendaciones
         \hline
     \end{tabular}
 \end{center}
-\caption{Corriente vs Volatje en la resitencia shunt C}
+\caption{Corriente vs Voltaje en la resitencia shunt C}
 \label{tab:shuntC}
 \end{table}
 \subsection{Conversión de voltaje}
+Para obtener el voltaje de entrada del ADE7978, se realizaron los siguientes pasos:\\
+
+La carga se conecta a la fase siguiendo el diagrama de conexión \ref{fig:configuracion}. Los pines V1PIN y GND\_A, pasan por un divisor de voltaje donde su salida es el pin V1P y VM como se ve en la figura \ref{fig:divisorVolate}. El divisor se modela bajo la siguiente ecuación:\\
+
+\begin{equation}
+    V1P = \frac{R_{2}}{R_{1} + R_{2}} * V_{in}
+\end{equation}
+
+Donde $\; R1 = 990150 \ohm$, \;$R2 = 1 K\ohm$.\\
+
+\begin{equation}\label{divisorVoltaje}
+    V1P = 0.00100893 * V_{in}
+\end{equation}
+
+El divisor de voltaje es necesario ya que el conversor ADE7933 solo debe recibir valores en un rango de $\pm 0.5V$. 
+
+El voltaje VA es la diferencia de voltaje que hay entre V1P y VM, esta es la señal que el conversor transforma a digital. La salida digital que entrega el conversor tiene un rango de $\pm 5.320.000$ como se ve en la figura \ref{fig:voltageOutput}. Esta señal entra al ADE7978 y de ahí en adelante, todos los procesos que se ejecutan, son basados en la conversión anteriormente descrita.\\
+
+La relación de entrada y salida del conversor ADE7933, consiste en un voltaje pico de entrada de $0.5 V$, genera una señal de salida de $5.320.000$.\\
+
+La siguiente ecuación relaciona la señal de salida del conversor con la señal de entrada al medidor:\\
+
+\begin{align*}
+    &0,5V \rightarrow 5,320,000.\\
+    &V1P \rightarrow DRV
+\end{align*}
+
+Donde $DRV = Dato\;del\;rango\;de\;voltaje\;del\;conversor$\\
+
+\begin{equation}
+    V1P = \frac{DRV * 0.5}{5.320.000}
+\end{equation}
+
+\begin{equation}\label{relacionConversor}
+    V1P = DRV * 9,39845 * 10^{-8} 
+\end{equation}
+
+Reemplazando la ecuación del divisor de voltaje \ref{divisorVoltaje} en \ref{relacionConversor}
+
+\begin{align*}
+    0.00100893 * V_{in} = DRV * 9,39845 * 10^{-8} 
+\end{align*}
+
+\begin{equation}\label{conversorEntradaSalida}
+    V_{in} = DRV * 0,00009315311
+\end{equation}
+La ecuación \ref{conversorEntradaSalida} modela la relación del voltaje de entrada al circuito al rango de voltaje del conversor.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 10cm]{3Proyecto/divisorVoltaje}
+    \caption{Divisor de voltaje ADC} 
+    \label{fig:divisorVolate}
+\end{figure} 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 10cm]{3Proyecto/voltageOutput}
+    \caption{Salida de voltaje del ADE 7978} 
+    \label{fig:voltageOutput}
+\end{figure} 
+
+
 \subsection{Conversión de corriente}
 
 
