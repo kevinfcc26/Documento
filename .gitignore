@@ -8,6 +8,9 @@
 *.gz
 *.bbl
 *.blg
+*.bst
+.vscode/*
+
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
