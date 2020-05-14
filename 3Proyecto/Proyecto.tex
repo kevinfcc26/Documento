@@ -367,71 +367,90 @@ Se asume que el circuito se alimenta con una fuente de voltaje AC con terminal $
 
 Con las ecuaciones obtenidas de cada nodo se despeja cada una de ellas dejándola igualada a una variable 
 \begin{itemize}
-    \item \textbf{Nodo A} \\
+    \item \textbf{Nodo D} \\
     $\mathbf{i_{1}=i_{2}}$
     \begin{align*}
-        \frac{V_{i}}{R_{1}} - \frac{A}{R_{1}} = \frac{A}{ZC} - \frac{B}{ZC} \\\\
-        \frac{V_{i}}{R_{1}} = A(\frac{1}{R_{1}}+\frac{1}{ZC}) -\frac{B}{ZC} \\\\
-        \frac{V_{i}}{R_{1}} = A\frac{R_{1}+ZC}{R_{1}ZC} -\frac{B}{ZC} \\\\
-            \frac{B}{ZC} = A\frac{R_{1}+ZC}{R_{1}ZC} - \frac{V_{i}}{R_{1}}
-        \end{align*}
-        \begin{equation}\label{Nodo A}
-            B = A\frac{R_{1}+ZC}{R_{1}} - V_{i}\frac{ZC}{R_{1}}
-        \end{equation}
+        &\frac{V_{i}}{R_{1}}-\frac{D}{R_{1}} = \frac{D}{ZC}-\frac{B}{ZC} \\\\
+        &\frac{B}{ZC} = \frac{D}{ZC}- \frac{V_{i}}{R_{1}} + \frac{D}{R_{1}} \\\\
+        &\frac{B}{ZC} = D(\frac{1}{ZC} +\frac{1}{R_{1}}) - \frac{V_{i}}{R_{1}} \\\\
+        &\frac{B}{ZC} = D\frac{R_{1}+ZC}{R_{1}ZC} - \frac{V_{i}}{R_{1}} \\\\
+    \end{align*}
+    \begin{equation}\label{Nodo D}
+        B = D\frac{R_{1}+ZC}{R_{1}} - V_{i}\frac{ZC}{R_{1}}
+    \end{equation}
         \item \textbf{Nodo B} \\
-        $ \mathbf{i_{2}=i_{3}+i_{4}}$
+        $ \mathbf{i_{2} + i_{3} = i_{4}}$
         \begin{align*}
-            \frac{A}{ZC} - \frac{B}{ZC} = \frac{B}{R_{2}} + \frac{B}{ZC} - \frac{D}{ZC} \\\\
-            \frac{A}{ZC} + \frac{D}{ZC} = B(\frac{1}{R_{2}} + \frac{1}{ZC} + \frac{1}{ZC}) \\\\
-            \frac{A}{ZC} + \frac{D}{ZC} = B(\frac{1}{R_{2}} + \frac{2}{ZC} ) \\\\
-            \frac{A}{ZC} + \frac{D}{ZC} = B\frac{2R_{2}+ZC}{R_{2}ZC} 
+            &\frac{D}{ZC} - \frac{B}{ZC} + \frac{V_{i}}{R_{2}}-\frac{B}{R_{2}} = \frac{B}{ZC} - \frac{A}{ZC}\\\\
+            &\frac{D}{ZC}  + \frac{V_{i}}{R_{2}} + \frac{A}{ZC} = B\frac{2}{ZC}  + \frac{B}{R_{2}} \\\\
+            &\frac{D}{ZC}  + \frac{V_{i}}{R_{2}} + \frac{A}{ZC} = B(\frac{2}{ZC}  + \frac{1}{R_{2}}) \\\\
+            &\frac{D}{ZC}  + \frac{V_{i}}{R_{2}} + \frac{A}{ZC} = B\frac{2R_{2}+ZC}{R_{2}ZC}
         \end{align*}
         \begin{equation}\label{Nodo B}
-            B = A\frac{R_{2}}{2R_{2}+ZC} + D\frac{R_{2}}{2R_{2}+ZC}
+            D\frac{R_{2}}{2R_{2}+ZC}  + V_{i}\frac{ZC}{2R_{2}+ZC} + A\frac{R_{2}}{2R_{2}+ZC} = B
         \end{equation}
-        \item \textbf{Nodo D} \\
+        \item \textbf{Nodo A} \\
         $ \mathbf{i_{4}=i_{5}}$
         \begin{align*}
-            \frac{B}{ZC} - \frac{D}{ZC} = \frac{D}{R_{3}} \\\\
-            \frac{B}{ZC} = D(\frac{1}{R_{3}} + \frac{1}{ZC}) \\\\
-            \frac{B}{ZC} = D\frac{R_{3}+ZC}{R_{3}ZC}
+            &\frac{B}{ZC} - \frac{A}{ZC} = \frac{A}{R_{1}}\\\\
+            &\frac{B}{ZC} = \frac{A}{R_{1}} + \frac{A}{ZC}\\\\
+            &\frac{B}{ZC} = A(\frac{1}{R_{1}} + \frac{1}{ZC})\\\\
+            &\frac{B}{ZC} = A\frac{R_{1}+ZC}{R_{1}ZC}
         \end{align*}
-        \begin{equation}\label{Nodo D}
-            B = D\frac{R_{3}+ZC}{R_{3}}
+        \begin{equation}\label{Nodo A}
+            B= A\frac{R_{1}+ZC}{R_{1}} \\\\
         \end{equation}
-    \end{itemize}
+\end{itemize}
     
-    Remplazando la ecuación \ref{Nodo B} en la ecuación \ref{Nodo A}
+    Remplazando la ecuación \ref{Nodo D} en la ecuación \ref{Nodo B}
     \begin{align*}
-        A\frac{R_{2}}{2R_{2}+ZC} + D\frac{R_{2}}{2R_{2}+ZC} = A\frac{R_{1}+ZC}{R_{1}} - V_{i}\frac{ZC}{R_{1}} \\\\
-        D\frac{R_{2}}{2R_{2}+ZC} = A(\frac{R_{1}+ZC}{R_{1}} - \frac{R_{2}}{2R_{2}+ZC})- V_{i}\frac{ZC}{R_{1}} \\\\
-        D\frac{R_{2}}{2R_{2}+ZC} = A\frac{(R_{1}+ZC)(2R_{2}+ZC) - R_{1}R_{2}}{R_{1}(2R_{2}+ZC)} - V_{i}\frac{ZC}{R_{1}} \\\\
-        D = A\frac{((R_{1}+ZC)(2R_{2}+ZC) - R_{1}R_{2})(2R_{2}+ZC)}{R_{1}R_{2}(2R_{2}+ZC)} - V_{i}\frac{ZC(2R_{2}+ZC)}{R_{1}R_{2}}
+        &D\frac{R_{1}+ZC}{R_{1}} - V_{i}\frac{ZC}{R_{1}} = D\frac{R_{2}}{2R_{2}+ZC}  + V_{i}\frac{ZC}{2R_{2}+ZC} + A\frac{R_{2}}{2R_{2}+ZC} \\\\
+        &A\frac{R_{2}}{2R_{2}+ZC} = D\frac{R_{1}+ZC}{R_{1}} - V_{i}\frac{ZC}{R_{1}} - D\frac{R_{2}}{2R_{2}+ZC} - V_{i}\frac{ZC}{2R_{2}+ZC}  \\\\
+        &A\frac{R_{2}}{2R_{2}+ZC} = D(\frac{R_{1}+ZC}{R_{1}} - \frac{R_{2}}{2R_{2}+ZC}) - V_{i}(\frac{ZC}{R_{1}}  + \frac{ZC}{2R_{2}+ZC}) \\\\
+        &A\frac{R_{2}}{2R_{2}+ZC} = D\frac{(R_{1}+ZC)(2R_{2}+ZC)-R_{1}R_{2}}{R_{1}(2R_{2}+ZC)} - V_{i}\frac{ZC(2R_{2}+ZC)+ R_{1}ZC}{R_{1}(2R_{2}+ZC)} \\\\
     \end{align*}
-    \begin{equation}\label{Nodo B en A}
-        D = A\frac{(R_{1}+ZC)(2R_{2}+ZC) - R_{1}R_{2}}{R_{1}R_{2}} - V_{i}\frac{ZC(2R_{2}+ZC)}{R_{1}R_{2}}
+    \begin{equation}\label{Nodo D en B}
+        A = D\frac{ (R_{1}+ZC)(2R_{2}+ZC)-R_{1}R_{2} }{ R_{1}R_{2}} - V_{i}\frac{ ZC(2R_{2}+ZC)+ R_{1}ZC }{ R_{1}R_{2}}
     \end{equation}
     
-    Remplazando la ecuación \ref{Nodo B} en la ecuación \ref{Nodo D}
+    Remplazando la ecuación \ref{Nodo D} en la ecuación \ref{Nodo A}
     \begin{align*}
-        A\frac{R_{2}}{2R_{2}+ZC} + D\frac{R_{2}}{2R_{2}+ZC} = D\frac{R_{3}+ZC}{R_{3}} \\\\
-        A\frac{R_{2}}{2R_{2}+ZC} = D(\frac{R_{3}+ZC}{R_{3}}-\frac{R_{2}}{2R_{2}+ZC}) \\\\
-        A\frac{R_{2}}{2R_{2}+ZC} = D(\frac{(2R_{2}+ZC)(R_{3}+ZC)-R_{2}R_{3}}{R_{3}(2R_{2}+ZC)} \\\\
-        AR_{2} = D(\frac{(2R_{2}+ZC)(R_{3}+ZC)-R_{2}R_{3}}{R_{3}}
+        &D\frac{R_{1}+ZC}{R_{1}} - V_{i}\frac{ZC}{R_{1}} = A\frac{R_{1}+ZC}{R_{1}} \\\\
     \end{align*}
-    \begin{equation}\label{Nodo B en D}
-        A\frac{R_{2}R_{3}}{(2R_{2}+ZC)(R_{3}+ZC)-R_{2}R_{3}} = D 
+    \begin{equation}\label{Nodo D en A}
+        A = D - V_{i}\frac{ZC}{R_{1}+ZC}
     \end{equation}
     
-    Remplazando la ecuación \ref{Nodo B en D} en la ecuación \ref{Nodo B en A}
+    Remplazando la ecuación \ref{Nodo D en B} en la ecuación \ref{Nodo D en A}
     \begin{align*}
-        A\frac{R_{2}R_{3}}{(2R_{2}+ZC)(R_{3}+ZC)-R_{2}R_{3}} = A\frac{(R_{1}+ZC)(2R_{2}+ZC) - R_{1}R_{2}}{R_{1}R_{2}} - V_{i}\frac{ZC(2R_{2}+ZC)}{R_{1}R_{2}}\\\\ 
-        V_{i}\frac{ZC(2R_{2}+ZC)}{R_{1}R_{2}} = A\frac{(R_{1}+ZC)(2R_{2}+ZC) - R_{1}R_{2}}{R_{1}R_{2}} - A\frac{R_{2}R_{3}}{(2R_{2}+ZC)(R_{3}+ZC)-R_{2}R_{3}} \\\\ 
-        V_{i}\frac{ZC(2R_{2}+ZC)}{R_{1}R_{2}} = A(\frac{(R_{1}+ZC)(2R_{2}+ZC) - R_{1}R_{2}}{R_{1}R_{2}} - \frac{R_{2}R_{3}}{(2R_{2}+ZC)(R_{3}+ZC)-R_{2}R_{3}}) \\\\ 
-        V_{i}\frac{ZC(2R_{2}+ZC)}{R_{1}R_{2}} = A\frac{ [(R_{1}+ZC)(2R_{2}+ZC) - R_{1}R_{2}] [(2R_{2}+ZC)(R_{3}+ZC) - R_{2}R_{3}] - R_{1}R_{2}^{2}R_{3}}{(R_{1}R_{2})((2R_{2}+ZC)(R_{3}+ZC)-R_{2}R_{3})} \\\\ 
-        V_{i}ZC(2R_{2}+ZC) = A\frac{ [(R_{1}+ZC)(2R_{2}+ZC) - R_{1}R_{2}] [(2R_{2}+ZC)(R_{3}+ZC)-R_{2}R_{3}] - R_{1}R_{2}^{2}R_{3} }{ (2R_{2}+ZC)(R_{3}+ZC)-R_{2}R_{3} } \\\\ 
-        V_{i}\frac{ [ZC(2R_{2}+ZC)] [(2R_{2}+ZC)(R_{3}+ZC)-R_{2}R_{3}] }{ [(R_{1}+ZC)(2R_{2}+ZC) - R_{1}R_{2}] [(2R_{2}+ZC)(R_{3}+ZC)-R_{2}R_{3}]-R_{1}R_{2}^{2}R_{3} } = A\\\\ 
+        &D\frac{ (R_{1}+ZC)(2R_{2}+ZC) - R_{1}R_{2} }{ R_{1}R_{2}} - V_{i}\frac{ ZC(2R_{2}+ZC)+ R_{1}ZC }{ R_{1}R_{2}} = D - V_{i}\frac{ZC}{R_{1}+ZC} \\\\
+        &D\frac{ (R_{1}+ZC)(2R_{2}+ZC) -  R_{1}R_{2} }{ R_{1}R_{2}} - D = V_{i}\frac{ ZC(2R_{2}+ZC)+ R_{1}ZC }{ R_{1}R_{2}} - V_{i}\frac{ZC}{R_{1}+ZC} \\\\
+        &D(\frac{ (R_{1}+ZC)(2R_{2}+ZC) -  R_{1}R_{2} }{ R_{1}R_{2} } - 1) = V_{i}(\frac{ ZC(2R_{2}+ZC)+ R_{1}ZC }{ R_{1}R_{2}} - \frac{ZC}{R_{1}+ZC}) \\\\
+        &D(\frac{ (R_{1}+ZC)(2R_{2}+ZC) -  2R_{1}R_{2} }{ R_{1}R_{2} }) = V_{i}\frac{ [ZC(2R_{2}+ZC)+ R_{1}ZC][R_{1}+ZC] - R_{1}R_{2}ZC }{ R_{1}R_{2}(R_{1}+ZC)} \\\\
     \end{align*}
+    \begin{equation}\label{Final D en funcion de Vi}
+        D = V_{i}\frac{ [ZC(2R_{2}+ZC)+ R_{1}ZC][R_{1}+ZC] - R_{1}R_{2}ZC }{ [(R_{1}+ZC)(2R_{2}+ZC) -  2R_{1}R_{2}][R_{1}+ZC]} \\\\
+    \end{equation}
+    
+    Remplazando \ref{Final D en funcion de Vi} en la ecuación \ref{Nodo D en A} para obtener A en términos de $V_{i}$
+    \begin{align*}
+        &A = V_{i}\frac{ [ZC(2R_{2}+ZC)+ R_{1}ZC][R_{1}+ZC] - R_{1}R_{2}ZC }{ [(R_{1}+ZC)(2R_{2}+ZC) -  2R_{1}R_{2}][R_{1}+ZC]} - V_{i}\frac{ZC}{R_{1}+ZC}\\\\
+        &A = V_{i}(\frac{ [ZC(2R_{2}+ZC)+ R_{1}ZC][R_{1}+ZC] - R_{1}R_{2}ZC }{ [(R_{1}+ZC)(2R_{2}+ZC) -  2R_{1}R_{2}][R_{1}+ZC]} - \frac{ZC}{R_{1}+ZC})\\\\
+        &A = V_{i}\frac{ ([ZC(2R_{2}+ZC)+ R_{1}ZC][R_{1}+ZC] - R_{1}R_{2}ZC)(R_{1}+ZC) - ZC[(R_{1}+ZC)(2R_{2}+ZC) -  2R_{1}R_{2}][R_{1}+ZC] }{ [(R_{1}+ZC)(2R_{2}+ZC) -  2R_{1}R_{2}][R_{1}+ZC][R_{1}+ZC] }\\\\
+    \end{align*}
+
+
+
+
+
+
+
+
+
+
+
+
+
     Con ayuda del software Matlab se simplifica la expresión remplazando los valores de cada elemento como se muestra en el datasheet
     \\
     $ R_{1} = 1150 \ohm;$ $R_{2} = 150 \ohm;$ $R_{3} = 1150 \ohm;$ $ZC = \frac{-j}{WC};$
