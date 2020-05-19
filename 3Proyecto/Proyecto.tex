@@ -493,6 +493,23 @@ Con las ecuaciones obtenidas de cada nodo se despeja cada una de ellas dejándol
 
     \subsection{Backend Solución en c++}
     \subsection{Backend Configuración del servidor}
+
+    Se realizó una investagación de servidores en la nube y optamos por usar Heroku ya que tiene una opción gratuita que permite hostear hasta 5 aplicaiones con un límite de peso de 512MB. \\
+    
+    Para realizar la configuración de la base de datos en Heroku, se hizo atravez del gestor de paquetes de javascript Node Js. En las instruccions del package.json se ejecuta el comando npm run start el cual ejecuta un archivo javascript con el siguiente código:\\
+
+    \begin{lstlisting}
+        const jsonServer = require('json-server');
+        const server = jsonServer.create();
+        const router = jsonServer.router('db.json');
+        const middlewares = jsonServer.defaults();
+        const port = process.env.PORT || 3000;
+
+        server.use(middlewares);
+        server.use(router);
+
+        server.listen(port);
+        \end{lstlisting}
     \subsection{Backend Solución con Node.js}
 
     \subsection{Frontend Solución en Angular}
