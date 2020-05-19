@@ -178,6 +178,14 @@ Teniendo todos los materiales, se realiza la conexión de la figura \ref{fig:con
 \label{tab:shuntA}
 \end{table}
 
+\begin{lstlisting}
+    x = [0.552 0.558 0.565 0.566 0.575 0.583 0.586 0.597 0.609 0.621 0.639 0.651 0.68 0.7 0.73 0.757 0.784 0.813 0.85 0.888 0.935 1.02 1.06 1.12 1.21 1.28 1.38 1.45 1.59 1.63 1.75 1.8 1.75 1.67 1.5 1.42 1.35 1.24 1.18 1.1 1.06 1.01 0.97 0.92 0.879 0.84 0.816 0.777 0.753 0.734 0.71 0.693 0.67 0.652 0.629 0.616 0.605 0.591 0.575 0.555 0.562]
+    y = [0.00105 0.00105 0.00107 0.00107 0.00107 0.00108 0.00109 0.00109 0.00111 0.00113 0.00115 0.00117 0.0012 0.00122 0.00125 0.0013 0.00134 0.00136 0.00143 0.00148 0.00153 0.00162 0.0017 0.00179 0.0019 0.002 0.0022 0.00226 0.00246 0.00254 0.0027 0.00277 0.00269 0.00257 0.00233 0.00222 0.00211 0.00196 0.00187 0.00176 0.00169 0.00163 0.00158 0.00151 0.00145 0.0014 0.00137 0.00131 0.00127 0.00125 0.00122 0.00119 0.00116 0.00115 0.00112 0.00111 0.0011 0.00108 0.00107 0.00105 0.00104]
+    plot( x, y, 'ob', 'markersize', 4, 'markerfacecolor', 'b' ),
+    grid,xlabel( 'Corriente ( A )' ), ylabel( 'Voltaje (V)' ),
+    title( 'Caracterización de la resistencia Shunt A' )
+\end{lstlisting}
+
 \begin{figure}[H]
     \begin{center}
     \includegraphics[width = 15cm]{3Proyecto/CorrienteVoltaje1.png}
@@ -222,6 +230,15 @@ Teniendo todos los materiales, se realiza la conexión de la figura \ref{fig:con
 \caption{Corriente vs Voltaje en la resistencia shunt B}
 \label{tab:shuntB}
 \end{table}
+
+\begin{lstlisting}
+    x = [ 0.549 0.574 0.606 0.633 0.67 0.698 0.744 0.77 0.823 0.867 0.922 0.99 1.05 1.15 1.23 1.36 1.48 1.69 1.8 1.7 1.48 1.35 1.22 1.15 1.05 0.977 0.913 0.85 0.811 0.76 0.728 0.685 0.662 0.635 0.611 0.599 0.58 0.557 ]
+    y = [ 0.00107 0.00111 0.00112 0.00115 0.00119 0.00125 0.0013 0.00133 0.0014 0.00145 0.00152 0.0016 0.0017 0.00186 0.00196 0.00213 0.0023 0.0026 0.00278 0.00262 0.0023 0.00214 0.00194 0.00182 0.0017 0.00162 0.00151 0.00143 0.00139 0.00132 0.00127 0.0012 0.00119 0.00116 0.00113 0.0011 0.00109 0.00108 ]
+    plot(x,y,'ob','markersize',4,'markerfacecolor','b'),
+    grid,xlabel('Corriente (A)'),ylabel('Voltaje (V)'),
+    title('Caracterización de la resistencia Shunt B')
+\end{lstlisting}
+
 \begin{figure}[H]
     \begin{center}
     \includegraphics[width = 15cm]{3Proyecto/CorrienteVoltaje2.png}
@@ -265,6 +282,15 @@ Teniendo todos los materiales, se realiza la conexión de la figura \ref{fig:con
 \caption{Corriente vs Voltaje en la resistencia shunt C}
 \label{tab:shuntC}
 \end{table}
+
+\begin{lstlisting}
+    x = [ 0.557 0.573 0.593 0.631 0.654 0.69 0.717 0.752 0.8 0.838 0.896 0.95 1.03 1.09 1.19 1.29 1.47 1.59 1.8 1.63 1.52 1.37 1.27 1.15 1.07 0.98 0.925 0.86 0.816 0.766 0.737 0.697 0.661 0.633 0.616 0.599 0.558 ]
+    y = [ 0.00106 0.00108 0.0011 0.00115 0.00117 0.00122 0.00126 0.00131 0.00137 0.00141 0.00149 0.00155 0.00166 0.00175 0.00189 0.00205 0.0023 0.00246 0.00276 0.00251 0.00237 0.00215 0.00199 0.00183 0.00172 0.0016 0.00153 0.00144 0.00138 0.00131 0.0013 0.00121 0.00119 0.00115 0.00113 0.00111 0.00107 ]
+    plot(x,y,'ob','markersize',4,'markerfacecolor','b'),
+    grid,xlabel('Corriente (A)'),ylabel('Voltaje (V)'),
+    title('Caracterización de la resistencia Shunt C')
+\end{lstlisting}
+
 
 \begin{figure}[H]
     \begin{center}
@@ -351,7 +377,10 @@ Para encontrar la relación que hay entre la entrada de corriente y el convertid
    \end{center}
 \end{figure}
 
-Como ya se tiene la relación entre la corriente de entrada y el voltaje de salida en la Shunt se procede hallar el voltaje entre el pin IP e IM resolviendo el circuito por medio del teorema de nodos como se muestra en la figura \ref{fig:Nodos}, los diodos de protección se eliminan ya que la tarjeta viene sin ellos de fabrica. 
+Como ya se tiene la relación entre la corriente de entrada y el voltaje de salida en la Shunt se procede hallar el voltaje entre el pin IP e IM resolviendo el circuito por medio del teorema de nodos como se muestra en la figura \ref{fig:Nodos}, los diodos de protección se eliminan ya que la tarjeta viene sin ellos de fabrica. \\
+
+Para simplificar el circuito electrónico se remplaza el filtro de ferrita con la resistencia de 1k por R1, y como el valor de los condensadores es el mismo, ambos condensadores se simbolizan con la letra C.
+
 \begin{figure}[H]
     \begin{center}
         \includegraphics[width = 10cm]{3Proyecto/Nodos.PNG}
@@ -360,12 +389,9 @@ Como ya se tiene la relación entre la corriente de entrada y el voltaje de sali
    \end{center}
 \end{figure}
 
-Se asume que el circuito se alimenta con una fuente de voltaje AC con terminal $+$ en IPIN y terminal $-$ en GND e IMIN resolviendo de la siguiente manera :
+Se asume que el circuito se alimenta con una fuente de voltaje AC con terminal $+$ en GND e IMIN y terminal $-$ en IPIN resolviendolo de la siguiente manera :
 \\  
-\begin{equation}\label{Nodo D}
-\end{equation}
 
-Con las ecuaciones obtenidas de cada nodo se despeja cada una de ellas dejándola igualada a una variable 
 \begin{itemize}
     \item \textbf{Nodo D} \\
     $\mathbf{i_{1}=i_{2}}$
@@ -494,3 +520,5 @@ Con las ecuaciones obtenidas de cada nodo se despeja cada una de ellas dejándol
         I = DRI (4.2566e^{-6} + 6.0898e^{-8}j) - (0.1855 - 0.0000j)   \\\\
         I = 4.2570e^{-6}DRI  - 0.1855   \\\\
     \end{align*}
+    
+        
