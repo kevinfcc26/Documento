@@ -494,11 +494,11 @@ Con las ecuaciones obtenidas de cada nodo se despeja cada una de ellas dejándol
     \subsection{Backend Solución en c++}
     \subsection{Backend Configuración del servidor}
 
-    Se realizó una investagación de servidores en la nube y optamos por usar Heroku ya que tiene una opción gratuita que permite hostear hasta 5 aplicaiones con un límite de peso de 512MB. \\
+    Se realizó una investagación de servidores en la nube y optamos por usar Heroku ya que tiene una opción gratuita que permite hostear hasta 5 aplicaiones con un límite de peso de 512MB. 
 
     \subsubsection{Configuración de la base de datos}
     
-    Para realizar la configuración de la base de datos en Heroku, se hizo atravez del gestor de paquetes de javascript Node Js. En las instruccions del package.json se ejecuta el comando npm run start el cual ejecuta un archivo javascript con el siguiente código:\\
+    Para realizar la configuración de la base de datos en Heroku, se hizo atravez del gestor de paquetes de javascript Node Js. En las instruccions del package.json se ejecuta el comando npm run start el cual ejecuta un archivo javascript con el siguiente código:
 
     \begin{lstlisting}
         const jsonServer = require('json-server');
@@ -512,11 +512,21 @@ Con las ecuaciones obtenidas de cada nodo se despeja cada una de ellas dejándol
 
         server.listen(port);
         \end{lstlisting}
-    De esta manera, Node levanta un servidor local en el puerto 3000 y heroku lo expone publicamente atravez de la URL https://json-ade-metering.herokuapp.com/.
+    De esta manera, Node levanta un servidor local en el puerto 3000 y heroku lo expone publicamente atravez de la URL https://json-ade-metering.herokuapp.com/.\\
+
+    Para configurar el archivo .json con la información, se creó un archivo llamado 'db.json' con una estructura básica inicial para almacenar datos. La estrutura básica se muestra a continucación:\\
+    \begin{lstlisting}
+        {
+            "registers": [
+                {}
+            ]
+        }
+    \end{lstlisting}
+    De esta manera se habilita la consulta de los registros por medio una peteción GET a la URL https://json-ade-metering.herokuapp.com/registers. Si se desea insertar (POST), actualizar (PUT) o eliminar (DELETE) información, se apunta al mismo endpoint pero con su repectivo método.
 
     \subsubsection{Configuración de la aplicación en Angilar 7}
 
-    La configurac
+    
 
     
     \subsection{Backend Solución con Node.js}
