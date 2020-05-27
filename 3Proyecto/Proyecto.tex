@@ -526,11 +526,79 @@ Con las ecuaciones obtenidas de cada nodo se despeja cada una de ellas dejándol
 
     \subsubsection{Configuración de la aplicación en Angilar 7}
 
-    
+    La configuración del proyecto en Angular es muy similar a la de la base da datos. Se hace atravez del gestor de paquetes de javascript Node Js. De igual manera en el archivo package.json se ejecuta el comando npm run start y acciona el siguiente script:
 
+    \begin{lstlisting}
+        //Install express server
+        const express = require('express');
+        const path = require('path');
+
+        const app = express();
+
+        // Serve only the static files form the dist directory
+        app.use(express.static('./dist/angular-pro-sidebar'));
+
+        app.get('/*', function (req, res) {
+
+        res.sendFile(path.join(__dirname, '/dist/angular-pro-sidebar/index.html'));
+        });
+
+        // Start the app by listening on the default Heroku port
+        app.listen(process.env.PORT || 8080);
+    \end{lstlisting}
+
+    La aplicación en Angular se habilita en el puerto 8080 y heroku lo expone publicamente por medio de la URL https://ieee-1459-usta.herokuapp.com/home.
     
     \subsection{Backend Solución con Node.js}
 
+    Se requirió realizar un programa en javascript, que cumpla la función de enviar el archivo db.json que genera el programa en C++, a la base de datos en Heroku. Para la comunicación se usó el paquete "xmlhttprequest", para relaziar las peticiones HTTPS a la base de datos.\\
+    El código que se desarrolló, es el siguiente:
+
+    \begin{lstlisting}
+        setInterval(init, 50)
+
+        function init() {
+            try {
+                var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+                var xhr = new XMLHttpRequest();
+                const fs = require('fs')
+                let rawdata = fs.readFileSync('db.json')
+                let registers = JSON.parse(rawdata)
+                xhr.open("PUT", 'https://json-ade-metering.herokuapp.com/registers/1', true);
+                xhr.setRequestHeader('Content-Type', 'application/json');
+                xhr.send(JSON.stringify(registers));
+                console.log(registers);
+                console.log("ESCRIBE")
+            } catch {
+                console.log("ERROR")
+            }
+        }
+    \end{lstlisting}
+
+    El código anteriormente descrito, se ejecuta cada 50 milisegundos atravez de una funcion de javascript llamada "setInterval(callback,timer)", esa función dispara la función init, la cual lee el archivo db.json y hace una petición PUT al servidor para actualizar los registros.
 
     \subsection{Frontend Solución en Angular}
-    hola otra vez
+    
+    Para la creación de la página web, se usó el framework javscript Angular 7, ya que implementa el lenguaje de programación 'Typescript' y permite tipar las variables de javascript y tener un mayor control del proyecto. De igual manera es necesario saber de HTML5, CSS3 y javascript para la creación de la página.\\
+    
+    Para instalar Angular es necesario tener node instalado en el computador. Para instalar node, por medio de la URL https://nodejs.org/es/, se descargó y se siguió el paso a paso del instalador. Figura \ref{fig:node} \\
+    \begin{figure}[H]
+        \begin{center}
+            \includegraphics[width = 15cm]{3Proyecto/node}
+        \caption{ Descarga de Node JS } 
+        \label{fig:node}
+       \end{center}
+    \end{figure}
+
+    Una vez instalado Node, se abrió una consola de comandos y se ejecutó el comando 'npm install -g @angular/cli' y de esta manera se instaló angular de forma global en el computador.\\
+
+    Para crear el proyecto en Angular se utlizó el comando 'ng new usta-tesis' y de esta forma, Angular generó todos los archivos y dependencias necesarias para generar la aplicación. Una vez hecha la configuración, se derigió a la raiz de proyecto ejecutando el comando 'cd usta-tesis', depués se ejecutó el comando 'ng serve -o' y este comando levanta un servidor local que por defecto es en la dirección http://localhost:4200 y la aplicación ya queda visible para empezar a trabajar en el proyecto.\\
+
+    En Angular, un componente hace referencia a una sección visual de la página y estos componentes se crean atravez del comando 'ng generate component componentName'. Cada componente cuenta con un archivo .html , .ts y .css. Para el proyectó creamos 4 componentes con los comandos de la figura GFFDF.\\
+
+    Con los componentes creados, se empezó a implementar el código necesario para crear la vista, los estilos y la funcionalidad.
+
+
+    \begin{lstlisting}
+        
+    \end{lstlisting}
