@@ -17,30 +17,9 @@ Se procedió a realizar la primer prueba con nuestro medidor y debido que en ese
     \item Licuadora Nutribullet.
     \item Plancha de 1000 W.
 \end{itemize}
-
-% % \begin{table} [H]
-% %     \begin{center}
-% %         \begin{tabular}{ |c|c|c| }
-% %             \hline
-% %             \multirow{2}{1cm}{CARGA} & MULTÍMETRO & \multicolumn{2}{ c| }{TARJETA}\\ \cline{2-3} 
-% %             & Corriente  & Voltaje\\
-% %             \hline
-% %             % \multicolumn{2}{ c| }{Multimetro} \\ 
-% %             % \cline{2-3}
-% %             Bombillo led de 9 W & 0,0772 \\
-% %             % \hline 
-% %             % Corriente (A) & 0.552 & 0.558 \\
-% %             % \hline
-% %             % Voltaje (V) & 0.00105 & 0.00105\\
-% %             \hline
-% %         \end{tabular}
-% %     \end{center}
-% %     \caption{Corriente vs Voltaje en la resistencia shunt A}
-% %     \label{tab:shuntA}
-% % \end{table}
 \begin{table}[htbp]
     \centering
-    \caption{Add caption}
+    \caption{Resultados de la prueba Nº 1}
       \begin{tabular}{|l|r|r|r|}
       \toprule
       \multicolumn{1}{|c|}{\multirow{2}[4]{*}{CARGA}} & \multicolumn{1}{c|}{MULTÍMETRO} & \multicolumn{2}{c|}{TARJETA} \\
@@ -61,7 +40,7 @@ Se procedió a realizar la primer prueba con nuestro medidor y debido que en ese
       Licuadora + licuadora pequeña + plancha & 12,55 & 116   & 14,6785336 \\
       \bottomrule
       \end{tabular}%
-    \label{tab:addlabel}%
+    \label{tab:resultado1-1}%
   \end{table}%
   
 
@@ -90,7 +69,7 @@ Se procedió a realizar la primer prueba con nuestro medidor y debido que en ese
       \multicolumn{2}{|c|}{**Promedio de diferencia =} & \cellcolor[rgb]{ .557,  .663,  .859}1,22381416 & \cellcolor[rgb]{ .557,  .663,  .859}177\% & \cellcolor[rgb]{ .557,  .663,  .859}1,568571429 & \cellcolor[rgb]{ .557,  .663,  .859}2\% \\
       \bottomrule
       \end{tabular}%
-    \label{tab:addlabel}%
+    \label{tab:resultado1-2}%
   \end{table}%
 
   **El valor de referencia es el osciloscopio o muiltimetro y el experimental es el valor de la tarjeta\\
@@ -102,5 +81,719 @@ Se procedió a realizar la primer prueba con nuestro medidor y debido que en ese
         \label{fig:prueba1}
    \end{center}
 \end{figure}
+
+En esta prueba, solo se comparó los registros de corriente rms y voltaje rms que entrega el software con un amperimetro y un osciloscopio midiendo voltaje.
+ De igual manera, se calculó un error absoluto y relativo para después ajustar los datos.
+
+ En la figura \ref{fig:prueba1}, la corriente de la tarjeta, tiene presición en su medición más hace falta ajustar su exactitud tomando cómo referencia otro instrumento de medición que se encuentre calibrado.
+
+Según la tabla \ref{tab:resultado1-1}, el promedio de error de voltaje es de un 2\%, \textcolor{red}{AVERIGUAR PORCENTAJE DE ERROR EN VOLATJE ADMITIDO}. El error de corriente es de 177\%, sin embargo ese valor tan alto es debido a que la medicón de una carga que consume baja energía cómo lo es el bombillo, no está dentro de la tolerancia de energía que admite la tarjeta. En la medición del bombillo hay un error relativo del 990\% con respecto a la corriente del amperimetro; por lo tanto, se procede a realizar pruebas con cargas que consuman más energía.
+\begin{figure}[H]
+  \begin{center}
+      \includegraphics[width = 5cm]{4Resultados/montaje-1.png}
+      \caption{ Montaje de la primera prueba } 
+      \label{fig:montaje1}
+ \end{center}
+\end{figure}
   
+\section{Segunda Prueba}
   
+En esta prueba se decidió medir todo el ciclo de lavado de una lavadora, con el fin de obtener datos en distintos escenarios los cuales seria llenado, lavado y centrifugado y tener una medición más estable.
+
+Carga:
+
+\begin{itemize}
+  \itemsep0em
+  \item Lavadora whirlpool de 9.8 A.
+\end{itemize}
+
+Ciclos de lavado:
+
+\begin{itemize}
+  \itemsep0em
+  \item Heavy
+  \item Regular
+  \item Super wash
+  \item Centrifugado
+  \item Rinse
+  \item Llenado
+\end{itemize}
+
+El análisis se realizó con respecto a los ciclos de lavado y en los todos los ciclos los siguientes datos fueron comunes:
+
+\begin{itemize}
+  \itemsep0em
+  \item Volatje RMS total con un valor promedio de 121 V en todos los ciclos.
+  \item Volatje RMS Fundamental con un valor promedio de 120,97 V en todos los ciclos.
+\end{itemize}
+
+\subsection{Análisis en el ciclo heavy}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AIRMS-AFIRMS-Heavy.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AIHRMS_CAL-Heavy.png}}
+  \hfill
+  \caption{AIRMS, AFIRMS Y AIHRMS-CAL VS DATETIME EN EL CICLO HEAVY}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVHRMS_CAL-Heavy.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/APF-Heavy.png}}
+  \hfill
+  \caption{AVHRMS Y APF VS DATETIME EN EL CICLO HEAVY}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AITHD-Heavy.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVTHD-Heavy.png}}
+  \hfill
+  \caption{AITHD Y AVTHD VS DATETIME EN EL CICLO HEAVY}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/APF1_CAL-Heavy.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AWATT-Heavy.png}}
+  \hfill
+  \caption{APF1-CAL Y AWATT VS DATETIME EN EL CICLO HEAVY}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AP1_CAL-Heavy.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/APH_CAL-Heavy.png}}
+  \hfill
+  \caption{AP1-CAL Y APH-CAL VS DATETIME EN EL CICLO HEAVY}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVAR-Heavy.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVA-Heavy.png}}
+  \hfill
+  \caption{AVAR Y AVA VS DATETIME EN EL CICLO HEAVY}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ASH_CAL-Heavy.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AS1_CAL-Heavy.png}}
+  \hfill
+  \caption{ASH-CAL Y AS1-CAL VS DATETIME EN EL CICLO HEAVY}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ASN_CAL-Heavy.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADI_CAL-Heavy.png}}
+  \hfill
+  \caption{ASN-CAL Y ADI-CAL VS DATETIME EN EL CICLO HEAVY}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADV_CAL-Heavy.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADH_CAL-Heavy.png}}
+  \hfill
+  \caption{ADV-CAL Y ADH-CAL VS DATETIME EN EL CICLO HEAVY}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AN_CAL-Heavy.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/NIRMS-Heavy.png}}
+  \hfill
+  \caption{AN-CAL Y NIRMS VS DATETIME EN EL CICLO HEAVY}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AFVARHR-Heavy.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AFWATTHR-Heavy.png}}
+  \hfill
+  \caption{AFVARHR Y AFWATTHR VS DATETIME EN EL CICLO HEAVY}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVAHR-Heavy.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVARHR-Heavy.png}}
+  \hfill
+  \caption{AVAHR Y AVARHR VS DATETIME EN EL CICLO HEAVY}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVAHR-Heavy.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVARHR-Heavy.png}}
+  \hfill
+  \caption{AVAHR Y AVARHR VS DATETIME EN EL CICLO HEAVY}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AWATTHR-Heavy.png}}
+  \hfill
+  \caption{AWATTHR VS DATETIME EN EL CICLO HEAVY}
+  \end{figure}
+\subsection{Análisis en el ciclo regular}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AIRMS-AFIRMS-Regular.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AIHRMS_CAL-Regular.png}}
+  \hfill
+  \caption{AIRMS, AFIRMS Y AIHRMS-CAL VS DATETIME EN EL CICLO REGULAR}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVHRMS_CAL-Regular.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/APF-Regular.png}}
+  \hfill
+  \caption{AVHRMS Y APF VS DATETIME EN EL CICLO REGULAR}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AITHD-Regular.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVTHD-Regular.png}}
+  \hfill
+  \caption{AITHD Y AVTHD VS DATETIME EN EL CICLO REGULAR}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/APF1_CAL-Regular.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AWATT-Regular.png}}
+  \hfill
+  \caption{APF1-CAL Y AWATT VS DATETIME EN EL CICLO REGULAR}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AP1_CAL-Regular.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/APH_CAL-Regular.png}}
+  \hfill
+  \caption{AP1-CAL Y APH-CAL VS DATETIME EN EL CICLO REGULAR}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVAR-Regular.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVA-Regular.png}}
+  \hfill
+  \caption{AVAR Y AVA VS DATETIME EN EL CICLO REGULAR}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ASH_CAL-Regular.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AS1_CAL-Regular.png}}
+  \hfill
+  \caption{ASH-CAL Y AS1-CAL VS DATETIME EN EL CICLO REGULAR}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ASN_CAL-Regular.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADI_CAL-Regular.png}}
+  \hfill
+  \caption{ASN-CAL Y ADI-CAL VS DATETIME EN EL CICLO REGULAR}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADV_CAL-Regular.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADH_CAL-Regular.png}}
+  \hfill
+  \caption{ADV-CAL Y ADH-CAL VS DATETIME EN EL CICLO REGULAR}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AN_CAL-Regular.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/NIRMS-Regular.png}}
+  \hfill
+  \caption{AN-CAL Y NIRMS VS DATETIME EN EL CICLO REGULAR}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AFVARHR-Regular.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AFWATTHR-Regular.png}}
+  \hfill
+  \caption{AFVARHR Y AFWATTHR VS DATETIME EN EL CICLO REGULAR}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVAHR-Regular.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVARHR-Regular.png}}
+  \hfill
+  \caption{AVAHR Y AVARHR VS DATETIME EN EL CICLO REGULAR}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVAHR-Regular.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVARHR-Regular.png}}
+  \hfill
+  \caption{AVAHR Y AVARHR VS DATETIME EN EL CICLO REGULAR}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AWATTHR-Regular.png}}
+  \hfill
+  \caption{AWATTHR VS DATETIME EN EL CICLO REGULAR}
+  \end{figure}
+\subsection{Análisis en el ciclo super wash}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AIRMS-AFIRMS-SuperWash.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AIHRMS_CAL-SuperWash.png}}
+  \hfill
+  \caption{AIRMS, AFIRMS Y AIHRMS-CAL VS DATETIME EN EL CICLO SUPER WASH}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVHRMS_CAL-SuperWash.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/APF-SuperWash.png}}
+  \hfill
+  \caption{AVHRMS Y APF VS DATETIME EN EL CICLO SUPER WASH}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AITHD-SuperWash.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVTHD-SuperWash.png}}
+  \hfill
+  \caption{AITHD Y AVTHD VS DATETIME EN EL CICLO SUPER WASH}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/APF1_CAL-SuperWash.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AWATT-SuperWash.png}}
+  \hfill
+  \caption{APF1-CAL Y AWATT VS DATETIME EN EL CICLO SUPER WASH}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AP1_CAL-SuperWash.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/APH_CAL-SuperWash.png}}
+  \hfill
+  \caption{AP1-CAL Y APH-CAL VS DATETIME EN EL CICLO SUPER WASH}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVAR-SuperWash.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVA-SuperWash.png}}
+  \hfill
+  \caption{AVAR Y AVA VS DATETIME EN EL CICLO SUPER WASH}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ASH_CAL-SuperWash.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AS1_CAL-SuperWash.png}}
+  \hfill
+  \caption{ASH-CAL Y AS1-CAL VS DATETIME EN EL CICLO SUPER WASH}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ASN_CAL-SuperWash.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADI_CAL-SuperWash.png}}
+  \hfill
+  \caption{ASN-CAL Y ADI-CAL VS DATETIME EN EL CICLO SUPER WASH}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADV_CAL-SuperWash.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADH_CAL-SuperWash.png}}
+  \hfill
+  \caption{ADV-CAL Y ADH-CAL VS DATETIME EN EL CICLO SUPER WASH}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AN_CAL-SuperWash.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/NIRMS-SuperWash.png}}
+  \hfill
+  \caption{AN-CAL Y NIRMS VS DATETIME EN EL CICLO SUPER WASH}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AFVARHR-SuperWash.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AFWATTHR-SuperWash.png}}
+  \hfill
+  \caption{AFVARHR Y AFWATTHR VS DATETIME EN EL CICLO SUPER WASH}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVAHR-SuperWash.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVARHR-SuperWash.png}}
+  \hfill
+  \caption{AVAHR Y AVARHR VS DATETIME EN EL CICLO SUPER WASH}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVAHR-SuperWash.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVARHR-SuperWash.png}}
+  \hfill
+  \caption{AVAHR Y AVARHR VS DATETIME EN EL CICLO SUPER WASH}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AWATTHR-SuperWash.png}}
+  \hfill
+  \caption{AWATTHR VS DATETIME EN EL CICLO SUPER WASH}
+  \end{figure}
+\subsection{Análisis en el ciclo centrifugado}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AIRMS-AFIRMS-Centrifugado.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AIHRMS_CAL-Centrifugado.png}}
+  \hfill
+  \caption{AIRMS, AFIRMS Y AIHRMS-CAL VS DATETIME EN EL CICLO CENTRIFUGADO}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVHRMS_CAL-Centrifugado.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/APF-Centrifugado.png}}
+  \hfill
+  \caption{AVHRMS Y APF VS DATETIME EN EL CICLO CENTRIFUGADO}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AITHD-Centrifugado.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVTHD-Centrifugado.png}}
+  \hfill
+  \caption{AITHD Y AVTHD VS DATETIME EN EL CICLO CENTRIFUGADO}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/APF1_CAL-Centrifugado.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AWATT-Centrifugado.png}}
+  \hfill
+  \caption{APF1-CAL Y AWATT VS DATETIME EN EL CICLO CENTRIFUGADO}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AP1_CAL-Centrifugado.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/APH_CAL-Centrifugado.png}}
+  \hfill
+  \caption{AP1-CAL Y APH-CAL VS DATETIME EN EL CICLO CENTRIFUGADO}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVAR-Centrifugado.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVA-Centrifugado.png}}
+  \hfill
+  \caption{AVAR Y AVA VS DATETIME EN EL CICLO CENTRIFUGADO}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ASH_CAL-Centrifugado.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AS1_CAL-Centrifugado.png}}
+  \hfill
+  \caption{ASH-CAL Y AS1-CAL VS DATETIME EN EL CICLO CENTRIFUGADO}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ASN_CAL-Centrifugado.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADI_CAL-Centrifugado.png}}
+  \hfill
+  \caption{ASN-CAL Y ADI-CAL VS DATETIME EN EL CICLO CENTRIFUGADO}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADV_CAL-Centrifugado.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADH_CAL-Centrifugado.png}}
+  \hfill
+  \caption{ADV-CAL Y ADH-CAL VS DATETIME EN EL CICLO CENTRIFUGADO}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AN_CAL-Centrifugado.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/NIRMS-Centrifugado.png}}
+  \hfill
+  \caption{AN-CAL Y NIRMS VS DATETIME EN EL CICLO CENTRIFUGADO}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AFVARHR-Centrifugado.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AFWATTHR-Centrifugado.png}}
+  \hfill
+  \caption{AFVARHR Y AFWATTHR VS DATETIME EN EL CICLO CENTRIFUGADO}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVAHR-Centrifugado.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVARHR-Centrifugado.png}}
+  \hfill
+  \caption{AVAHR Y AVARHR VS DATETIME EN EL CICLO CENTRIFUGADO}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVAHR-Centrifugado.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVARHR-Centrifugado.png}}
+  \hfill
+  \caption{AVAHR Y AVARHR VS DATETIME EN EL CICLO CENTRIFUGADO}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AWATTHR-Centrifugado.png}}
+  \hfill
+  \caption{AWATTHR VS DATETIME EN EL CICLO CENTRIFUGADO}
+  \end{figure}
+\subsection{Análisis en el ciclo rinse}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AIRMS-AFIRMS-Rinse.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AIHRMS_CAL-Rinse.png}}
+  \hfill
+  \caption{AIRMS, AFIRMS Y AIHRMS-CAL VS DATETIME EN EL CICLO RINSE}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVHRMS_CAL-Rinse.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/APF-Rinse.png}}
+  \hfill
+  \caption{AVHRMS Y APF VS DATETIME EN EL CICLO RINSE}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AITHD-Rinse.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVTHD-Rinse.png}}
+  \hfill
+  \caption{AITHD Y AVTHD VS DATETIME EN EL CICLO RINSE}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/APF1_CAL-Rinse.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AWATT-Rinse.png}}
+  \hfill
+  \caption{APF1-CAL Y AWATT VS DATETIME EN EL CICLO RINSE}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AP1_CAL-Rinse.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/APH_CAL-Rinse.png}}
+  \hfill
+  \caption{AP1-CAL Y APH-CAL VS DATETIME EN EL CICLO RINSE}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVAR-Rinse.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVA-Rinse.png}}
+  \hfill
+  \caption{AVAR Y AVA VS DATETIME EN EL CICLO RINSE}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ASH_CAL-Rinse.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AS1_CAL-Rinse.png}}
+  \hfill
+  \caption{ASH-CAL Y AS1-CAL VS DATETIME EN EL CICLO RINSE}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ASN_CAL-Rinse.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADI_CAL-Rinse.png}}
+  \hfill
+  \caption{ASN-CAL Y ADI-CAL VS DATETIME EN EL CICLO RINSE}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADV_CAL-Rinse.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADH_CAL-Rinse.png}}
+  \hfill
+  \caption{ADV-CAL Y ADH-CAL VS DATETIME EN EL CICLO RINSE}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AN_CAL-Rinse.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/NIRMS-Rinse.png}}
+  \hfill
+  \caption{AN-CAL Y NIRMS VS DATETIME EN EL CICLO RINSE}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AFVARHR-Rinse.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AFWATTHR-Rinse.png}}
+  \hfill
+  \caption{AFVARHR Y AFWATTHR VS DATETIME EN EL CICLO RINSE}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVAHR-Rinse.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVARHR-Rinse.png}}
+  \hfill
+  \caption{AVAHR Y AVARHR VS DATETIME EN EL CICLO RINSE}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVAHR-Rinse.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVARHR-Rinse.png}}
+  \hfill
+  \caption{AVAHR Y AVARHR VS DATETIME EN EL CICLO RINSE}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AWATTHR-Rinse.png}}
+  \hfill
+  \caption{AWATTHR VS DATETIME EN EL CICLO RINSE}
+  \end{figure}
+\subsection{Análisis en el ciclo llenado}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AIRMS-AFIRMS-Llenado.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AIHRMS_CAL-Llenado.png}}
+  \hfill
+  \caption{AIRMS, AFIRMS Y AIHRMS-CAL VS DATETIME EN EL CICLO LLENADO}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVHRMS_CAL-Llenado.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/APF-Llenado.png}}
+  \hfill
+  \caption{AVHRMS Y APF VS DATETIME EN EL CICLO LLENADO}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AITHD-Llenado.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVTHD-Llenado.png}}
+  \hfill
+  \caption{AITHD Y AVTHD VS DATETIME EN EL CICLO LLENADO}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/APF1_CAL-Llenado.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AWATT-Llenado.png}}
+  \hfill
+  \caption{APF1-CAL Y AWATT VS DATETIME EN EL CICLO LLENADO}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AP1_CAL-Llenado.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/APH_CAL-Llenado.png}}
+  \hfill
+  \caption{AP1-CAL Y APH-CAL VS DATETIME EN EL CICLO LLENADO}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVAR-Llenado.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVA-Llenado.png}}
+  \hfill
+  \caption{AVAR Y AVA VS DATETIME EN EL CICLO LLENADO}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ASH_CAL-Llenado.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AS1_CAL-Llenado.png}}
+  \hfill
+  \caption{ASH-CAL Y AS1-CAL VS DATETIME EN EL CICLO LLENADO}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ASN_CAL-Llenado.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADI_CAL-Llenado.png}}
+  \hfill
+  \caption{ASN-CAL Y ADI-CAL VS DATETIME EN EL CICLO LLENADO}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADV_CAL-Llenado.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADH_CAL-Llenado.png}}
+  \hfill
+  \caption{ADV-CAL Y ADH-CAL VS DATETIME EN EL CICLO LLENADO}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AN_CAL-Llenado.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/NIRMS-Llenado.png}}
+  \hfill
+  \caption{AN-CAL Y NIRMS VS DATETIME EN EL CICLO LLENADO}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AFVARHR-Llenado.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AFWATTHR-Llenado.png}}
+  \hfill
+  \caption{AFVARHR Y AFWATTHR VS DATETIME EN EL CICLO LLENADO}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVAHR-Llenado.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVARHR-Llenado.png}}
+  \hfill
+  \caption{AVAHR Y AVARHR VS DATETIME EN EL CICLO LLENADO}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVAHR-Llenado.png}}
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVARHR-Llenado.png}}
+  \hfill
+  \caption{AVAHR Y AVARHR VS DATETIME EN EL CICLO LLENADO}
+  \end{figure}
+\begin{figure}[H]
+  \hfill
+  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AWATTHR-Llenado.png}}
+  \hfill
+  \caption{AWATTHR VS DATETIME EN EL CICLO LLENADO}
+  \end{figure}
+
+  Con esta prueba, se obtienen una caractireizacion más del medidor, la cuál es que para un funcionamiento estable y preciso de la tarjeta, es necesario que las cargas consuman como mínimo 1 Amperio, sin embargo, debido a la alta frecuencia con la que el ADE7978 hace la medición, hay ocasiones en que los datos presentan una subida o bajada erronea. \\\\
+  Complatada la prueba monofásica, se precedió a realizar la prueba trifásica desbalanceada con el fin de tener cubierto todos los casos de medición que se planteó en este proyecto.
+  \section{Tercer Prueba}
