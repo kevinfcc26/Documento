@@ -504,10 +504,15 @@ Finalmente, la información se visualiza de forma gráfica y númerica en una p�
             &A = V_{i}\frac{ [ZC(2R_{2}+ZC)+ R_{1}ZC][R_{1}+ZC] - R_{1}R_{2}ZC }{ [(R_{1}+ZC)(2R_{2}+ZC) -  2R_{1}R_{2}][R_{1}+ZC]} - V_{i}\frac{ZC}{R_{1}+ZC}\\\\
             &A = V_{i}(\frac{ [ZC(2R_{2}+ZC)+ R_{1}ZC][R_{1}+ZC] - R_{1}R_{2}ZC }{ [(R_{1}+ZC)(2R_{2}+ZC) -  2R_{1}R_{2}][R_{1}+ZC]} - \frac{ZC}{R_{1}+ZC})\\\\
         \end{align*}
-        
+
+        \small
         \begin{equation}\label{Final A en funcion de Vi}
-            A = V_{i}\frac{ ([ZC(2R_{2}+ZC)+ R_{1}ZC][R_{1}+ZC] - R_{1}R_{2}ZC)(R_{1}+ZC) - ZC[(R_{1}+ZC)(2R_{2}+ZC) -  2R_{1}R_{2}][R_{1}+ZC] }{ [(R_{1}+ZC)(2R_{2}+ZC) -  2R_{1}R_{2}][R_{1}+ZC][R_{1}+ZC] }
+            \begin{aligned}
+                & A = V_{i} *\\\\
+                & \frac{ ([ZC(2R_{2}+ZC)+ R_{1}ZC][R_{1}+ZC] - R_{1}R_{2}ZC)(R_{1}+ZC) - ZC[(R_{1}+ZC)(2R_{2}+ZC) -  2R_{1}R_{2}][R_{1}+ZC] }{ [(R_{1}+ZC)(2R_{2}+ZC) -  2R_{1}R_{2}][R_{1}+ZC][R_{1}+ZC] }\\
+            \end{aligned}
         \end{equation}
+        \normalsize
     
         Con ayuda del software Matlab se remplazan los valores y se resuelve la ecuación D y A
 
@@ -524,7 +529,8 @@ Finalmente, la información se visualiza de forma gráfica y númerica en una p�
             DenD = ((R1+ZC)*(2*R2+ZC)-2*R1*R2)*(R1+ZC)
             D= NumD/DenD
 
-            NumA = ((ZC*(2*R2+ZC)+R1*ZC)*(R1+ZC)-R1*R2*ZC)*(R1+ZC)-ZC*((R1+ZC)*(2*R2+ZC)-2*R1*R2)*(R1+ZC)
+            NumA = ((ZC*(2*R2+ZC)+R1*ZC)*(R1+ZC)-R1*R2*ZC)*(R1+ZC)-ZC *
+                    ((R1+ZC)*(2*R2+ZC)-2*R1*R2)*(R1+ZC)
             DenA = ((R1+ZC)*(2*R2+ZC)-2*R1*R2)*(R1+ZC)*(R1+ZC)
             A= NumA/DenA
         \end{lstlisting}

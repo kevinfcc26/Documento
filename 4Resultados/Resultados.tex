@@ -797,3 +797,120 @@ El análisis se realizó con respecto a los ciclos de lavado y en los todos los 
   Con esta prueba, se obtuvo una caracterización más del medidor, la cuál para un funcionamiento estable y preciso de la tarjeta, es necesario que las cargas consuman como mínimo 1 Amperio, sin embargo, debido a la alta frecuencia con la que el ADE7978 hace la medición, hay ocasiones en que los datos presentan un valor fuera del rango. \\\\
   Completada la prueba monofásica, se procedió a realizar la prueba trifásica desbalanceada con el fin de tener cubierto todos los casos de medición que se planteó en este proyecto.
   \section{Tercer Prueba}
+
+  Para esta prueba se utilizó una red trifásica doméstica y a cada fase se conectó a una carga. las tres cargas son tienen un consumo distinto para así probar y medir el caso trifásico desbalanceado.\\\\
+  A continuación se describe las cargas que se usaron:\\
+  \begin{itemize}
+    \itemsep0em
+    \item FASE A - 2 pantallas, 1 cpu, 2 portatiles y una Raspberry.
+    \item FASE B - Caminadora eléctrica.
+    \item FASE C - Lavadora samsung.
+  \end{itemize}
+  \begin{figure}[H]
+    \hfill
+    \subfigure{\includegraphics[width=7.5cm]{4Resultados/lavadora.jpeg}}
+    \hfill
+    \subfigure{\includegraphics[width=7.5cm]{4Resultados/caminadora.jpeg}}
+    \hfill
+    \caption{Lavadora y caminadora usadas en la prueba}
+    \end{figure}
+    \begin{figure}[H]
+      \begin{center}
+          \includegraphics[width = 7.5cm]{4Resultados/cargas.jpeg}
+          \caption{ Carga de la fase A} 
+          \label{fig:cargaA}
+     \end{center}
+    \end{figure}
+    \subsection{Resultados de la prueba}
+    \begin{figure}[H]
+      \hfill
+      \subfigure{\includegraphics[width=7.5cm]{4Resultados/corriente-rms.png}}
+      \hfill
+      \subfigure{\includegraphics[width=7.5cm]{4Resultados/corriente-fundamental.png}}
+      \hfill
+      \caption{CORRIENTE RMS Y CORRIENTE FUNDAMENTAL}
+      \end{figure}
+
+      Las variaciones que se ven en la señal CIRMS es debido a los distintos ciclos que tiene la lavadora mientras realizaba su ciclo de lavado. \\
+      La caminadora se le hizo una variación en la velocidad por lo cual se ve una subida en la gráfica de corriente BIRMS.\\
+      La carga en la fase A no tuvo ninguna variación durante la medición por lo cual la señal AIRMS es estable.\\
+    \begin{figure}[H]
+      \hfill
+      \subfigure{\includegraphics[width=7.5cm]{4Resultados/corriente-armonica.png}}
+      \hfill
+      \subfigure{\includegraphics[width=7.5cm]{4Resultados/THDI.png}}
+      \hfill
+      \caption{CORRIENTE ARMÓMOCA Y DISTORSIÓN ARMÓNICA DE CORRIENTE}
+      \end{figure}
+    \begin{figure}[H]
+      \hfill
+      \subfigure{\includegraphics[width=7.5cm]{4Resultados/voltaje-rms.png}}
+      \hfill
+      \subfigure{\includegraphics[width=7.5cm]{4Resultados/voltaje-fundamental.png}}
+      \hfill
+      \caption{VOLTAJE RMS Y VOLTAJE FUNDAMENTAL}
+      \end{figure}
+    \begin{figure}[H]
+      \hfill
+      \subfigure{\includegraphics[width=7.5cm]{4Resultados/voltaje-armonico.png}}
+      \hfill
+      \subfigure{\includegraphics[width=7.5cm]{4Resultados/THDV.png}}
+      \hfill
+      \caption{VOLTAJE ARMÓMOCA Y DISTORSIÓN ARMÓNICA DE VOLTAJ}
+      \end{figure}
+    \begin{figure}[H]
+      \hfill
+      \subfigure{\includegraphics[width=7.5cm]{4Resultados/factor-potencia-total.png}}
+      \hfill
+      \subfigure{\includegraphics[width=7.5cm]{4Resultados/factor-potencia-fundamental.png}}
+      \hfill
+      \caption{FACTOR DE POTENCIA TOTAL Y FACTOR DE POTENCIA FUNDAMENTAL}
+      \end{figure}
+    \begin{figure}[H]
+      \hfill
+      \subfigure{\includegraphics[width=7.5cm]{4Resultados/potencia-aparente-total.png}}
+      \hfill
+      \subfigure{\includegraphics[width=7.5cm]{4Resultados/potencia-aparente-fundamental.png}}
+      \hfill
+      \caption{POTENCIA APARENTE TOTAL Y POTENCIA APARENTE FUNDAMENTAL}
+      \end{figure}
+    \begin{figure}[H]
+      \hfill
+      \subfigure{\includegraphics[width=7.5cm]{4Resultados/potencia-aparente-armonica.png}}
+      \hfill
+      \subfigure{\includegraphics[width=7.5cm]{4Resultados/angulo-desfase.png}}
+      \hfill
+      \caption{POTENCIA APARENTE ARMÓNICA Y ÁNGULO DE DESFASE ENTRE FASES}
+      \end{figure}
+
+    En la gráfica de los ángulos de desfase, las etiquetas se interpretan de la siguiente manera:
+    \begin{itemize}
+      \itemsep0em
+      \item ANGLE 0 - ángulo de desfase entre la fase A y B
+      \item ANGLE 1 - ángulo de desfase entre la fase B y C
+      \item ANGLE 2 - ángulo de desfase entre la fase C y A
+    \end{itemize}
+    \begin{figure}[H]
+      \hfill
+      \subfigure{\includegraphics[width=7.5cm]{4Resultados/potencia-activa-total.png}}
+      \hfill
+      \subfigure{\includegraphics[width=7.5cm]{4Resultados/potencia-activa-armonica.png}}
+      \hfill
+      \caption{POTENCIA ACTIVA TOTAL Y POTENCIA ACTIVA ARMÓNICA}
+      \end{figure}
+    \begin{figure}[H]
+      \hfill
+      \subfigure{\includegraphics[width=7.5cm]{4Resultados/current-distortion-var.png}}
+      \hfill
+      \subfigure{\includegraphics[width=7.5cm]{4Resultados/voltage-distortion-var.png}}
+      \hfill
+      \caption{DISTORSIÓN DE POTENCIA (VAR) EN CORRIENTE Y VOLTAJE}
+      \end{figure}
+    \begin{figure}[H]
+      \hfill
+      \subfigure{\includegraphics[width=7.5cm]{4Resultados/NIRMS.png}}
+      \hfill
+      \subfigure{\includegraphics[width=7.5cm]{4Resultados/potencia-noactiva-var.png}}
+      \hfill
+      \caption{CORRIENTE RMS EN NEUTRO Y POTENCIA (VAR) NO ACTIVA}
+      \end{figure}
