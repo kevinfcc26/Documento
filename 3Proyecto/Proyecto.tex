@@ -488,25 +488,25 @@ Finalmente, la información se visualiza de forma gráfica y númerica en una p�
             A = D - V_{i}\frac{ZC}{R_{1}+ZC}
         \end{equation}
     
-        Remplazando la ecuación \ref{Nodo D en B} en la ecuación \ref{Nodo D en A} para dejar D en terminos de $V_{i}$
+        Remplazando la ecuación \ref{Nodo D en B} en la ecuación \ref{Nodo D en A} para dejar D en términos de $V_{i}$
         \begin{align*}
             &D\frac{ (R_{1}+ZC)(2R_{2}+ZC) - R_{1}R_{2} }{ R_{1}R_{2}} - V_{i}\frac{ ZC(2R_{2}+ZC)+ R_{1}ZC }{ R_{1}R_{2}} = D - V_{i}\frac{ZC}{R_{1}+ZC} \\\\
             &D\frac{ (R_{1}+ZC)(2R_{2}+ZC) -  R_{1}R_{2} }{ R_{1}R_{2}} - D = V_{i}\frac{ ZC(2R_{2}+ZC)+ R_{1}ZC }{ R_{1}R_{2}} - V_{i}\frac{ZC}{R_{1}+ZC} \\\\
             &D(\frac{ (R_{1}+ZC)(2R_{2}+ZC) -  R_{1}R_{2} }{ R_{1}R_{2} } - 1) = V_{i}(\frac{ ZC(2R_{2}+ZC)+ R_{1}ZC }{ R_{1}R_{2}} - \frac{ZC}{R_{1}+ZC}) \\\\
             &D(\frac{ (R_{1}+ZC)(2R_{2}+ZC) -  2R_{1}R_{2} }{ R_{1}R_{2} }) = V_{i}\frac{ [ZC(2R_{2}+ZC)+ R_{1}ZC][R_{1}+ZC] - R_{1}R_{2}ZC }{ R_{1}R_{2}(R_{1}+ZC)} \\\\
         \end{align*}
-        \begin{equation}\label{Final D en funcion de Vi}
+        \begin{equation}\label{Final D en función de Vi}
             D = V_{i}\frac{ [ZC(2R_{2}+ZC)+ R_{1}ZC][R_{1}+ZC] - R_{1}R_{2}ZC }{ [(R_{1}+ZC)(2R_{2}+ZC) -  2R_{1}R_{2}][R_{1}+ZC]} \\\\
         \end{equation}
     
-        Remplazando \ref{Final D en funcion de Vi} en la ecuación \ref{Nodo D en A} para obtener A en términos de $V_{i}$
+        Remplazando \ref{Final D en función de Vi} en la ecuación \ref{Nodo D en A} para obtener A en términos de $V_{i}$
         \begin{align*}
             &A = V_{i}\frac{ [ZC(2R_{2}+ZC)+ R_{1}ZC][R_{1}+ZC] - R_{1}R_{2}ZC }{ [(R_{1}+ZC)(2R_{2}+ZC) -  2R_{1}R_{2}][R_{1}+ZC]} - V_{i}\frac{ZC}{R_{1}+ZC}\\\\
             &A = V_{i}(\frac{ [ZC(2R_{2}+ZC)+ R_{1}ZC][R_{1}+ZC] - R_{1}R_{2}ZC }{ [(R_{1}+ZC)(2R_{2}+ZC) -  2R_{1}R_{2}][R_{1}+ZC]} - \frac{ZC}{R_{1}+ZC})\\\\
         \end{align*}
 
         \small
-        \begin{equation}\label{Final A en funcion de Vi}
+        \begin{equation}\label{Final A en función de Vi}
             \begin{aligned}
                 & A = V_{i} *\\\\
                 & \frac{ ([ZC(2R_{2}+ZC)+ R_{1}ZC][R_{1}+ZC] - R_{1}R_{2}ZC)(R_{1}+ZC) - ZC[(R_{1}+ZC)(2R_{2}+ZC) -  2R_{1}R_{2}][R_{1}+ZC] }{ [(R_{1}+ZC)(2R_{2}+ZC) -  2R_{1}R_{2}][R_{1}+ZC][R_{1}+ZC] }\\
@@ -553,7 +553,7 @@ Finalmente, la información se visualiza de forma gráfica y númerica en una p�
         \end{equation}
 
         
-        Usando la relación entre corriente y voltaje de las Shunt ecuaciones ( \ref{crt ShuntA},\ref{crt ShuntB}, \ref{crt ShuntC}) se remplaza para despejar la ecuación enterminos de corriente y voltaje entre IM-IP
+        Usando la relación entre corriente y voltaje de las Shunt ecuaciones ( \ref{crt ShuntA},\ref{crt ShuntB}, \ref{crt ShuntC}) se remplaza para despejar la ecuación entérminos de corriente y voltaje entre IM-IP
         \begin{itemize}
             \item \textbf{Shunt A} 
                 \begin{equation}\label{Tension V IM-IP}
@@ -605,7 +605,7 @@ Finalmente, la información se visualiza de forma gráfica y númerica en una p�
                 \end{equation}
         \end{itemize}
         
-        Con ayuda de Matlab se resuelve la ecuacion dejandola en terminos de $I = f(ADCI) $.
+        Con ayuda de Matlab se resuelve la ecuacion dejandola en términos de $I = f(ADCI) $.
         \begin{itemize}
             \item \textbf{Shunt A} 
                 \begin{lstlisting}
@@ -655,12 +655,12 @@ Finalmente, la información se visualiza de forma gráfica y númerica en una p�
         \begin{figure}[H]
             \begin{center}
                 \includegraphics[width = 15cm]{3Proyecto/I2Cconnection.png}
-                \caption{ Conección I2C } 
+                \caption{ Conexión I2C } 
                 \label{fig:Coneccion I2C}
             \end{center}
         \end{figure}
 
-        El puerto de comunicacion del ADE7978 funciona 100\% como un esclavo a un clock maximo de 400kHz; en la operacion de escritura se envia un bit en 0  para indicar que la operacion va a iniciar, seguido de la direccion del dispositivo que es de 8 bits, seguido de la direccion del registro que se quiere escribir y por ultimo la información que se quiere escrib en el registro fig: \ref{fig:I2C protocol write}; para la operacion de lectura se debe envia un 0 para indicar que la operacion va a iniciar, seguido de la direccion del dispositivo y la direccion del registro que se quiere leer, seguido de otro bit en 0 y la dirección del dispositivo nuevamente, en ese moeto se empieza a recibir la información que esta alojada en ese registro fig: \ref{fig:I2C protocol read}.
+        El puerto de comunicacion del ADE7978 funciona 100\% como un esclavo a un clock maximo de 400kHz; en la operaciónde escritura se envia un bit en 0  para indicar que la operaciónva a iniciar, seguido de la direccion del dispositivo que es de 8 bits, seguido de la direccion del registro que se quiere escribir y por ultimo la información que se quiere escrib en el registro fig: \ref{fig:I2C protocol write}; para la operaciónde lectura se debe envia un 0 para indicar que la operaciónva a iniciar, seguido de la direccion del dispositivo y la direccion del registro que se quiere leer, seguido de otro bit en 0 y la dirección del dispositivo nuevamente, en ese moeto se empieza a recibir la información que esta alojada en ese registro fig: \ref{fig:I2C protocol read}.
         
         \begin{figure}[H]
             \begin{center}
@@ -677,7 +677,7 @@ Finalmente, la información se visualiza de forma gráfica y númerica en una p�
             \end{center}
         \end{figure}
 
-        Con la teoria obtenida del datasheet, se realizó la programación de esta comunicación por medio del lenguaje c++, usando la libreria BCM2835 \cite{A40}, a esta libreria fue necesario realizarle un cambio en la funcion de lectura del puerto I2C, ya que esta libreria esta desarrollada para enviar direcciones de registro de solo 8 bits y en el caso del ADE 7978 cada direccion de registro es de 16 bits, esta modificacion se realizó en el metodo \textbf{bcm2835 i2c read register rs} agregandole un segundo caracter al la operacion de envio de la siguiente manera :
+        Con la teoria obtenida del datasheet, se realizó la programación de esta comunicación por medio del lenguaje c++, usando la libreria BCM2835 \cite{A40}, a esta libreria fue necesario realizarle un cambio en la función de lectura del puerto I2C, ya que esta libreria está desarrollada para enviar direcciones de registro de solo 8 bits y en el caso del ADE 7978 cada direccion de registro es de 16 bits, esta modificacion se realizó en el metodo \textbf{bcm2835 i2c read register rs} agregandole un segundo carácter al la operaciónde envio de la siguiente manera :
         \begin{lstlisting}
         /* Clear FIFO */
         bcm2835_peri_set_bits(control, BCM2835_BSC_C_CLEAR_1 , BCM2835_BSC_C_CLEAR_1 );
@@ -856,7 +856,7 @@ Finalmente, la información se visualiza de forma gráfica y númerica en una p�
         %     }
         % \end{lstlisting}
 
-        El código anteriormente descrito, se ejecuta cada 50 milisegundos atravez de una funcion de javascript llamada "setInterval(callback,timer)", esa función dispara la función init, la cual lee el archivo db.json y hace una petición PUT al servidor para actualizar los registros.
+        El código anteriormente descrito, se ejecuta cada 50 milisegundos atravez de una función de javascript llamada "setInterval(callback,timer)", esa función dispara la función init, la cual lee el archivo db.json y hace una petición PUT al servidor para actualizar los registros.
 
     \subsection{Frontend Solución en Angular}
         
