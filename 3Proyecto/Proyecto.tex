@@ -778,56 +778,56 @@ Finalmente, la información se visualiza de forma gráfica y númerica en una p�
             \end{itemize}
 
             Para mas información de como esta diseñado el programa, visitar el repositorio publico github \cite{A41}
-    \subsection{Backend Configuración del servidor}
+    \subsection{Backend Configuraci\'{o}n del servidor}
         Se realizó una investagación de servidores en la nube y optamos por usar Heroku ya que tiene una opción gratuita que permite hostear hasta 5 aplicaiones con un límite de peso de 512MB. 
         \subsubsection{Configuraci\'on de la base de datos}
             Para realizar la configuración de la base de datos en Heroku, se hizo atravez del gestor de paquetes de javascript Node Js. En las instruccions del package.json se ejecuta el comando npm run start el cual ejecuta un archivo javascript con el siguiente código:
 
-            % \begin{lstlisting}
-            %     const jsonServer = require('json-server');
-            %     const server = jsonServer.create();
-            %     const router = jsonServer.router('db.json');
-            %     const middlewares = jsonServer.defaults();
-            %     const port = process.env.PORT || 3000;
+            \begin{lstlisting}
+                const jsonServer = require('json-server');
+                const server = jsonServer.create();
+                const router = jsonServer.router('db.json');
+                const middlewares = jsonServer.defaults();
+                const port = process.env.PORT || 3000;
             
-            %     server.use(middlewares);
-            %     server.use(router);
+                server.use(middlewares);
+                server.use(router);
             
-            %     server.listen(port);
-            % \end{lstlisting}
+                server.listen(port);
+            \end{lstlisting}
             De esta manera, Node levanta un servidor local en el puerto 3000 y heroku lo expone publicamente atravez de la URL https://json-ade-metering.herokuapp.com/.\\
             Para configurar el archivo .json con la información, se creó un archivo llamado 'db.json' con una estructura básica inicial para almacenar datos. La estrutura básica se muestra a continucación:\\
-            % \begin{lstlisting}
-            %     {
-            %         "registers": [
-            %             {}
-            %         ]
-            %     }
-            % \end{lstlisting}
+            \begin{lstlisting}
+                {
+                    "registers": [
+                        {}
+                    ]
+                }
+            \end{lstlisting}
             De esta manera se habilita la consulta de los registros por medio una peteción GET a la URL https://json-ade-metering.herokuapp.com/registers. Si se desea insertar (POST), actualizar (PUT) o eliminar (DELETE) información, se apunta al mismo endpoint pero con su repectivo método.
 
         \subsubsection{Configuración de la aplicación en Angular 7}
 
             La configuración del proyecto en Angular es muy similar a la de la base da datos. Se hace atravez del gestor de paquetes de javascript Node Js. De igual manera en el archivo package.json se ejecuta el comando npm run start y acciona el siguiente script:
 
-            % \begin{lstlisting}
-            %     //Install express server
-            %     const express = require('express');
-            %     const path = require('path');
+            \begin{lstlisting}
+                //Install express server
+                const express = require('express');
+                const path = require('path');
             
-            %     const app = express();
+                const app = express();
             
-            %     // Serve only the static files form the dist directory
-            %     app.use(express.static('./dist/angular-pro-sidebar'));
+                // Serve only the static files form the dist directory
+                app.use(express.static('./dist/angular-pro-sidebar'));
             
-            %     app.get('/*', function (req, res) {
+                app.get('/*', function (req, res) {
             
-            %     res.sendFile(path.join(__dirname, '/dist/angular-pro-sidebar/index.html'));
-            %     });
+                res.sendFile(path.join(__dirname, '/dist/angular-pro-sidebar/index.html'));
+                });
             
-            %     // Start the app by listening on the default Heroku port
-            %     app.listen(process.env.PORT || 8080);
-            % \end{lstlisting}
+                // Start the app by listening on the default Heroku port
+                app.listen(process.env.PORT || 8080);
+            \end{lstlisting}
 
             La aplicación en Angular se habilita en el puerto 8080 y heroku lo expone publicamente por medio de la URL https://ieee-1459-usta.herokuapp.com/home.
     
@@ -835,26 +835,26 @@ Finalmente, la información se visualiza de forma gráfica y númerica en una p�
 
     Se requirió realizar un programa en javascript, que cumpla la función de enviar el archivodb.json que genera el programa en C++, a la base de datos en Heroku. Para la comunicaciónse usó el paquete "xmlhttprequest", para relaziar las peticiones HTTPS a la base de datos.El código que se desarrolló, es el siguiente:
 
-        % \begin{lstlisting}
-        %     setInterval(init, 50)
+        \begin{lstlisting}
+            setInterval(init, 50)
         
-        %     function init() {
-        %         try {
-        %             var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-        %             var xhr = new XMLHttpRequest();
-        %             const fs = require('fs')
-        %             let rawdata = fs.readFileSync('db.json')
-        %             let registers = JSON.parse(rawdata)
-        %             xhr.open("PUT", 'https://json-ade-metering.herokuapp.com/registers/1', true);
-        %             xhr.setRequestHeader('Content-Type', 'application/json');
-        %             xhr.send(JSON.stringify(registers));
-        %             console.log(registers);
-        %             console.log("ESCRIBE")
-        %         } catch {
-        %             console.log("ERROR")
-        %         }
-        %     }
-        % \end{lstlisting}
+            function init() {
+                try {
+                    var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+                    var xhr = new XMLHttpRequest();
+                    const fs = require('fs')
+                    let rawdata = fs.readFileSync('db.json')
+                    let registers = JSON.parse(rawdata)
+                    xhr.open("PUT", 'https://json-ade-metering.herokuapp.com/registers/1', true);
+                    xhr.setRequestHeader('Content-Type', 'application/json');
+                    xhr.send(JSON.stringify(registers));
+                    console.log(registers);
+                    console.log("ESCRIBE")
+                } catch {
+                    console.log("ERROR")
+                }
+            }
+        \end{lstlisting}
 
         El código anteriormente descrito, se ejecuta cada 50 milisegundos atravez de una función de javascript llamada "setInterval(callback,timer)", esa función dispara la función init, la cual lee el archivo db.json y hace una petición PUT al servidor para actualizar los registros.
 
