@@ -1,5 +1,5 @@
 \newpage{\clearpage}
-\chapter{Marco te\'{o}rico}
+\chapter{ Marco te\'{o}rico}
 
 \section{Factor de potencia y distorsión de la onda.}
 
@@ -48,7 +48,7 @@ Una señal de corriente sinusoidal para una carga lineal como en \ref{fig:RL}, n
 \begin{figure}[H]
 \centering
 \includegraphics{2Marco/distorsin}
-\caption{ Señal de corriente con distorsión (a) Fase de la corriente y su componente fundamental; (b) Componente de distorsión} \cite{A29} 
+\caption{ Señal de corriente con distorsión: (a) Fase de la corriente y su componente fundamental; (b) Componente de distorsión} \cite{A29} 
 \label{fig:distorsion_current}
 \end{figure} 
 
@@ -77,21 +77,21 @@ Un concepto básico que se usa es que en una forma de onda repetitiva, la integr
 Donde:\\
 $h1 \neq h2$\\
 
-Con el fin de obtener el valor rms de $i_{s}(t)$ en \ref{fig:distorsion_current}(a), se aplica el concepto básico de rms:\\
+Con el fin de obtener el valor rms de $i_{s}(t)$ en la figura \ref{fig:distorsion_current}(a), se aplica el concepto básico de rms:\\
 
 \begin{equation}\label{EQ7}
 I_{s}=\sqrt{\frac{1}{T_{1}}\int_{T_{1}}^{}(i_{s})^2(t) \cdot dt}\\
 \end{equation}
 
 
-Donde, de \ref{EQ4}\\
+Donde, de la ecuación \ref{EQ4}\\
 
 \begin{equation}\label{EQ8}
 i^2_{s}=(i_{s1}+ (\sum_{h=2}^{\infty}i_{sh})^2 = i^2_{sh} + \sum_{h=2}^{\infty}i^2_{sh(t)} \\ 
 $+ productos en términos de frecuencia de cruce$
 \end{equation}
 
-Sustituyendo \ref{EQ8} en \ref{EQ7}, con el concepto visto en la \ref{EQ6}, cada integral de las frecuencias cruzadas es igual a cero,
+Sustituyendo la ecuación \ref{EQ8} en la ecuación \ref{EQ7}, con el concepto visto en la ecuación \ref{EQ6}, cada integral de las frecuencias cruzadas es igual a cero,
 
 \begin{equation}\label{EQ9}
 I_{s} = \sqrt{\frac{1}{T}\int_{T_{1}}^{}i^2_{s1}(t) \cdot dt + \sum_{h=2}^{\infty}\frac{1}{T_{1}}\int_{T1}^{}i^2_{sh}(t)\cdot dt}\\
@@ -113,7 +113,7 @@ y\\
 I_{distorsion}=\sqrt{\sum_{h=2}^{\infty}\left(\frac{1}{T_{1}}\int_{T_{1}}^{}i^2_{sh}(t)\cdot dt\right)}=\sqrt{\sum_{h=2}^{}I^2_{sh}}\\\\
 \end{equation}
 
-La ecuación descrita anteriormente, presenta que el valor rms de la componente de distorsión en \ref{fig:distorsion_current} puede ser obtenido de s valores de las componentes individual de los armónicos.\cite{A29}\\
+La ecuación descrita anteriormente, presenta que el valor rms de la componente de distorsión en la figura \ref{fig:distorsion_current} puede ser obtenido de s valores de las componentes individual de los armónicos.\cite{A29}\\
 
 Tomando como referencia los valores rms de los componentes de la distorsión y la fundamental en la corriente $i_{s}(t)$, un indice de distorsión llamado Distorsión Armónica Total (THD) es definida en porcentaje y este mismo pude ser presentado en distintas formas bajo las siguientes ecuaciones:\\
 
@@ -437,7 +437,7 @@ $PF_{1} = \frac{P_{1}}{S_{1}}; \;\;\;\;\;\; PF_{1} = \frac{203,9608VA}{200VA};$\
 
 \textbf{* }$PF_{1} = 0,9805$
 
-Según la ecuación ref{EQ34}: \\
+Según la ecuación \ref{EQ34}: \\
 
 $PF=\frac{1}{\sqrt{1+THD^2_{I}}}PF_{1}; \;\;\;\;\;\; PF=\frac{1}{\sqrt{1+0,45^2}}0,9805$ \\
 
@@ -624,7 +624,7 @@ $S_{A} \neq \sqrt{P^2+Q^2}$
 S_{V}=\sqrt{P^2+Q^2}\\
 \end{equation}
 
-En la Fig \ref{fig:inter}, se muestra un interpretación de $S_{V}$ y $S_{A}$.
+En la figura \ref{fig:inter}, se muestra un interpretación de $S_{V}$ y $S_{A}$.
 
 \begin{figure}[H]
 \centering
