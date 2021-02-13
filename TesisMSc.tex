@@ -1,7 +1,8 @@
 \input{EncabezadoTesisMSc}
 
 \begin{document}
-\pagenumbering{roman}
+% \pagenumbering{roman}
+\pagenumbering{arabic}
 \include{0Preliminares/Preliminares}
 \renewcommand{\tablename}{\textbf{Tabla}}
 \renewcommand{\figurename}{\textbf{Figura}}
@@ -9,6 +10,9 @@
 \renewcommand{\listfigurename}{Lista de Figuras}
 \renewcommand{\contentsname}{Contenido}
 
+%\newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\clearpage}}
+\newpage{\clearpage}
+\tableofcontents
 
 \newpage{\clearpage}
 \addcontentsline{toc}{chapter}{\numberline{}Lista de Figuras}
@@ -100,15 +104,11 @@
 \end{abbrv}
 
 
-%\newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\clearpage}}
-\newpage{\clearpage}
-\tableofcontents
-
 \newpage{\clearpage}
 %\include{Tab_Simbolos/TabSimbolosMSc}
 %\include{Resumen}%\newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\clearpage}}
-\pagenumbering{arabic}
-\setcounter{page}{2}
+% \pagenumbering{arabic}
+% \setcounter{page}{2}
 \include{1Introduccion/Introduccion}
 \include{2Marco/Marco}
 \include{3Proyecto/Proyecto}

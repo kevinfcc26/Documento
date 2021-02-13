@@ -1,17 +1,21 @@
 \newpage{\clearpage}
-\chapter{ Desarrollo y ejecución del proyecto}
+\chapter{ Desarrollo y ejecuci\'{o}n del proyecto} 
 \section{Arquitectura del proyecto}
+El medidor se planteó con base a una arquitectura combinada entre software y hardware, en donde las cargas que  se miden serán la entrada inicial del sistema. Dicha entrada pasa por un proceso de converison y analizis de datos; estos resultados se pueden visualizar de manera gráfica y númerica en una aplicación web.\\\\
 \begin{figure}[H]
-\centering
-\includegraphics[width = 15cm]{3Proyecto/arquitectura}
-\caption{Arquitectura del proyecto} 
-\label{fig:arquitectura-proyecto}
-\end{figure} 
-En primera medida se planteó el diseño electrónico del medidor, iniciando por las cargas donde se conectan a un convertidor de señal análoga a digital, estas señales se pasan a un procesador digital de señales, dónde se aplica los parámetros matemáticos establecidos en el estándar IEEE 1459 del 2010, el cual da la medición de la potencia eléctrica en cualquier tipo de condición.\\\\
-Dicho esto, la información se envía a un procesador de datos, este se encarga de administrar el manejo que se le da a los datos como lo es su lectura, escritura y filtración de los datos. El procesador debe contar con conexión a internet ya sea por wifi o ethernet con el fin de guardar la información en una base datos que está alojada en un servidor en la nube, la comunicación que tiene el procesador de datos con el servidor es por protocolo HTTPS.\\\\
-Por lo tanto, el servidor en la nube que se planteó es Heroku ya que tiene la opción de una cuenta gratuita y así hostear la base de datos y la aplicación web sin ningún costo. Por ende las restricciones que tiene este plan, es que no se puede escoger el dominio de la página y hay un límite de espacio de 512MB pero es más que suficiente para el peso que tiene la base de datos de 21.5MB y la aplicación web de 65.2MB.\\\\
+    \centering
+    \includegraphics[width = 15cm]{3Proyecto/arquitectura}
+    \caption{Arquitectura del proyecto} 
+    \label{fig:arquitectura-proyecto}
+    \end{figure}
+El proceso de medición empieza en el momento de conectar una carga electrica al conversor de señal análoga a digital. Estas señales pasan a un procesador digital de señales, dónde se aplica los parámetros matemáticos establecidos en el estándar IEEE 1459 del 2010, el cual da la medición de la potencia eléctrica en cualquier tipo de condición.\\\\
+% En primera instancia, se planteó el diseño electrónico del medidor, iniciando por las cargas donde se conectan a un conversor de señal análoga a digital, estas señales se pasan a un procesador digital de señales, dónde se aplica los parámetros matemáticos establecidos en el estándar IEEE 1459 del 2010, el cual da la medición de la potencia eléctrica en cualquier tipo de condición.\\\\
+Dicho esto, la información se envía a un procesador de datos encargado de administrar la lectura, escritura y filtración de datos. El procesador debe contar con conexión a internet ya sea por via wifi o ethernet, con el fin de enviar la información al servidor de base datos alojado en la nube. La comunicación entre el procesador de datos y el servidor se realiza a través del protocolo de comunicación HTTPS.\\\\
+Por lo tanto, el servidor en la nube que se planteó es Heroku ya que tiene la opción de una cuenta gratuita y así alojar la base de datos y la aplicación web sin ningún costo. Por ende las restricciones que tiene este plan, es que no se puede escoger el dominio de la página y hay un límite de espacio de 512MB pero es más que suficiente para el peso que tiene la base de datos de 21.5MB y la aplicación web de 65.2MB.\\\\
 Una vez configurado el servidor, se escogió el framework javascript Angular 7 para el desarrollo de la aplicación web, ya que por medio del lenguaje de programación Typescript, el cual es un lenguaje tipado y robusto, nos permite tener mayor manipulación y consistencia en los datos; la aplicación utiliza una arquitectura RESTful y este permite, realizar peticiones HTTPS a la base de datos.\\\\
 Finalmente, la información se visualiza de forma gráfica y númerica en una página web, en donde se pueden ver los valores de voltaje (V), corriente (A), potencia activa(W), potencia aparente (VA), potencia reactiva(VAR) y porcentaje de distorsión armónica en corriente y voltaje en cada fase.\\\\
+Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
+
 
 
 \section{Fase de integración}
@@ -36,7 +40,7 @@ Finalmente, la información se visualiza de forma gráfica y númerica en una p�
             \item Es posible ejecutar aplicaciones de medición en tiempo real.
             \item Viene con software de medición.
             \item Se puede conectar a cualquier sistema de prueba o voltaje AC.
-            \item Fuentes de alimentación capacitaras y aisladas presentes
+            \item Fuentes de alimentación capacitiva y aisladas presentes
             \item Fácil visualización de resultados y calibración a través de RS-232
             \item Pantalla LCD de 160 segmentos
             \item Conectores RF para soporte AMR / AMI
@@ -126,7 +130,7 @@ Finalmente, la información se visualiza de forma gráfica y númerica en una p�
                     \label{fig:Cableado}
                 \end{center}
             \end{figure}
-        Para configurar la tarjeta fue necesario encontrar una resistencia Shunt que se ajustará a las especificaciones del circuito a implementar, sin embargo este trabajo fue mas complicado, ya que las resistencias Shunt disponibles en el mercado son costosas y la mayoría de ellas vienen con resistencias bajas, elevando el voltaje de salida y ampliando el rango de medición del medidor ($\dfrac{I}{R}=V$), se decidió comprar 4 resistencias Shunt caseras las cuales tenían un costo de tan solo \$4.000 COP muy bajo comparado con las importadas o fabricadas industrial mente, en las que su valor esta entre \$50.000 COP - \$ 200.000 COP.\\
+        Para configurar la tarjeta fue necesario encontrar una resistencia Shunt que se ajustará a las especificaciones del circuito a implementar, sin embargo este trabajo fue mas complicado, ya que las resistencias Shunt disponibles en el mercado son costosas y la mayoría de ellas vienen con resistencias bajas, elevando el voltaje de salida y ampliando el rango de medición del medidor ($\dfrac{I}{R}=V$), se decidió comprar 4 resistencias Shunt caseras las cuales tenían un costo de tan solo \$4.000 COP muy bajo comparado con las importadas o fabricadas industrialmente, en las que su valor esta entre \$50.000 COP - \$ 200.000 COP.\\
         Teniendo todos los materiales, se realiza la conexión de la figura \ref{fig:configuracion}, utilizando el cable azul para el pin V1PIN, el cable café para el pin GND, el cable amarillo para el pin IMIN, el cable rojo para el pin IPIN y el cable blanco para conectar las shunt con el bloque de terminales, todo el montaje puesto sobre una lamina de acetato elevando la tarjeta con los 4 postes Met como se muestra en la figura \ref{fig:Cableado}\\
 
     \subsection{Caracterizaci\'on de la resistencia Shunt}
@@ -650,7 +654,7 @@ Finalmente, la información se visualiza de forma gráfica y númerica en una p�
 \section{Desarrollo de Software}
     \subsection{Implementación del protocolo I2C entre la rasberry y el ADE7978}
 
-        El protocolo I2C es un estandar internacional para la comunicacion entre dispositivos, siguiendo la teoria de comunicación I2C se conecto GPIO de la rasberry con el puerto de comunicación del ADE7978 como se muestra en la figura 
+        El protocolo I2C es un estandar internacional para la comunicacion entre dispositivos. Siguiendo la teoria de comunicación I2C se conectó GPIO de la rasberry con el puerto de comunicación del ADE7978 como se muestra en la figura 
         \ref{fig:Coneccion I2C}\\
         \begin{figure}[H]
             \begin{center}
@@ -660,7 +664,7 @@ Finalmente, la información se visualiza de forma gráfica y númerica en una p�
             \end{center}
         \end{figure}
 
-        El puerto de comunicacion del ADE7978 funciona 100\% como un esclavo a un clock maximo de 400kHz; en la operaciónde escritura se envia un bit en 0  para indicar que la operaciónva a iniciar, seguido de la direccion del dispositivo que es de 8 bits, seguido de la direccion del registro que se quiere escribir y por ultimo la información que se quiere escrib en el registro fig: \ref{fig:I2C protocol write}; para la operaciónde lectura se debe envia un 0 para indicar que la operaciónva a iniciar, seguido de la direccion del dispositivo y la direccion del registro que se quiere leer, seguido de otro bit en 0 y la dirección del dispositivo nuevamente, en ese moeto se empieza a recibir la información que esta alojada en ese registro fig: \ref{fig:I2C protocol read}.
+        El puerto de comunicacion del ADE7978 funciona 100\% como un esclavo a un clock maximo de 400kHz; en la operación de escritura se envia un bit en 0  para indicar que la operación va a iniciar, seguido de la dirección del dispositivo que es de 8 bits, seguido de la dirección del registro que se quiere escribir y por ultimo la información que se quiere escribir en el registro fig: \ref{fig:I2C protocol write}; para la operación de lectura se debe envia un 0 para indicar que la operación va a iniciar, seguido de la dirección del dispositivo y la dirección del registro que se quiere leer, seguido de otro bit en 0 y la dirección del dispositivo nuevamente, en ese momento se empieza a recibir la información que esta alojada en ese registro fig: \ref{fig:I2C protocol read}.
         
         \begin{figure}[H]
             \begin{center}
@@ -677,7 +681,7 @@ Finalmente, la información se visualiza de forma gráfica y númerica en una p�
             \end{center}
         \end{figure}
 
-        Con la teoria obtenida del datasheet, se realizó la programación de esta comunicación por medio del lenguaje c++, usando la libreria BCM2835 \cite{A40}, a esta libreria fue necesario realizarle un cambio en la función de lectura del puerto I2C, ya que esta libreria está desarrollada para enviar direcciones de registro de solo 8 bits y en el caso del ADE 7978 cada direccion de registro es de 16 bits, esta modificacion se realizó en el metodo \textbf{bcm2835 i2c read register rs} agregandole un segundo carácter al la operaciónde envio de la siguiente manera :
+        Con la teoria obtenida del datasheet, se realizó la programación de esta comunicación por medio del lenguaje c++, usando la libreria BCM2835 \cite{A40}, a esta libreria fue necesario realizarle un cambio en la función de lectura del puerto I2C, ya que esta libreria está desarrollada para enviar direcciónes de registro de solo 8 bits y en el caso del ADE 7978 cada dirección de registro es de 16 bits, esta modificacion se realizó en el método \textbf{bcm2835 i2c read register rs} agregandole un segundo carácter al la operaciónde envio de la siguiente manera :
         \begin{lstlisting}
         /* Clear FIFO */
         bcm2835_peri_set_bits(control, BCM2835_BSC_C_CLEAR_1 , BCM2835_BSC_C_CLEAR_1 );
@@ -699,7 +703,7 @@ Finalmente, la información se visualiza de forma gráfica y númerica en una p�
             \item Iniciar el puerto de comunicacion I2C
             \item Cargar la dirección del dispositivo esclavo
             \item Cargar la frecuencia del clock
-            \item Llamar el metodo de lectura pasandole la direccion del regustro, bus de datos y la longitud del mismo
+            \item Llamar el método de lectura pasandole la dirección del regustro, bus de datos y la longitud del mismo
             \item Terminar la comunicacion del puerto I2C y del puerto de la rasberry
         \end{itemize}
         Con estos pasos ya se optiene el dato en el bus, el codigo de los pasos es el siguiente:
@@ -736,24 +740,24 @@ Finalmente, la información se visualiza de forma gráfica y númerica en una p�
         \subsection{Backend Solución en c++}
             Con la prueba exitosa se comienzó a desarrollar toda la logica del programa para tomar todos los registros de la DSP
             \begin{itemize}
-                \item Se cre una clase que contenga todas las propiedades y metodos que describan el funcionamiento de los registros
+                \item Se creó una clase que contenga todas las propiedades y métodos que describan el funcionamiento de los registros
                 \item Crear un objeto de la clase creada por cada registro de la DSP
                 \item Crear funciones dentro del programa que permitan la manipulacion y el analisis de dichos registros
                 \item Mantener el programa principal en un bucle infinito para que siempre se ejecute.
             \end{itemize}
 
-            Se creó una clase con el nombre nombre Registro conteniendo las siguientes propiedades y metodos
+            Se creó una clase con el nombre Registro conteniendo las siguientes propiedades y métodos
             \subsubsection{Propiedades}
                 \begin{itemize}
-                    \item Address: direccion en exadecimal del la posición en memoria del registro.
+                    \item Address: dirección en exadecimal del la posición en memoria del registro.
                     \item Len dato: tamaño en bytes de la informacion contenida en el regitro.
                     \item Name: Nombre del registro dado por el datasheet.
                     \item Value: Valor actual de la ultima lectura o escritura realizada al registro.
                     \item ConValue: Valor convertido. 
                 \end{itemize}
-            \subsubsection{Metodos}
+            \subsubsection{Métodos}
                 \begin{itemize}
-                    \item Contructores: se crean dos contructores al primero se le pasa el nombrem la direccion y la longitud del registro, el segudno contructor se crea sin parametros para incializar los registros y despues configurarlos.
+                    \item Contructores: se crean dos contructores al primero se le pasa el nombre la dirección y la longitud del registro, el segundo contructor se crea sin parametros para incializar los registros y despues configurarlos.
                     \item GetName: Metodo para obtener el nombre que tiene el registro.
                     \item GetValue: Metodo para obtner el valor cargado o leeido en el registro.
                     \item GetConValue: Metodo para obtener el valor convertido cargado en el registro.
@@ -761,10 +765,10 @@ Finalmente, la información se visualiza de forma gráfica y númerica en una p�
                     \item Write: Metodo para activar el puerto I2C, escribir y actualizar el contenido de un registro.
                     \item SetValue: Metodo para cargar en el registro el valor que se quiere escribir en el ADE
                     \item SetConValue: Metodo para cargar el valor convertido en el registro.
-                    \item Config\_Obj: Metodo para pasarle la configuracion de los registros, en este metodo resive el nombre del registro, la direccion de memoria y el tamaño del dato.
+                    \item Config\_Obj: Metodo para pasarle la configuracion de los registros, en este método resive el nombre del registro, la dirección de memoria y el tamaño del dato.
                 \end{itemize}
             
-            Teniendo las propiedades  metodos de la clase declarados en el programa, se realizó la logica del programa para analisar los datos optenidos y enviarlos al front, para realizar esto se crearon varios metodos que posteriormente se llamaran en el programa principal, los metodos creados son los siguientes
+            Teniendo las propiedades  métodos de la clase declarados en el programa, se realizó la logica del programa para analisar los datos optenidos y enviarlos al front, para realizar esto se crearon varios métodos que posteriormente se llamaran en el programa principal, los métodos creados son los siguientes
             \begin{itemize}
                 \item Read\_all\_registers : Metodo para leer todos los registros configurados.
                 \item Config\_registers : Metodo para crear todos los registros como un objeto de la clase Registro, pasandole a cada uno su nombre, direcion y longitud del dato que guarda en bytes.
@@ -779,9 +783,9 @@ Finalmente, la información se visualiza de forma gráfica y númerica en una p�
 
             Para mas información de como esta diseñado el programa, visitar el repositorio publico github \cite{A41}
     \subsection{Backend Configuraci\'{o}n del servidor}
-        Se realizó una investagación de servidores en la nube y optamos por usar Heroku ya que tiene una opción gratuita que permite hostear hasta 5 aplicaiones con un límite de peso de 512MB. 
+        Se realizó una investigación de servidores en la nube y se optó por usar Heroku ya que tiene una opción gratuita que permite alojar hasta 5 aplicaciones con un límite de peso de 512MB. 
         \subsubsection{Configuraci\'on de la base de datos}
-            Para realizar la configuración de la base de datos en Heroku, se hizo atravez del gestor de paquetes de javascript Node Js. En las instruccions del package.json se ejecuta el comando npm run start el cual ejecuta un archivo javascript con el siguiente código:
+            Para realizar la configuración de la base de datos en Heroku, se hizo a través del gestor de paquetes de javascript Node Js. En las instruccions del package.json se ejecuta el comando npm run start el cual ejecuta un archivo javascript con el siguiente código:
 
             \begin{lstlisting}
                 const jsonServer = require('json-server');
@@ -795,7 +799,7 @@ Finalmente, la información se visualiza de forma gráfica y númerica en una p�
             
                 server.listen(port);
             \end{lstlisting}
-            De esta manera, Node levanta un servidor local en el puerto 3000 y heroku lo expone publicamente atravez de la URL https://json-ade-metering.herokuapp.com/.\\
+            De esta manera, Node levanta un servidor local en el puerto 3000 y heroku lo expone publicamente a través de la URL https://json-ade-metering.herokuapp.com/.\\
             Para configurar el archivo .json con la información, se creó un archivo llamado 'db.json' con una estructura básica inicial para almacenar datos. La estrutura básica se muestra a continucación:\\
             \begin{lstlisting}
                 {
@@ -808,7 +812,7 @@ Finalmente, la información se visualiza de forma gráfica y númerica en una p�
 
         \subsubsection{Configuración de la aplicación en Angular 7}
 
-            La configuración del proyecto en Angular es muy similar a la de la base da datos. Se hace atravez del gestor de paquetes de javascript Node Js. De igual manera en el archivo package.json se ejecuta el comando npm run start y acciona el siguiente script:
+            La configuración del proyecto en Angular es muy similar a la de la base da datos. Se hace a través del gestor de paquetes de javascript Node Js. De igual manera en el archivo package.json se ejecuta el comando npm run start y acciona el siguiente script:
 
             \begin{lstlisting}
                 //Install express server
@@ -856,11 +860,11 @@ Finalmente, la información se visualiza de forma gráfica y númerica en una p�
             }
         \end{lstlisting}
 
-        El código anteriormente descrito, se ejecuta cada 50 milisegundos atravez de una función de javascript llamada "setInterval(callback,timer)", esa función dispara la función init, la cual lee el archivo db.json y hace una petición PUT al servidor para actualizar los registros.
+        El código anteriormente descrito, se ejecuta cada 50 milisegundos a través de una función de javascript llamada "setInterval(callback,timer)", esa función dispara la función init, la cual lee el archivo db.json y hace una petición PUT al servidor para actualizar los registros.
 
     \subsection{Frontend Solución en Angular}
         
-        Para la creación de la página web, se usó el framework javscript Angular 7, ya que implementa el lenguaje de programación 'Typescript' y permite tipar las variables de javascript y tener un mayor control del proyecto. De igual manera es necesario saber de HTML5, CSS3 y javascript para la creación de la página.\\
+        Para la creación de la página web, se usó el framework javscript Angular 7, ya que implementa el lenguaje de programación 'Typescript' y permite asignar un tipo de variable a las variables de javascript y tener un mayor control del proyecto. De igual manera es necesario saber de HTML5, CSS3 y javascript para la creación de la página.\\
         Para instalar Angular es necesario tener node instalado en el computador. Para instalar node, por medio de la URL https://nodejs.org/es/, se descargó y se siguió el paso a paso del instalador. Figura \ref{fig:node} \\
 
         \begin{figure}[H]
@@ -889,7 +893,7 @@ Finalmente, la información se visualiza de forma gráfica y númerica en una p�
                 \label{fig:ngServe}
            \end{center}
         \end{figure}
-        En Angular, un componente hace referencia a una sección visual de la página y estos componentes se crean atravez del comando 'ng generate component componentName'. Cada componente cuenta con un archivo .html , .ts y .css. Para el proyectó creamos 4 componentes con los comandos de la figura \ref{fig:ngComponents}.\\
+        En Angular, un componente hace referencia a una sección visual de la página y estos componentes se crean a través del comando 'ng generate component componentName'. Cada componente cuenta con un archivo .html , .ts y .css. Para el proyectó creamos 4 componentes con los comandos de la figura \ref{fig:ngComponents}.\\
         \begin{figure}[H]
             \begin{center}
                 \includegraphics[width = 15cm]{3Proyecto/ngComponents}

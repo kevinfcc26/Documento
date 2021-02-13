@@ -3,7 +3,7 @@
 
 \section{Factor de potencia y distorsión de la onda.}
 
-Las distorsiones presentes en la onda se interpretan como ruido eléctrico. Estas distorsiones es la sobre posición de señales en múltiplos de la frecuencia fundamental. Los armónicos se encuentran en equipos principales generadores de armónicos que efectúan circuitos de rectificación como por ejemplo computadores, televisores, microondas; etc. \cite{A28}\\  Como un caso base, se considera una carga lineal R-L mostrado en \ref{fig:RL} alimentado por medio de una fuente sinusoidal en estado estable. Usando valores rms para las magnitudes de voltaje y corriente, la potencia suministrada por la fuente es:\cite{A29}\\
+Las distorsiones presentes en la onda se interpretan como ruido eléctrico. Estas distorsiones es la sobre posición de señales en múltiplos de la frecuencia fundamental. Los armónicos se encuentran en equipos principales generadores de armónicos que efectúan circuitos de rectificación como por ejemplo computadores, televisores, microondas; etc. \cite{A28}\\  Como un caso base, se considera una carga lineal R-L mostrado en la figura \ref{fig:RL} alimentado por medio de una fuente sinusoidal en estado estable. Usando valores rms para las magnitudes de voltaje y corriente, la potencia suministrada por la fuente es:\cite{A29}\\
 \begin{equation}\label{EQ1}
 P=V_{s}I_{s}cos \phi\\
 \end{equation}
@@ -43,7 +43,7 @@ Esto demuestra que el PF y la corriente $I_{s}$ son inversamente proporcional. \
 \section{Distorsión armónica total (THD) y valor RMS de la corriente distorsionada}
 
 
-Una señal de corriente sinusoidal para una carga lineal como en \ref{fig:RL}, no tiene distorsión, sin embargo, hay señales de corrientes que su forma de onda es distorsionada, esto se debe a los equipos generadores de armónicos mencionados en el primer indice. \cite{A29} Un ejemplo de una señal con distorsión se puede ver en \ref{fig:distorsion_current} en donde $i_{s}$ es la señal de corriente distorsionada y $V_{s}(t)$ es sinusoidal. El análisis se aplica a la utilidad de suministros ya sean en monofásico o trifásico, en donde el estudio se realiza por fases.\\
+Una señal de corriente sinusoidal para una carga lineal como en la figura \ref{fig:RL}, no tiene distorsión, sin embargo, hay señales de corrientes que su forma de onda es distorsionada, esto se debe a que el proceso de rectificar la corriente alterna en corriente directa, transforma la señal haciéndola no sinusoidal, es decir la onda se distorsiona. \cite{A29} Un ejemplo de una señal con distorsión se puede ver en \ref{fig:distorsion_current} en donde $i_{s}$ es la señal de corriente distorsionada y $V_{s}(t)$ es sinusoidal. El análisis se aplica a la utilidad de suministros ya sean en monofásico o trifásico, en donde el estudio se realiza por fases.\\
   
 \begin{figure}[H]
 \centering
@@ -149,7 +149,7 @@ $\theta$ es el ángulo de fase entre el voltaje y la corriente  $(rad)$\\
 $t$ es el tiempo $(s)$\\
 \subsubsection{Potencia activa(W)}
 
-La potencia activa P o también conocida como potencia real, es la medición del flujo de energía durante in intervalo de tiempo $\tau$ a $\tau + KT$. \cite{A30}\\
+La potencia activa P o también conocida como potencia real, es la medición del flujo de energía durante un intervalo de tiempo $\tau$ a $\tau + KT$. \cite{A30}\\
 
 \begin{equation}\label{EQ16}
 P=\frac{1}{KT}\int_{\tau}^{\tau + KT}pdt = \frac{1}{KT}\int_{\tau}^{\tau + KT}p_{a}dt\\
@@ -200,12 +200,12 @@ Para un $S$ y $V$ dados, la utilización máxima de la línea es obtenida cuando
  S = P+jQ =  VI^*\\
 \end{equation}  
 
-Esta expresión proviene del triángulo de potencias $S,P$ Y $Q$. En la figura \ref{fig:triangulo} se observa un resumen de las direcciones del flujo de potencia. El ángulo $\theta$ es el ángulo de fase de la impedancia equivalente compleja $Z/ \theta = \textbf{V/I}$.\cite{A30}\\ 
+Esta expresión proviene del triángulo de potencias $S,P$ Y $Q$. En la figura \ref{fig:triangulo} se observa un resumen de las direcciónes del flujo de potencia. El ángulo $\theta$ es el ángulo de fase de la impedancia equivalente compleja $Z/ \theta = \textbf{V/I}$.\cite{A30}\\ 
 
 \begin{figure}[H]
 \centering
 \includegraphics{2Marco/triangulopotencias}
-\caption{ Cuatro cuadrantes de las direcciones del flujo de potencia} \cite{A30} 
+\caption{ Cuatro cuadrantes de las direcciónes del flujo de potencia} \cite{A30} 
 \label{fig:triangulo}
 \end{figure} 
 
@@ -236,7 +236,7 @@ I^2 = {I_{1}}^2 + {I_{H}}^2
 
 Las formas de ondas distorsionadas de a menudo contienen componentes de frecuencias llamadas armónicos. Un grupo especial de inter-armónicos es caracterizado por $h<1$. Estos armónicos tienen periodos más largos que el periodo $T$ de la frecuencia fundamental.\cite{A30}\\
 
-Si la onda de corriente o voltaje distorsionada está compuesta únicamente, la medición en intervalos de tiempo $kT$, no permitirá una medición correcta de rms y valores de potencia. \cite{A30}\\
+Si la onda distorsionada de corriente y voltaje está compuesta únicamente de armónicos, la medición en intervalos de tiempo $kT$, permitirá una medición correcta de rms y valores de potencia. \cite{A30}\\
 
 Si al menos uno de los inter-armónicos de orden $h$ es irracional, la onda observada no es periódica. En tal caso las mediciones deberían ser infinitas con el fin de tener una medición correcta del rms y las potencias.\cite{A30}\\
 
@@ -676,7 +676,7 @@ PF_{e}=\frac{P}{S_{e}}\\
 
 \subsection{Análisis de datos obtenidos de tres cargas no lineales}
 
-A continuación, se muestra el análisis de los datos obtenidos por el circutor de tres computadores de los etm de la Universidad Santo Tomas en la sede central, siguiendo las normas establecidas para cada caso a nivel nacional. \\
+A continuación, se muestra el análisis de los datos obtenidos por el circutor de tres computadores de los ETM de la Universidad Santo Tomas en la sede central, siguiendo las normas establecidas para cada caso a nivel nacional. \\
 El circutor no posee una memoria que almacene los datos medidos, por tal razón, los datos obtenidos se transmiten en tiempo real por comunicación serial a un computador por medio de un programa realizado en Visual Studio, donde se pueden adquirir las medidas de potencia, tensiones, voltajes, THDi, THDv, en una hoja de cálculo.\\
 Las medidas tomadas y el análisis de estas, se realizaron tomando como referencia la norma NTC 1340 (tercera actualización) y el IEEE 1159, el cual establece el tiempo de muestreo para el monitoreo de calidad de energía eléctrica que es mayor a un minuto para sistemas de larga duración en variaciones de rms.
 
@@ -890,11 +890,11 @@ Tomando como referencia la figura \ref{fig:límites-corriente}, la cual está en
 
 El desarrollo de software es un campo de la ciencia computacional dedicado a la creación, diseño, implementación y soporte de software.
 
-El softaware se compone de una serie de instrucciones o programas que le dicen al computador que debe hacer. Es independiente del hardware y hace a los computadores programables.  \cite{A31}
+El software se compone de una serie de instrucciones o programas que le dicen al computador que debe hacer. Es independiente del hardware y hace a los computadores programables.  \cite{A31}
 
 \subsection{Programación Orientada a Objetos}
 
-La programación orientada a objetos (OOP) es un paradigma de programación  basado en convertir objetos que puedan ser tangibles o intangibles a objetos digitales los cuáles tienen metodos y propiedades. Esto genera ventajas en modularidad y reusabilidad en código. Los objetos que usualmente son instancias de clases, son utilizados para interactuar uno con otro para diseñar aplicaciones y programas de computadores. \cite{A32}
+La programación orientada a objetos (POO) es un paradigma de programación  basado en convertir objetos que puedan ser tangibles o intangibles a objetos digitales los cuáles tienen métodos y propiedades. Esto genera ventajas en modularidad y reusabilidad en código. Los objetos que usualmente son instancias de clases, son utilizados para interactuar uno con otro para diseñar aplicaciones y programas de computadores. \cite{A32}
 
 \subsection{Desarrollo Web}
 
@@ -910,7 +910,7 @@ En la capa de arquitectura de un proyecto de software, el backend no es accesibl
 
 \subsection{REST}
 
-REST se compone de una serie de principios de comunicación web en la cual se diseñan servicios web orientados a recursos de sistemas, incluyendo como los estados de los recursos son ubicados y transferidos atravez del protocolo HTTP por un gran rango de clientes que usan distintos lenguajes de programación.  \cite{A37}
+REST se compone de una serie de principios de comunicación web en la cual se diseñan servicios web orientados a recursos de sistemas, incluyendo como los estados de los recursos son ubicados y transferidos a través del protocolo HTTP por un gran rango de clientes que usan distintos lenguajes de programación.  \cite{A37}
 
 
 \section{Fourier}
@@ -959,11 +959,11 @@ Esta manera es la que usan la mayoría de conversares análogos digitales y proc
 
 
 \section{Convertidores ADC}
-El convertido análogo digital (ADC) fue creado para representar en una palabra digital el nivel de voltaje existente en una en una entrada análoga, transformándola en una señal binaria de un número de muestras (N), en la electrónica la resolución de la señal de entrada la da la cantidad de bits disponibles para la conversión, entre mas grande sea la cantidad de bits, mayor es la resolución de la señal y mas confiable es esta. 
+El convertidor análogo digital (ADC) fue creado para representar en una palabra digital el nivel de voltaje existente en una en una entrada análoga, transformándola en una señal binaria de un número de muestras (N), en la electrónica la resolución de la señal de entrada la da la cantidad de bits disponibles para la conversión, entre mas grande sea la cantidad de bits, mayor es la resolución de la señal y mas confiable es ésta. 
 
 \section{Internet de las cosas}
 
-El concepto de internet de las cosas o por su sigla en ingles (IoT) - internet of things, tiene como objetivo conectar lo desconectado, esto significa que algún dispositivo que no tenga comunicación con la red lo pueda tener y así puedan interactuar con las personas y otros objetos. IoT es una tecnología de transición en donde los dispositivos permitiran sensar y controlar el mundo fisico haciendo los objetos inteligentes y conectandolos atravez de una red inteligente. Esta transición de volver un dispositivo intelegente se puede realizar de distintas formas pero la más común para empezar es la Raspberry. \cite{A38}
+El concepto de internet de las cosas o por su sigla en ingles (IoT) - internet of things, tiene como objetivo conectar lo desconectado, esto significa que algún dispositivo que no tenga comunicación con la red lo pueda tener y así puedan interactuar con las personas y otros objetos. IoT es una tecnología de transición en donde los dispositivos permitiran sensar y controlar el mundo fisico haciendo los objetos inteligentes y conectandolos a través de una red inteligente. Esta transición de volver un dispositivo intelegente se puede realizar de distintas formas pero la más común para empezar es la Raspberry. \cite{A38}
 
 \subsection{Raspberry pi 4}
 
