@@ -1,16 +1,16 @@
 \newpage{\clearpage}
 \chapter{ Desarrollo y ejecuci\'{o}n del proyecto} 
 \section{Arquitectura del proyecto}
-El medidor se planteó con base a una arquitectura combinada entre software y hardware, en donde las cargas que  se miden serán la entrada inicial del sistema. Dicha entrada pasa por un proceso de converison y analizis de datos; estos resultados se pueden visualizar de manera gráfica y númerica en una aplicación web.\\\\
+El medidor se planteó con base a una arquitectura combinada entre software y hardware, en donde las cargas que  se miden serán la entrada inicial del sistema; dicha entrada pasa por un proceso de converison y analizis de datos, estos resultados se pueden visualizar de manera gráfica y númerica en una aplicación web.\\\\
 \begin{figure}[H]
     \centering
     \includegraphics[width = 15cm]{3Proyecto/arquitectura}
     \caption{Arquitectura del proyecto} 
     \label{fig:arquitectura-proyecto}
     \end{figure}
-El proceso de medición empieza en el momento de conectar una carga electrica al conversor de señal análoga a digital. Estas señales pasan a un procesador digital de señales, dónde se aplica los parámetros matemáticos establecidos en el estándar IEEE 1459 del 2010, el cual da la medición de la potencia eléctrica en cualquier tipo de condición.\\\\
+El proceso de medición empieza en el momento de conectar una carga electrica al conversor de señal análoga a digital. Estas señales pasan a un procesador digital de señales, dónde se aplica los parámetros matemáticos establecidos en el estándar IEEE 1459 del 2010, el cual permite la medición de la potencia eléctrica en cualquier tipo de condición.\\\\
 % En primera instancia, se planteó el diseño electrónico del medidor, iniciando por las cargas donde se conectan a un conversor de señal análoga a digital, estas señales se pasan a un procesador digital de señales, dónde se aplica los parámetros matemáticos establecidos en el estándar IEEE 1459 del 2010, el cual da la medición de la potencia eléctrica en cualquier tipo de condición.\\\\
-Dicho esto, la información se envía a un procesador de datos encargado de administrar la lectura, escritura y filtración de datos. El procesador debe contar con conexión a internet ya sea por via wifi o ethernet, con el fin de enviar la información al servidor de base datos alojado en la nube. La comunicación entre el procesador de datos y el servidor se realiza a través del protocolo de comunicación HTTPS.\\\\
+Dicho esto, la información se envía a un procesador de datos encargado de administrar la lectura, escritura y filtración de datos. El procesador debe contar con conexión a internet, con el fin de enviar la información al servidor de base datos alojado en la nube. La comunicación entre el procesador de datos y el servidor se realiza a través del protocolo de comunicación HTTPS.\\\\
 Por lo tanto, el servidor en la nube que se planteó es Heroku ya que tiene la opción de una cuenta gratuita y así alojar la base de datos y la aplicación web sin ningún costo. Por ende las restricciones que tiene este plan, es que no se puede escoger el dominio de la página y hay un límite de espacio de 512MB pero es más que suficiente para el peso que tiene la base de datos de 21.5MB y la aplicación web de 65.2MB.\\\\
 Una vez configurado el servidor, se escogió el framework javascript Angular 7 para el desarrollo de la aplicación web, ya que por medio del lenguaje de programación Typescript, el cual es un lenguaje tipado y robusto, nos permite tener mayor manipulación y consistencia en los datos; la aplicación utiliza una arquitectura RESTful y este permite, realizar peticiones HTTPS a la base de datos.\\\\
 Finalmente, la información se visualiza de forma gráfica y númerica en una página web, en donde se pueden ver los valores de voltaje (V), corriente (A), potencia activa(W), potencia aparente (VA), potencia reactiva(VAR) y porcentaje de distorsión armónica en corriente y voltaje en cada fase.\\\\
