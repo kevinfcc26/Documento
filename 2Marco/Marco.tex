@@ -2,13 +2,14 @@
 \chapter{ Marco te\'{o}rico}
 
 \section{Factor de potencia y distorsión de la onda.}
-
-Las distorsiones presentes en la onda se interpretan como ruido eléctrico. Estas distorsiones es la sobre posición de señales en múltiplos de la frecuencia fundamental. Los armónicos se encuentran en equipos principales generadores de armónicos que efectúan circuitos de rectificación como por ejemplo computadores, televisores, microondas; etc. \cite{A28}\\  Como un caso base, se considera una carga lineal R-L mostrado en la figura \ref{fig:RL} alimentado por medio de una fuente sinusoidal en estado estable. Usando valores rms para las magnitudes de voltaje y corriente, la potencia suministrada por la fuente es:\cite{A29}\\
+% El factor de potencia se puede interpretar como la relación entre la energía transmitida a la carga y la energía máxima que podría transmitirse siempre que las pérdidas de línea se mantengan iguales.\cite{A28}\\  Como un caso base, se considera una carga lineal R-L mostrado en la figura \ref{fig:RL} alimentado por medio de una fuente sinusoidal en estado estable. Usando valores rms para las magnitudes de voltaje y corriente, la potencia suministrada por la fuente es:\cite{A29}\\
+Las distorsiones presentes en la onda se interpretan como ruido eléctrico, estas distorsiones es la superposición de señales en múltiplos de la frecuencia fundamental. Muchas de estas distorsiones son generadas por equipos como por ejemplo televisores, computadores, microondas; etc.\\
+%  Los armónicos se encuentran en equipos principales generadores de armónicos que efectúan circuitos de rectificación como por ejemplo computadores, televisores, microondas; etc. \cite{A28}\\  Como un caso base, se considera una carga lineal R-L mostrado en la figura \ref{fig:RL} alimentado por medio de una fuente sinusoidal en estado estable. Usando valores rms para las magnitudes de voltaje y corriente, la potencia suministrada por la fuente es:\cite{A29}\\
 \begin{equation}\label{EQ1}
 P=V_{s}I_{s}cos \phi\\
 \end{equation}
-
-El factor de potencia (FP), se conoce como la analogía entre la potencia real media P y el producto de la tensión y corriente rms:
+El factor de potencia (FP) se puede interpretar como la relación entre la energía transmitida a la carga y la energía máxima que podría transmitirse siempre que las pérdidas de línea se mantengan iguales. \cite{A30} Este se puede expresar como la analogía entre la potencia real media P y el producto de la tensión y corriente rms:\\
+% El factor de potencia (FP), se conoce como la analogía entre la potencia real media P y el producto de la tensión y corriente rms:
 \begin{equation}\label{EQ2}
 PF=\frac{P}{V_{s}I_{s}}=cos\phi\\
 $(Usando \ref{EQ1})$  \\
@@ -43,7 +44,7 @@ Esto demuestra que el PF y la corriente $I_{s}$ son inversamente proporcional. \
 \section{Distorsión armónica total (THD) y valor RMS de la corriente distorsionada}
 
 
-Una señal de corriente sinusoidal para una carga lineal como en la figura \ref{fig:RL}, no tiene distorsión, sin embargo, hay señales de corrientes que su forma de onda es distorsionada, esto se debe a que el proceso de rectificar la corriente alterna en corriente directa, transforma la señal haciéndola no sinusoidal, es decir la onda se distorsiona. \cite{A29} Un ejemplo de una señal con distorsión se puede ver en \ref{fig:distorsion_current} en donde $i_{s}$ es la señal de corriente distorsionada y $V_{s}(t)$ es sinusoidal. El análisis se aplica a la utilidad de suministros ya sean en monofásico o trifásico, en donde el estudio se realiza por fases.\\
+Una señal de corriente sinusoidal para una carga lineal como se muestra en la figura \ref{fig:RL}, no tiene distorsión, sin embargo, hay señales de corrientes que su forma de onda es distorsionada debido a el proceso de rectificar la corriente alterna en corriente directa, haciendola no sinusoidal, es decir la onda se distorsiona. \cite{A29} Un ejemplo de una señal con distorsión se puede ver en la figura \ref{fig:distorsion_current} en donde $i_{s}$ es la señal de corriente distorsionada y $V_{s}(t)$ es sinusoidal. El análisis se aplica a la utilidad de suministros ya sean en monofásico o trifásico, en donde el estudio se realiza por fases.\\
   
 \begin{figure}[H]
 \centering
