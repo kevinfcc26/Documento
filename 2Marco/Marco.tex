@@ -27,7 +27,7 @@ Esto demuestra que el PF y la corriente $I_{s}$ son inversamente proporcional. \
 \begin{figure}[H]
 \centering
 \includegraphics{2Marco/CargaRL}
-\caption{ Circuito RL  } 
+\caption{ Circuito RL  } \cite{A29} 
 \label{fig:RL}
 \end{figure} 
 
@@ -363,14 +363,14 @@ $S_{1} = \sqrt{P^2 + Q^2}; \;\;\;\;\;\; S_{1} = \sqrt{200^2 + 40^2} $\\
 Según la ecuación \ref{EQ23}:\\
 
 $THD_{v}=\sqrt{\left(\frac{V}{V_{1}}\right)^2-1} ;  \;\;\;\;\;\; {THD_{v}}^2=\left(\frac{V}{V_{1}}\right)^2 - 1;  \;\;\;\;\;\;
-{THD_{v1}}^2=\frac{{V}^2 - {{V}_{1}}^2}{{V_{1}}^2} $\\
+{THD_{v}}^2=\frac{{V}^2 - {{V}_{1}}^2}{{V_{1}}^2} $\\
 
-${THD_{v1}}^2*{{V_{1}}^2}={{V}^2 - {{V}_{1}}^2}; \;\;\;\;\;\;
-{THD_{v1}}^2*{{V_{1}}^2} + {{V}_{1}}^2={{V}^2}; \;\;\;\;\;\;
-{V_{1}}^2 ({THD_{v1}}^2 + 1)={{V}^2}; \;\;\;\;\;\;$\\
+${THD_{v}}^2*{{V_{1}}^2}={{V}^2 - {{V}_{1}}^2}; \;\;\;\;\;\;
+{THD_{v}}^2*{{V_{1}}^2} + {{V}_{1}}^2={{V}^2}; \;\;\;\;\;\;
+{V_{1}}^2 ({THD_{v}}^2 + 1)={{V}^2}; \;\;\;\;\;\;$\\
 
-${V_{1}}^2 = \frac{{{V}^2}}{{THD_{v1}}^2 + 1}; \;\;\;\;\;\;
-V_{1} = \sqrt{\frac{{{V}^2}}{{THD_{v1}}^2 + 1}}; \;\;\;\;\;\;
+${V_{1}}^2 = \frac{{{V}^2}}{{THD_{v}}^2 + 1}; \;\;\;\;\;\;
+V_{1} = \sqrt{\frac{{{V}^2}}{{THD_{v}}^2 + 1}}; \;\;\;\;\;\;
 V_{1} = \sqrt{\frac{{{120V}^2}}{{0.04}^2 + 1}}$\\
 
 \textbf{* }$V_{1} = 119.9041V$\\
@@ -420,7 +420,7 @@ S_{N} =  \sqrt{{223,836VA}^2 - {203,9608VA}^2}$\\
 
 Según la ecuación \ref{EQ60}: \\
 
-\textbf{* }$D_{1} = V_{1}*I_{H} = 119,9041V * 0,7654A = 91,7745VA$\\
+\textbf{* }$D_{i} = V_{1}*I_{H} = 119,9041V * 0,7654A = 91,7745VA$\\
 
 \textbf{* }$D_{v} = V_{H}*I_{1} = 4.7962V *1,7010A = 8,1583VA$\\
 
@@ -466,7 +466,32 @@ Según la ecuación \ref{EQ31}: \\
 
 $D_{H}=\sqrt{S^2_{H}-P^2{H}}; \;\;\;\;\;\;\; D_{H} = \sqrt{3,6710VA^2 - 0,1317VA^2}$\\
 
-\textbf{* }$D_{H} = 3,6686VAR$
+\textbf{* }$D_{H} = 3,6686VAR$\\
+
+En la tabla \ref{tab:resultados-monofasico}, se relacionan los resultados obtenidos del ejemplo anterior.
+
+\begin{table}[H]
+\begin{tabular}{|l|l|l|l|l}
+\cline{1-4}
+Parametro & Total (T)      & Fundamental (1)            & No fundamental (H)               &  \\ \cline{1-4}
+V (V)     & 120            & 119,9041                   & 4,7962                           &  \\ \cline{1-4}
+I (A)     & 1,8653         & 1,701                      & 0,7654                           &  \\ \cline{1-4}
+$THD_{V}$ (\%) & 4              & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}} &  \\ \cline{1-4}
+$THD_{I}$ (\%) & 45             & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}} &  \\ \cline{1-4}
+P (W)     & 200,1317       & 200                        & 0,1317                           &  \\ \cline{1-4}
+Q (VAR)   & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}} & 40                         & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}} &  \\ \cline{1-4}
+S (VA)    & 223,836        & 203,9608                   & 3,671                            &  \\ \cline{1-4}
+$S_{N}$ (VA)   & 92,2094        & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}} &  \\ \cline{1-4}
+$D_{I}$ (VA)   & 91,7745        & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}} &  \\ \cline{1-4}
+$D_{V}$ (VA)   & 8,1583         & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}} &  \\ \cline{1-4}
+$\theta$ (°)  & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}} & 11,3044                    & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}} &  \\ \cline{1-4}
+PF        & 0,8941         & 0,9805                     & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}} &  \\ \cline{1-4}
+N (VAR)   & 100,2489       & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}} &  \\ \cline{1-4}
+$D_{H}$ (VAR)  & 3,6686         & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}} &  \\ \cline{1-4}
+\end{tabular}
+\caption{Resultado del ejemplo monofásico no sinusoidal}
+\label{tab:resultados-monofasico}
+\end{table}
 
 \subsection{Sistema trifásico sinusoidal balanceado }
 
@@ -630,7 +655,7 @@ En la figura \ref{fig:inter}, se muestra un interpretación de $S_{V}$ y $S_{A}$
 \begin{figure}[H]
 \centering
 \includegraphics{2Marco/intergeo}
-\caption{Potencias aparentes aritméticas y vectoriales} 
+\caption{Potencias aparentes aritméticas y vectoriales} \cite{A30}
 \label{fig:inter}
 \end{figure} 
 
@@ -700,7 +725,7 @@ Frecuencia & 18/05/2018 & 18:13 & 60 & 60 & 60 & 30 & 6:00 & min:s\\
 \begin{figure}[H]
 \centering
 \includegraphics{2Marco/voltaje-rms}
-\caption{Voltaje RMS} 
+\caption{Voltaje RMS (Autoria propia)} 
 \label{fig:voltaje-rms}
 \end{figure} 
 
@@ -709,7 +734,7 @@ Según la norma NTC 1340 (Tercera actualización) expresa que el 100\% de los va
 \begin{figure}[H]
 \centering
 \includegraphics[width = 10cm]{2Marco/tension-nominal}
-\caption{Clasificación, denominación y valores tensión nominal} 
+\caption{Clasificación, denominación y valores tensión nominal} \cite{A44}
 \label{fig:tension-nominal}
 \end{figure} 
 
@@ -769,7 +794,7 @@ L3 Irms & 18/05/2018 & 18:13 & 576,5 & 553 & 730 & mA & 6:00 & min:s\\
 \begin{figure}[H]
 \centering
 \includegraphics{2Marco/corriente-rms}
-\caption{Corriente RMS} 
+\caption{Corriente RMS (Autoria propia)} 
 \label{fig:corriente-rms}
 \end{figure} 
 
@@ -802,14 +827,14 @@ L3 THDi & 18/05/2018 & 18:13 & 40,45 & 30,9 & 44,5 & \% & 6:00 & min:s\\
 \begin{figure}[H]
 \centering
 \includegraphics{2Marco/porcentaje-thdv}
-\caption{Porcentaje de $THD_{V}$} 
+\caption{Porcentaje de $THD_{V}$ (Autoria propia)} 
 \label{fig:porcentaje-thdv}
 \end{figure} 
 
 \begin{figure}[H]
 \centering
 \includegraphics{2Marco/porcentaje-thdi}
-\caption{Porcentaje de $THD_{I}$} 
+\caption{Porcentaje de $THD_{I}$ (Autoria propia)} 
 \label{fig:porcentaje-thdi}
 \end{figure} 
 
@@ -883,7 +908,7 @@ Tomando como referencia la figura \ref{fig:límites-corriente}, la cual está en
 \begin{figure}[H]
 \centering
 \includegraphics{2Marco/limites-distorsion-corriente}
-\caption{Límites de distorsión de corriente para sistemas de distribución general} 
+\caption{Límites de distorsión de corriente para sistemas de distribución general} \cite{A45}
 \label{fig:límites-corriente}
 \end{figure} 
 

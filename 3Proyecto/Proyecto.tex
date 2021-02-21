@@ -5,7 +5,7 @@ El medidor se planteó con base a una arquitectura combinada entre software y ha
 \begin{figure}[H]
     \centering
     \includegraphics[width = 15cm]{3Proyecto/arquitectura}
-    \caption{Arquitectura del proyecto} 
+    \caption{Arquitectura del proyecto (Esquema realizado con la aplicación https://app.diagrams.net/)} 
     \label{fig:arquitectura-proyecto}
     \end{figure}
 El proceso de medición empieza en el momento de conectar una carga electrica al conversor de señal análoga a digital. Estas señales pasan a un procesador digital de señales, dónde se aplica los parámetros matemáticos establecidos en el estándar IEEE 1459 del 2010, el cual permite la medición de la potencia eléctrica en cualquier tipo de condición.\\\\
@@ -32,7 +32,7 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
         \begin{figure}
             \centering
             \includegraphics[width = 3cm]{3Proyecto/EVM430-F6779}
-            \caption{Tarjeta EVM430-F6779-3} 
+            \caption{Tarjeta EVM430-F6779-3}\cite{A46} 
             \label{fig:EVM430-F6779-3}
         \end{figure} 
         \begin{itemize}
@@ -51,7 +51,7 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
         \begin{figure}[H]
             \centering
             \includegraphics[width = 3cm]{3Proyecto/EVAL-ADE7978}
-            \caption{Tarjeta EVAL-ADE7978} 
+            \caption{Tarjeta EVAL-ADE7978} \cite{A47}
             \label{fig:EVAL-ADE7978}
         \end{figure}
         \begin{itemize}
@@ -73,7 +73,7 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
         \begin{figure}[H]
             \centering
             \includegraphics[width = 3cm]{3Proyecto/78M6631-EVM-DSL}
-            \caption{Tarjeta 78M6631-EVM-DSL}
+            \caption{Tarjeta 78M6631-EVM-DSL}\cite{A48}
             \label{fig:78M6631-EVM-DSL}
         \end{figure}
         \begin{itemize}
@@ -101,7 +101,7 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
         \begin{figure}[H]
             \begin{center}
                 \includegraphics[width = 9cm]{3Proyecto/configuration}
-                \caption{ Esquema de conexión para una distribución en Y, 3 fases, 4 hilos.} 
+                \caption{ Esquema de conexión para una distribución en Y, 3 fases, 4 hilos.} \cite{A49}
                 \label{fig:configuracion}
             \end{center}
         \end{figure}
@@ -126,7 +126,7 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
             \begin{figure}[H]
                 \begin{center}
                     \includegraphics[width = 3cm]{3Proyecto/Cableado}
-                    \caption{ ADE 7978 configurado con las resistencias Shunt} 
+                    \caption{ ADE 7978 configurado con las resistencias Shunt (Imagen del proyecto)} 
                     \label{fig:Cableado}
                 \end{center}
             \end{figure}
@@ -150,7 +150,7 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
         \begin{figure}[H]
             \begin{center}
                 \includegraphics[width = 10cm]{3Proyecto/EsquemaCtrShunt.PNG}
-                \caption{ Esquema caracterización de las resistencias Shunt } 
+                \caption{ Esquema caracterización de las resistencias Shunt (Esquema realizado en MATLAB)} 
                 \label{fig:EsquemaCtrShunt}
             \end{center}
         \end{figure}
@@ -216,7 +216,7 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
             \begin{figure}[H]
                 \begin{center}
                     \includegraphics[width = 15cm]{3Proyecto/CorrienteVoltaje1.png}
-                    \caption{ Caracterización ShuntA} 
+                    \caption{ Caracterización ShuntA (Gráfica obtenida en MATLAB)} 
                     \label{fig:Muestras ShuntA}
                 \end{center}
             \end{figure}
@@ -274,7 +274,7 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
             \begin{figure}[H]
                 \begin{center}
                     \includegraphics[width = 15cm]{3Proyecto/CorrienteVoltaje2.png}
-                    \caption{ Caracterización ShuntB} 
+                    \caption{ Caracterización ShuntB (Gráfica obtenida en MATLAB)} 
                     \label{fig:Muestras shuntB}
                 \end{center}
             \end{figure}
@@ -334,7 +334,7 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
             \begin{figure}[H]
                 \begin{center}
                     \includegraphics[width = 15cm]{3Proyecto/CorrienteVoltaje3.png}
-                    \caption{ Caracterización ShuntC} 
+                    \caption{ Caracterización ShuntC (Gráfica obtenida en MATLAB)} 
                     \label{fig:Muestras shuntC}
                 \end{center}
             \end{figure}
@@ -398,14 +398,14 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
         \begin{figure}[H]
             \centering
             \includegraphics[width = 10cm]{3Proyecto/divisorVoltaje}
-            \caption{Divisor de voltaje ADC} 
+            \caption{Divisor de voltaje ADC} \cite{A49}
             \label{fig:divisorVolate}
         \end{figure} 
 
         \begin{figure}[H]
             \centering
             \includegraphics[width = 10cm]{3Proyecto/voltageOutput}
-            \caption{Salida de voltaje del ADE 7978} 
+            \caption{Salida de voltaje del ADE 7978} \cite{A50}
             \label{fig:voltageOutput}
         \end{figure} 
 
@@ -417,7 +417,7 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
         \begin{figure}[H]
             \begin{center}
                 \includegraphics[width = 10cm]{3Proyecto/CircuitoCorriente.PNG}
-                \caption{ Circuito de protección para los pines IP e IM } 
+                \caption{ Circuito de protección para los pines IP e IM } \cite{A49}
                 \label{fig:CircuitoCorriente}
             \end{center}
         \end{figure}
@@ -429,7 +429,7 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
         \begin{figure}[H]
             \begin{center}
                 \includegraphics[width = 10cm]{3Proyecto/Nodos.PNG}
-                \caption{ Nodos aplicados al circuito} 
+                \caption{ Nodos aplicados al circuito} \cite{A49}
                 \label{fig:Nodos}
             \end{center}
         \end{figure}
@@ -576,7 +576,7 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
         \begin{figure}[H]
             \begin{center}
                 \includegraphics[width = 15cm]{3Proyecto/ConversorCorrienteADE.PNG}
-                \caption{ Relacion ADC corriente} 
+                \caption{ Relacion ADC corriente} \cite{A50}
                 \label{fig:Relacion ADC corriente}
             \end{center}
         \end{figure}
@@ -659,7 +659,7 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
         \begin{figure}[H]
             \begin{center}
                 \includegraphics[width = 15cm]{3Proyecto/I2Cconnection.png}
-                \caption{ Conexión I2C } 
+                \caption{ Conexión I2C (Esquema realizado en Orcad pspice)} 
                 \label{fig:Coneccion I2C}
             \end{center}
         \end{figure}
@@ -669,14 +669,14 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
         \begin{figure}[H]
             \begin{center}
                 \includegraphics[width = 15cm]{3Proyecto/I2CProtocol.PNG}
-                \caption{ Protocolo de escritura I2C} 
+                \caption{ Protocolo de escritura I2C}\cite{A50}
                 \label{fig:I2C protocol write}
             \end{center}
         \end{figure}
         \begin{figure}[H]
             \begin{center}
                 \includegraphics[width = 15cm]{3Proyecto/I2CProtocolRead.PNG}
-                \caption{ Protocolo de lectura I2C} 
+                \caption{ Protocolo de lectura I2C} \cite{A50}
                 \label{fig:I2C protocol read}
             \end{center}
         \end{figure}
@@ -870,7 +870,7 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
         \begin{figure}[H]
             \begin{center}
                 \includegraphics[width = 15cm]{3Proyecto/node}
-                \caption{ Descarga de Node JS } 
+                \caption{ Descarga de Node JS } \cite{A51}
                 \label{fig:node}
            \end{center}
         \end{figure}
@@ -882,14 +882,14 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
         \begin{figure}[H]
             \begin{center}
                 \includegraphics[width = 15cm]{3Proyecto/ngNew}
-                \caption{ Creación de proyecto en Angular} 
+                \caption{ Creación de proyecto en Angular (Terminal del computador)} 
                 \label{fig:ngNew}
            \end{center}
         \end{figure}
         \begin{figure}[H]
             \begin{center}
                 \includegraphics[width = 15cm]{3Proyecto/ngServe}
-                \caption{ Levantar servidor local en Angular} 
+                \caption{ Levantar servidor local en Angular (Terminal del computador)} 
                 \label{fig:ngServe}
            \end{center}
         \end{figure}
@@ -897,7 +897,7 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
         \begin{figure}[H]
             \begin{center}
                 \includegraphics[width = 15cm]{3Proyecto/ngComponents}
-                \caption{ Creación de componentes en Angular} 
+                \caption{ Creación de componentes en Angular (Terminal del computador)} 
                 \label{fig:ngComponents}
             \end{center}
         \end{figure}
@@ -906,14 +906,14 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
         \begin{figure}[H]
             \begin{center}
                 \includegraphics[width = 15cm]{3Proyecto/components1}
-                \caption{ Componentes home y navbar} 
+                \caption{ Componentes home y navbar} \cite{A52}
                 \label{fig:components1}
             \end{center}
         \end{figure}
         \begin{figure}[H]
             \begin{center}
                 \includegraphics[width = 15cm]{3Proyecto/components2}
-                \caption{ Componentes graphic y dashboard} 
+                \caption{ Componentes graphic y dashboard} \cite{A52}
                 \label{fig:components2}
             \end{center}
         \end{figure}
