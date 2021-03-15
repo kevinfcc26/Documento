@@ -4,7 +4,40 @@
 A continuación, se explican los conceptos claves que se deben saber para poder realizar este proyecto. Se inicia explicando las distorsiones en la onda, el factor de potencia y la distorsión armónica total en voltaje y corriente, con el fin de entender como se generan las distorsiones en la onda y como están compuestas. Siguiente a esto, se explica el estándar IEEE 1459 del 2010 que es el objetivo principal del proyecto en donde se explican las condiciones que una carga puede presentar y como se deben analizar estas cargas en dichas condiciones. Se procede a realizar un ejercicio practico en donde se analiza una de las situaciones contempladas en el estándar IEEE 1459 para demostrar la implementación de esta.\\\\
 Una vez demostrado el estándar, se procede a crear un software que nos permita realizar los cálculos de este de forma digital y al final mostrar los resultados en una página web. Para lograr este software se requiere tener claro los conceptos de programación orientada a objetos, programación web, definición del Front-end, definición del Back-end y la arquitectura de software REST. De esta manera ya es posible tener todo lo necesario para crear el software.\\\\
 Para entender como funcionan la descomposición de onda y el proceso de convertir una señal análoga a digital, es necesario comprender los principios básicos de la transformada de Fourier y el teorema de muestreo de Nyquist-Shannon.\\\\
-Por último, se requiere una definición de ¿qué es el internet de las cosas?, ¿qué permite? y ¿qué dispositivos se usan para lograr dicha funcionalidad? Para implementar este concepto, se utilizará la tarjeta raspberry pi, la cual cumple con las características fundamentales para conectar el medidor de energía a la red de internet.\\\\
+Por último, se requiere una definición de ¿qué es el internet de las cosas?, ¿qué permite? y ¿qué dispositivos se usan para lograr dicha funcionalidad? Para implementar este concepto, se utilizará la tarjeta raspberry pi, la cual cumple con las características fundamentales para conectar el medidor de energía a la red de internet.
+
+\section{Medidores en la actualidad}
+
+Thomas Alva Edison, al presentó el primer sistema de distribución eléctrico usando corriente alterna, creó un modelo de negocio en dónde la luz se pudiera vender de la misma manera que el gas. Su medidor eléctrico, patentado en Estados Unidos en 1881 usa efectos electroquímicos de corriente cómo método de funcionamiento.\cite{A55}\\\\
+Este medidor contenía una celda una celda electrolítica, en donde su ubicaba una lamina de cobre pesada con precisión al inicio del periodo de facturación. A medida que la corriente eléctrica pasaba por la lamina provoca una deposición de cobre. Al finalizar el periodo de facturación se vuelve a pesar el cobre y la diferencia en peso representó la cantidad de electricidad que había pasado. De tal forma se calibró el medidor para que las facturas pudieran expresarse en pies cúbicos de gas.\cite{A55}\\\\
+Este medidor se usó hasta el fin del siglo XIX; pese a ello, obtener el valor de la medición era complicado de obtener para la empresa de servicios públicos y aún más para el cliente. Por ende, Edison creó un sistema de conteo para mejorar la lectura de este.\cite{A55}\\\\
+En la misma década, otro medidor de energía fue creado usando el principio de oscilación o rotación proporcional a la energía el cual podría conducir a un registro de lectura. Este principio lo crearon los American William Edward Ayrton y John Perry en 1881. En su forma más avanzada, este medidor tenía dos péndulos, con una bobina en ambos péndulos conectados al voltaje. Debajo de los péndulos había dos bobinas de corriente que se enrollaban en direcciones opuestas. Por tanto, uno de los péndulos iba más lento y el otro más rápido que sin carga. La diferencia entre los tiempos de oscilación, promovió el mecanismo de conteo. El rol de los dos péndulos se intercambió cada minuto, de modo que se pudiera compensar la diferencia inicial entre los tiempos de oscilación de los péndulos. Al mismo tiempo, se dio cuerda al reloj.\cite{A55}\\\\
+Estos medidores eran costosos porque contenían dos relojes y fueron reemplazados gradualmente por medidores de motor. Los medidores de péndulo miden amperios-hora o vatios-hora, pero solo se pueden usar para corriente continua.\cite{A55}\\\\
+Dichos medidores de motor, el par motor es proporcional a la carga y está equilibrado por un par de frenado, de modo que la velocidad del rotor es proporcional a la carga cuando los pares están en equilibrio. El Norte Americano Elihu Thomson, invenó su Wattímetro de grabación en 1889 para General Electric. Era un motor sin hierro, con el rotor estimulado por el voltaje a través de una bobina y una resistencia, usando un conmutador.\cite{A55}\\\\
+De tal manera, los medidores fueron mejorando sus características en cuanto su forma de medir la corriente eléctrica y la lectura de esta para los usuarios. Sin embargo, como lo menciona Andrew J Berrisfold en el proyecto del impacto armónico \cite{A43}, dichos medidores no contemplaron la opción que las señales de voltaje y corriente fueran no sinusoidales, lo que conlleva a que las mediciones no puedan ser exactas. \\\\
+El estándar IEEE14-59-2010 (1459-2010 IEEE Standard Definitions for the Measurement of Electric Power Quantities Under Sinusoidal, Nonsinusoidal, Balanced, or Unbalanced Conditions., n.d.) explica la forma en cómo se debe obtener las distintas potencias eléctricas en el caso de condiciones desbalanceadas.\\\\
+En la tabla (REF:tabla) se enseña algunos de los medidores usados en la actualidad en Colombia y se hace un estudio de su ficha técnica para verificar si estos implementan el estándar IEEE 1459 y si cuentan con una aplicación web para ver las mediciones de este.\\\\
+
+\begin{longtable}{|l|c|c|c|}
+    \hline
+    Medidor - Fabricante               & \multicolumn{1}{l|}{IEEE 1459} & \multicolumn{1}{l|}{Aplicación web} & \multicolumn{1}{l|}{Referencia} \\ \hline
+    \endfirsthead
+    %
+    \multicolumn{4}{c}%
+    {{\bfseries Table \thetable\ continued from previous page}} \\
+    \endhead
+    %
+    MONOFÁSICO BIFILAR -1F2H - RYMEL              & NO & NO & \cite{A56} \\ \hline
+    MONOFÁSICO TRIFILAR - 1F3H - RYMEL & \cellcolor[HTML]{FFFFFF}NO     & NO                                  & \cite{A57}                        \\ \hline
+    TRIFÁSICO TETRAFILAR - 3F4H-LCD - RYMEL       & NO & NO & \cite{A58} \\ \hline
+    BIFÁSICO TRIFILAR - 2F3H-LCD - RYMEL          & NO & NO & \cite{A59} \\ \hline
+    Todos los medidores - Iskra                   & NO & NO & \cite{A60} \\ \hline
+    Todos los medidores - Skaitek                 & NO & NO & \cite{A61} \\ \hline
+    Medidores de energía clase 1 - INELCA         & NO & NO & \cite{A62} \\ \hline
+    Aclara I-210+c™ Electricity Meter - Sensus    & NO & SI & \cite{A63} \\ \hline
+    Medidores inteligentes tipo SMETS 1 y SMETS 2 & NO & SI & \cite{A64} \\ \hline
+    \end{longtable}
+Al obtener los resultados de la investigación, los medidores más antiguos no cumplen con los dos criterios propuestos; sin embargo, los medidores inteligentes (Smart Meters), cuentan con aplicaciones web, dónde sus valores pueden ser visualizados, pero estas mediciones no implementan el IEEE1459.\\\\
 
 \section{Factor de potencia y distorsión de la onda.}
 % El factor de potencia se puede interpretar como la relación entre la energía transmitida a la carga y la energía máxima que podría transmitirse siempre que las pérdidas de línea se mantengan iguales.\cite{A28}\\  Como un caso base, se considera una carga lineal R-L mostrado en la figura \ref{fig:RL} alimentado por medio de una fuente sinusoidal en estado estable. Usando valores rms para las magnitudes de voltaje y corriente, la potencia suministrada por la fuente es:\cite{A29}\\
