@@ -11,12 +11,12 @@ Por último, se requiere una definición de ¿qué es el internet de las cosas?,
 Thomas Alva Edison, al presentó el primer sistema de distribución eléctrico usando corriente alterna, creó un modelo de negocio en dónde la luz se pudiera vender de la misma manera que el gas. Su medidor eléctrico, patentado en Estados Unidos en 1881 usa efectos electroquímicos de corriente cómo método de funcionamiento.\cite{A55}\\\\
 Este medidor contenía una celda una celda electrolítica, en donde su ubicaba una lamina de cobre pesada con precisión al inicio del periodo de facturación. A medida que la corriente eléctrica pasaba por la lamina provoca una deposición de cobre. Al finalizar el periodo de facturación se vuelve a pesar el cobre y la diferencia en peso representó la cantidad de electricidad que había pasado. De tal forma se calibró el medidor para que las facturas pudieran expresarse en pies cúbicos de gas.\cite{A55}\\\\
 Este medidor se usó hasta el fin del siglo XIX; pese a ello, obtener el valor de la medición era complicado de obtener para la empresa de servicios públicos y aún más para el cliente. Por ende, Edison creó un sistema de conteo para mejorar la lectura de este.\cite{A55}\\\\
-En la misma década, otro medidor de energía fue creado usando el principio de oscilación o rotación proporcional a la energía el cual podría conducir a un registro de lectura. Este principio lo crearon los American William Edward Ayrton y John Perry en 1881. En su forma más avanzada, este medidor tenía dos péndulos, con una bobina en ambos péndulos conectados al voltaje. Debajo de los péndulos había dos bobinas de corriente que se enrollaban en direcciones opuestas. Por tanto, uno de los péndulos iba más lento y el otro más rápido que sin carga. La diferencia entre los tiempos de oscilación, promovió el mecanismo de conteo. El rol de los dos péndulos se intercambió cada minuto, de modo que se pudiera compensar la diferencia inicial entre los tiempos de oscilación de los péndulos. Al mismo tiempo, se dio cuerda al reloj.\cite{A55}\\\\
+En la misma década, otro medidor de energía fue creado usando el principio de oscilación o rotación proporcional a la energía el cual podría conducir a un registro de lectura. Este principio lo crearon los americanos William Edward Ayrton y John Perry en 1881. En su forma más avanzada, este medidor tenía dos péndulos, con una bobina en ambos péndulos conectados al voltaje. Debajo de los péndulos había dos bobinas de corriente que se enrollaban en direcciones opuestas. Por tanto, uno de los péndulos iba más lento y el otro más rápido que sin carga. La diferencia entre los tiempos de oscilación, promovió el mecanismo de conteo. El rol de los dos péndulos se intercambió cada minuto, de modo que se pudiera compensar la diferencia inicial entre los tiempos de oscilación de los péndulos. Al mismo tiempo, se dio cuerda al reloj.\cite{A55}\\\\
 Estos medidores eran costosos porque contenían dos relojes y fueron reemplazados gradualmente por medidores de motor. Los medidores de péndulo miden amperios-hora o vatios-hora, pero solo se pueden usar para corriente continua.\cite{A55}\\\\
-Dichos medidores de motor, el par motor es proporcional a la carga y está equilibrado por un par de frenado, de modo que la velocidad del rotor es proporcional a la carga cuando los pares están en equilibrio. El Norte Americano Elihu Thomson, invenó su Wattímetro de grabación en 1889 para General Electric. Era un motor sin hierro, con el rotor estimulado por el voltaje a través de una bobina y una resistencia, usando un conmutador.\cite{A55}\\\\
-De tal manera, los medidores fueron mejorando sus características en cuanto su forma de medir la corriente eléctrica y la lectura de esta para los usuarios. Sin embargo, como lo menciona Andrew J Berrisfold en el proyecto del impacto armónico \cite{A43}, dichos medidores no contemplaron la opción que las señales de voltaje y corriente fueran no sinusoidales, lo que conlleva a que las mediciones no puedan ser exactas. \\\\
-El estándar IEEE14-59-2010 (1459-2010 IEEE Standard Definitions for the Measurement of Electric Power Quantities Under Sinusoidal, Nonsinusoidal, Balanced, or Unbalanced Conditions., n.d.) explica la forma en cómo se debe obtener las distintas potencias eléctricas en el caso de condiciones desbalanceadas.\\\\
-En la tabla (REF:tabla) se enseña algunos de los medidores usados en la actualidad en Colombia y se hace un estudio de su ficha técnica para verificar si estos implementan el estándar IEEE 1459 y si cuentan con una aplicación web para ver las mediciones de este.\\\\
+En los medidores de motor, el par motor es proporcional a la carga y está equilibrado por un par de frenado, de modo que la velocidad del rotor es proporcional a la carga cuando los pares están en equilibrio. El americano Elihu Thomson, inventó su Wattímetro de grabación en 1889 para General Electric. Era un motor sin hierro, con el rotor estimulado por el voltaje a través de una bobina y una resistencia, usando un conmutador.\cite{A55}\\\\
+De tal manera, los medidores fueron mejorando sus características en cuanto su forma de medir la corriente eléctrica y la lectura de esta para los usuarios. Sin embargo, como lo menciona Andrew J Berrisfold en el proyecto del impacto armónico \cite{A43}, dichos medidores no contemplaron las señales de voltaje y corriente fueran no sinusoidales, lo que conlleva a que las mediciones no puedan ser exactas. \\\\
+El estándar IEEE 1459-2010 (1459-2010 IEEE Standard Definitions for the Measurement of Electric Power Quantities Under Sinusoidal, Nonsinusoidal, Balanced, or Unbalanced Conditions., n.d.) explica la forma en cómo se debe obtener las distintas potencias eléctricas en el caso de condiciones desbalanceadas.\\\\
+En la tabla \ref{tab:medidores} se enseña algunos de los medidores usados en la actualidad en Colombia y se hace un estudio de su ficha técnica para verificar si estos implementan el estándar IEEE 1459 y si cuentan con una aplicación web para ver las mediciones de este.\\\\
 
 \begin{longtable}{|l|c|c|c|}
     \hline
@@ -36,31 +36,33 @@ En la tabla (REF:tabla) se enseña algunos de los medidores usados en la actuali
     Medidores de energía clase 1 - INELCA         & NO & NO & \cite{A62} \\ \hline
     Aclara I-210+c™ Electricity Meter - Sensus    & NO & SI & \cite{A63} \\ \hline
     Medidores inteligentes tipo SMETS 1 y SMETS 2 & NO & SI & \cite{A64} \\ \hline
-    \end{longtable}
-Al obtener los resultados de la investigación, los medidores más antiguos no cumplen con los dos criterios propuestos; sin embargo, los medidores inteligentes (Smart Meters), cuentan con aplicaciones web, dónde sus valores pueden ser visualizados, pero estas mediciones no implementan el IEEE1459.\\\\
+    \caption{Autor - Características de medidores} 
+    \label{tab:medidores}    
+\end{longtable}
+Al obtener los resultados de la investigación, los medidores más antiguos no cumplen con los dos criterios propuestos; sin embargo, los medidores inteligentes (Smart Meters), cuentan con aplicaciones web, dónde sus valores pueden ser visualizados, pero estas mediciones no implementan el IEEE 1459.
 
 \section{Factor de potencia y distorsión de la onda.}
-% El factor de potencia se puede interpretar como la relación entre la energía transmitida a la carga y la energía máxima que podría transmitirse siempre que las pérdidas de línea se mantengan iguales.\cite{A28}\\  Como un caso base, se considera una carga lineal R-L mostrado en la figura \ref{fig:RL} alimentado por medio de una fuente sinusoidal en estado estable. Usando valores rms para las magnitudes de voltaje y corriente, la potencia suministrada por la fuente es:\cite{A29}\\
-Las distorsiones presentes en la onda se interpretan como ruido eléctrico, estas distorsiones es la superposición de señales en múltiplos de la frecuencia fundamental. Muchas de estas distorsiones son generadas por equipos como por ejemplo televisores, computadores, microondas; etc.\\
-%  Los armónicos se encuentran en equipos principales generadores de armónicos que efectúan circuitos de rectificación como por ejemplo computadores, televisores, microondas; etc. \cite{A28}\\  Como un caso base, se considera una carga lineal R-L mostrado en la figura \ref{fig:RL} alimentado por medio de una fuente sinusoidal en estado estable. Usando valores rms para las magnitudes de voltaje y corriente, la potencia suministrada por la fuente es:\cite{A29}\\
+% El factor de potencia se puede interpretar como la relación entre la energía transmitida a la carga y la energía máxima que podría transmitirse siempre que las pérdidas de línea se mantengan iguales.\cite{A28}\\  Como un caso base, se considera una carga lineal R-L mostrado en la figura \ref{fig:RL} alimentado por medio de una fuente sinusoidal en estado estable. Usando valores para las magnitudes de voltaje y corriente, la potencia suministrada por la fuente es:\cite{A29}\\
+Las distorsiones presentes en la onda se interpretan como ruido eléctrico, estas distorsiones es la superposición de señales en múltiplos de la frecuencia fundamental. Muchas de estas distorsiones son generadas por equipos como por ejemplo televisores, computadores, microondas; etc.
+%  Los armónicos se encuentran en equipos principales generadores de armónicos que efectúan circuitos de rectificación como por ejemplo computadores, televisores, microondas; etc. \cite{A28}\\  Como un caso base, se considera una carga lineal R-L mostrado en la figura \ref{fig:RL} alimentado por medio de una fuente sinusoidal en estado estable. Usando valores para las magnitudes de voltaje y corriente, la potencia suministrada por la fuente es:\cite{A29}\\
 \begin{equation}\label{EQ1}
 P=V_{s}I_{s}cos \phi\\
 \end{equation}
-El factor de potencia (FP) se puede interpretar como la relación entre la energía transmitida a la carga y la energía máxima que podría transmitirse siempre que las pérdidas de línea se mantengan iguales. \cite{A30} Este se puede expresar como la analogía entre la potencia real media P y el producto de la tensión y corriente rms:\\
-% El factor de potencia (FP), se conoce como la analogía entre la potencia real media P y el producto de la tensión y corriente rms:
+El factor de potencia (FP) se puede interpretar como la relación entre la energía transmitida a la carga y la energía máxima que podría transmitirse siempre que las pérdidas de línea se mantengan iguales. \cite{A30} Este se puede expresar como la analogía entre la potencia real media P y el producto de la tensión y corriente:
+% El factor de potencia (FP), se conoce como la analogía entre la potencia real media P y el producto de la tensión y corriente:
 \begin{equation}\label{EQ2}
 PF=\frac{P}{V_{s}I_{s}}=cos\phi\\
-$(Usando \ref{EQ1})$  \\
+$(Usando \ref{EQ1})$
 \end{equation} 
 
-Y por lo tanto, la corriente rms es:\\
+Y por lo tanto, la corriente es:
 
 \begin{equation}\label{EQ3}
-I=\frac{P}{V_{s}PF}\\
-$(Usando \ref{EQ2})$  \\
+I=\frac{P}{V_{s}PF}
+$(Usando \ref{EQ2})$
 \end{equation} 
 
-Esto demuestra que el PF y la corriente $I_{s}$ son inversamente proporcional. \\
+Esto demuestra que el PF y la corriente $I_{s}$ son inversamente proporcional.
 
 \begin{figure}[H]
 \centering
@@ -82,7 +84,9 @@ Esto demuestra que el PF y la corriente $I_{s}$ son inversamente proporcional. \
 \section{Distorsión armónica total (THD) y valor RMS de la corriente distorsionada}
 
 
-Una señal de corriente sinusoidal para una carga lineal como se muestra en la figura \ref{fig:RL}, no tiene distorsión, sin embargo, hay señales de corrientes que su forma de onda es distorsionada debido a el proceso de rectificar la corriente alterna en corriente directa, haciendola no sinusoidal, es decir la onda se distorsiona. \cite{A29} Un ejemplo de una señal con distorsión se puede ver en la figura \ref{fig:distorsion_current} en donde $i_{s}$ es la señal de corriente distorsionada y $V_{s}(t)$ es sinusoidal. El análisis se aplica a la utilidad de suministros ya sean en monofásico o trifásico, en donde el estudio se realiza por fases.\\
+La corriente sinusoidal consumida por la carga lineal de la figura \ref{fig:RL}, no tiene distorsión, sin embargo, los accionamientos eléctricos toman corrientes con una forma de onda distorsionada como se muestra en $i_{s}(t)$ en la figura \ref{fig:distorsion_current}. La tensión de la red $V_{s}$ se supone que es sinusoidal.\cite{A29}\\
+El siguiente análisis se aplica al suministro de la red eléctrica, ya sea monofásico o trifásico, en cuyo caso el análisis se realiza por fases. \cite{A29}\\
+% Una señal de corriente sinusoidal para una carga lineal como se muestra en la figura \ref{fig:RL}, no tiene distorsión, sin embargo, hay señales de corrientes que su forma de onda es distorsionada debido a el proceso de rectificar la corriente alterna en corriente directa, haciendola no sinusoidal, es decir la onda se distorsiona. \cite{A29} Un ejemplo de una señal con distorsión se puede ver en la figura \ref{fig:distorsion_current} en donde $i_{s}$ es la señal de corriente distorsionada y $V_{s}(t)$ es sinusoidal. El análisis se aplica a la utilidad de suministros ya sean en monofásico o trifásico, en donde el estudio se realiza por fases.\\
   
 \begin{figure}[H]
 \centering
@@ -93,22 +97,24 @@ Una señal de corriente sinusoidal para una carga lineal como se muestra en la f
 
 
 
-La onda periódica de la corriente $i_{s}(t)$, se puede expresar en componentes de Fourier:\\
+La onda periódica de la corriente $i_{s}(t)$ en la figura \ref{fig:distorsion_current}, se puede expresar en componentes de Fourier:\\
 \begin{equation}\label{EQ4}
 i_{s}(t)=i_{s1}(t) + \sum_{h=2}^{\infty}i_{sh(t)}\\
 \end{equation}
 Donde:\\
 $\sum_{h=2}^{\infty}i_{sh(t)} = i_{distorsion}(t)$\\
 
-El componente dc se asume como cero e $i_{s}$ es la componente fundamental mostrada en la figura \ref{fig:distorsion_current}(a). Partiendo de la ecuación \ref{EQ4} la componente de distorsión en la corriente es la diferencia entre $i_{s}(t)$ y su componente de frecuencia fundamental:\cite{A29}\\  
+
+El componente dc se asume como cero e $i_{s1}(t)$ es la componente fundamental mostrada con una señal de puntos en la figura \ref{fig:distorsion_current}(a). Alguna de las frecuencias armónicas en la ecuación \ref{EQ4} podrian no tener valor. Partiendo de la ecuación \ref{EQ4} la componente de distorsión en la corriente es la diferencia entre $i_{s}(t)$ y su componente de frecuencia fundamental:\cite{A29}\\  
  
 \begin{equation}\label{EQ5}
-i_{distorsión}(t)=i_{s}(t)-i_{s1}(t)\\
+i_{distorsión}(t)=i_{s}(t)-i_{s1}(t) = \sum_{h=2}^{\infty}i_{sh(t)}\\
 \end{equation}
 
-En una forma de onda con su frecuencia de línea $f_{1}$ y su tiempo de periodo $T_{1}(=\frac{1}{f_{1}})$, los componentes en la expresión de \ref{EQ5} son en los múltiplos de $h$ en la frecuencia fundamental, como por ejemplo, el $3^{er}$ armónico $(h=3)$ está en $180 Hz$ con un sistema de $60 Hz$.\cite{A29}\\
+El componente de distorsión está graficado en la figura \ref{fig:distorsion_current}b.
+En una onda de forma repetitiva con la frecuencia de linea $f_{1}$ y su tiempo de periodo $T_{1}(=\frac{1}{f_{1}})$, los componentes en la expresión de la ecuación\ref{EQ5} son en los múltiplos de $h$ en la frecuencia fundamental, como por ejemplo, el $3^{er}$ armónico $(h=3)$ está en $180 Hz$ con un sistema de $60 Hz$.\cite{A29}\\
 
-Un concepto básico que se usa es que en una forma de onda repetitiva, la integral de el producto de dos componentes armónicos (incluyendo la fundamental) en frecuencias desiguales sobre repeticiones del tiempo de periodo es igual a cero: \cite{A29}\\
+A continuación, se usa un concepto básico: en una forma de onda repetitiva, la integral de el producto de dos componentes armónicos (incluyendo la fundamental) en frecuencias desiguales sobre repeticiones del tiempo de periodo es igual a cero: \cite{A29}\\
 
 \begin{equation}\label{EQ6}
 \int_{T_{1}}^{}f_{h1}(t) \cdot g_{h2}(t) \cdot dt = 0\\
@@ -130,7 +136,7 @@ i^2_{s}=(i_{s1}+ (\sum_{h=2}^{\infty}i_{sh})^2 = i^2_{sh} + \sum_{h=2}^{\infty}i
 $+ productos en términos de frecuencia de cruce$
 \end{equation}
 
-Sustituyendo la ecuación \ref{EQ8} en la ecuación \ref{EQ7}, con el concepto visto en la ecuación \ref{EQ6}, cada integral de las frecuencias cruzadas es igual a cero,
+Sustituyendo la ecuación \ref{EQ8} en la ecuación \ref{EQ7} y reconociendo que cada integral de los términos del producto de frecuencia cruzada es igual a cero (de acuerdo a la ecuación \ref{EQ6}),
 
 \begin{equation}\label{EQ9}
 I_{s} = \sqrt{\frac{1}{T}\int_{T_{1}}^{}i^2_{s1}(t) \cdot dt + \sum_{h=2}^{\infty}\frac{1}{T_{1}}\int_{T1}^{}i^2_{sh}(t)\cdot dt}\\
@@ -143,7 +149,7 @@ Por lo tanto,\\
 I_{s} = \sqrt{I^2_{s1}+I^2_{distorsion}}\\\\
 \end{equation}
 
-Donde los valores rms del componente de la frecuencia fundamental y los componentes de distorsión son los siguientes:\\
+Donde el valor de el componente de la frecuencia fundamental y los componentes de distorsión son los siguientes:\\
 \begin{equation}\label{EQ11}
 I_{s1}=\sqrt{\frac{1}{T}\int_{T1}^{}i^2_{s1}(t) \cdot dt}\\
 \end{equation}
@@ -152,9 +158,9 @@ y\\
 I_{distorsion}=\sqrt{\sum_{h=2}^{\infty}\left(\frac{1}{T_{1}}\int_{T_{1}}^{}i^2_{sh}(t)\cdot dt\right)}=\sqrt{\sum_{h=2}^{}I^2_{sh}}\\\\
 \end{equation}
 
-La ecuación descrita anteriormente, presenta que el valor rms de la componente de distorsión en la figura \ref{fig:distorsion_current} puede ser obtenido de s valores de las componentes individual de los armónicos.\cite{A29}\\
+La ecuación descrita anteriormente, presenta que el valor de la componente de distorsión en la figura \ref{fig:distorsion_current} puede ser obtenido de los valores de las componentes individuales de los armónicos.\cite{A29}\\
 
-Tomando como referencia los valores rms de los componentes de la distorsión y la fundamental en la corriente $i_{s}(t)$, un indice de distorsión llamado Distorsión Armónica Total (THD) es definida en porcentaje y este mismo pude ser presentado en distintas formas bajo las siguientes ecuaciones:\\
+Tomando como referencia los valores de los componentes de la distorsión y la fundamental en la corriente $i_{s}(t)$, un indice de distorsión llamado Distorsión Armónica Total (THD) es definida en porcentaje y este mismo puede ser presentado en distintas formas bajo las siguientes ecuaciones:\\
 
 \begin{equation}\label{EQ13}
 \%THD = 100*\frac{I_{distorsion}}{I_{s1}}\\
@@ -181,11 +187,11 @@ i\sqrt{2}I sin(\omega t - \theta)\\
 
 Donde:\\
 $V$ es el valor rms de el voltaje $(V)$\\
-$I$ es el valor rms de el voltaje $(I)$\\
+$I$ es el valor rms de la corriente $(I)$\\
 $\omega$ es la frecuencia angular  $2\pi f(rad/s)$\\
 $f$ es la frecuencia del sistema $(Hz)$\\
 $\theta$ es el ángulo de fase entre el voltaje y la corriente  $(rad)$\\
-$t$ es el tiempo $(s)$\\
+$t$ es el tiempo $(s)$
 \subsubsection{Potencia activa(W)}
 
 La potencia activa P o también conocida como potencia real, es la medición del flujo de energía durante un intervalo de tiempo $\tau$ a $\tau + KT$. \cite{A30}\\
@@ -198,7 +204,7 @@ Donde:\\
 $T=1/f$ es el ciclo de tiempo $(s)$\\
 $k$     es un número entero positivo $(s)$\\
 $\tau$  es el momento cuando empieza la medición $(s)$\\
-$P=VIcos \theta$\\
+$P=VIcos \theta$
 \subsubsection{Potencia Reactiva (var)}
 
 La magnitud de la potencia reactiva $Q$ iguala la amplitud de la potencia reactiva instantánea $P_{q}$.\cite{A30}\\
@@ -212,7 +218,7 @@ Q=\frac{\omega}{KT}\int_{\tau}^{\tau + KT}i\left[\int_{}^{}vdt\right] dt\\
 Sí la carga es inductiva, entonces $Q>0$. Sí la carga es capacitiva, entonces $Q<0$. Por lo tanto, cuando la corriente atrasa el voltaje $\theta>0$ y viceversa.\\
 \subsubsection{Potencia Aparente (VA)}
 
-La potencia aparente $S$ es el producto del voltaje rms y corriente rms.\cite{A30}\\
+La potencia aparente $S$ es el producto del voltaje y corriente.\cite{A30}\\
 
 \begin{equation}\label{EQ19}
 S=VI
@@ -220,7 +226,7 @@ S=VI
 
 $S=\sqrt{P^2+Q^2}$ \\
 
-La potencia aparente de una carga monofásica se puede interpretar como la potencia activa total que se puede transmitir a través de la misma línea mientras se mantiene el voltaje rms constante de la carga y a línea de alimentación  de pérdida de potencia constante.\cite{A30}\\
+La potencia aparente de una carga monofásica se puede interpretar como la potencia activa total que se puede transmitir a través de la misma línea mientras se mantiene el voltaje constante de la carga y a línea de alimentación  de pérdida de potencia constante.\cite{A30}\\
 
 \subsubsection{Factor de potencia}
 
@@ -228,9 +234,9 @@ La potencia aparente de una carga monofásica se puede interpretar como la poten
 PF=\frac{P}{S}
 \end{equation}
 
-El factor de potencia se puede interpretar como el radio entre la energía transmitida a la carga sobre la energía máxima que podría transmitirse, siempre y cuando las pérdidas de línea se mantengan iguales.\cite{A30}\\
+El factor de potencia se puede interpretar como el razón entre la energía transmitida a la carga sobre la energía máxima que podría transmitirse, siempre y cuando las pérdidas de línea se mantengan iguales.\cite{A30}\\
 
-Para un $S$ y $V$ dados, la utilización máxima de la línea es obtenida cuando $P=S$, por lo tanto, el radio $P/S$ es un indicador de factor de utilización.\cite{A30}\\
+Para un $S$ y $V$ dados, la utilización máxima de la línea es obtenida cuando $P=S$, por lo tanto, la razón $P/S$ es un indicador de factor de utilización.\cite{A30}\\
  \subsubsection{Potencia Compleja (VA)}
  
  La potencia compleja es una cantidad la cual la potencia activa es la parte real y la potencia reactica es la parte imaginaría.\cite{A30}\\
@@ -264,7 +270,7 @@ $i_{1}=\sqrt{2I_{1}}sin(\omega t - \beta_{1})$\\\\
 $v_{H}=V_{0}+\sqrt{2}\sum_{h\neq 1}^{}V_{h}sin(h\omega t-\alpha_{h})$\\\\
 $i_{H}=I_{0}+\sqrt{2}\sum_{h\neq 1}^{}I_{h}sin(h\omega t-\beta_{h})$\\\\
 
-Los valores valores rms al cuadrado son los siguientes:
+Los valores rms al cuadrado son los siguientes:
 
 \begin{equation}\label{EQ59}
 \begin{split}
@@ -370,7 +376,7 @@ Esta potencia agrupa componentes no activas fundamentales y no fundamentales.\ci
 P_{F1}=cos \theta_{1} = \frac{P_{1}}{S_{1}}\\
 \end{equation}
 
-Este radio, facilita la evaluación de las condiciones del flujo energía.\cite{A30}\\
+Este coeficiente, facilita la evaluación de las condiciones del flujo energía.\cite{A30}\\
 
 \subsubsection{Factor de potencia}
 
@@ -378,7 +384,7 @@ Este radio, facilita la evaluación de las condiciones del flujo energía.\cite{
 PF=\frac{P}{S}
 \end{equation}
 
-Dados un $S$ y un $V$, la máxima utilización de la línea es obtenido cuando $P=S$, por lo tanto, el radio $P/S$ es un indicador de factor de utilización.\cite{A30}\\
+Dados un $S$ y un $V$, la máxima utilización de la línea es obtenido cuando $P=S$, por lo tanto, la razón $P/S$ es un indicador de factor de utilización.\cite{A30}\\
 
 Cuando el $THD_{v}<5\%$ y $THD_{i}>40\%$, es conveniente usar la siguiente ecuación:\\
 
@@ -559,8 +565,8 @@ P=\frac{1}{kT}\int_{\tau}^{\tau +kT}pdt\\
 \end{equation}
 $P=3VI\cos\theta=\sqrt{3}V_{\ell \ell}I\cos\theta$\\
 Donde\\
-$V$              es el voltaje rms de línea a neutro\\
-$V_{\ell \ell}$  es el voltaje rms línea a línea\\
+$V$              es el voltaje de línea a neutro\\
+$V_{\ell \ell}$  es el voltaje línea a línea\\
 
 \subsubsection{Potencia reactiva}
 
@@ -715,7 +721,7 @@ r(I^2_{a}+I^2_{b}+I^2_{c}+\rho I^2_{n})=3rI^2_{e}\\
 \end{equation}
 Donde:\\\\
 $r$			es la resistencia\\
-$I_{n}$		es la corriente actual (rms)\\
+$I_{n}$		es la corriente actual\\
 $r_{n}$		Es el cable neutro de la resistencia\\
 
 De las ecuaciones anteriores, la corriente equivalente de un sistema de 4 líneas es el siguiente:\\
@@ -817,11 +823,11 @@ Al comparar los datos de la tabla en la figura \ref{fig:tension-nominal} con la 
 \hline
 Nombre & Fecha & Hora & RMS & Min & Max & Unidades & Duración & Unidades\\
 \hline
-L1 Irms & 18/05/2018 & 18:13 & 605,1 & 537 & 808 & mA & 6:00 & min:s\\
+L1 I & 18/05/2018 & 18:13 & 605,1 & 537 & 808 & mA & 6:00 & min:s\\
 \hline
-L2 Irms & 18/05/2018 & 18:13 & 624,1 & 576 & 790 & mA & 6:00 & min:s\\
+L2 I & 18/05/2018 & 18:13 & 624,1 & 576 & 790 & mA & 6:00 & min:s\\
 \hline
-L3 Irms & 18/05/2018 & 18:13 & 576,5 & 553 & 730 & mA & 6:00 & min:s\\
+L3 I & 18/05/2018 & 18:13 & 576,5 & 553 & 730 & mA & 6:00 & min:s\\
 \hline
 \end{tabular}
 \end{center}
@@ -832,7 +838,7 @@ L3 Irms & 18/05/2018 & 18:13 & 576,5 & 553 & 730 & mA & 6:00 & min:s\\
 \begin{figure}[H]
 \centering
 \includegraphics{2Marco/corriente-rms}
-\caption{Corriente RMS (Autoria propia)} 
+\caption{Corriente (Autoria propia)} 
 \label{fig:corriente-rms}
 \end{figure} 
 
