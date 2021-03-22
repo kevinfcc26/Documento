@@ -767,7 +767,7 @@ Frecuencia & 18/05/2018 & 18:13 & 60 & 60 & 60 & 30 & 6:00 & min:s\\
 
 \begin{figure}[H]
 \centering
-\includegraphics{2Marco/voltaje-rms}
+\includegraphics[width = 10cm]{2Marco/voltaje-rms}
 \caption{Autor - Voltaje RMS} 
 \label{fig:voltaje-rms}
 \end{figure} 
@@ -789,7 +789,7 @@ Con los valores de la figura \ref{fig:voltaje-rms} se evidencia que los valores 
     \end{align*}
     \textbf{Porcentaje mínimos de volatjes}\\
     
-    \begin{table}
+    \begin{table}[H]
     \begin{center}
     \begin{tabular}{ |c|c|c| } 
     \hline
@@ -803,7 +803,7 @@ Con los valores de la figura \ref{fig:voltaje-rms} se evidencia que los valores 
     \hline
     \end{tabular}
     \end{center}
-    \caption{Tabla de rangos máximos y mínimos de VRMS}
+    \caption{Autor - Tabla de rangos máximos y mínimos de VRMS}
     \label{tab:rangos-vrms}
     \end{table}
 
@@ -826,9 +826,9 @@ L3 I & 18/05/2018 & 18:13 & 576,5 & 553 & 730 & mA & 6:00 & min:s\\
 \caption{Autor - Datos de caracterización de corriente}
 \label{tab:ejercicio-corriente}
 \end{table}
-\begin{figure}[H]
+\begin{figure}
     \centering
-    \includegraphics[width = 10cm]{2Marco/tension-nominal}
+    \includegraphics[width = 15cm]{2Marco/tension-nominal}
     \caption{Clasificación, denominación y valores tensión nominal} \cite{A44}
     \label{fig:tension-nominal}
     \end{figure} 
@@ -839,9 +839,7 @@ L3 I & 18/05/2018 & 18:13 & 576,5 & 553 & 730 & mA & 6:00 & min:s\\
 \caption{Autor - Corriente } 
 \label{fig:corriente-rms}
 \end{figure} 
-
 La figura \ref{fig:corriente-rms} corresponde a la corriente consumida dentro del intervalo ya establecido, se observa que los valores cambian en un rango de 300 mA, debido al uso que le aplican al computador.
-
 \begin{table}[!htbp]
 \begin{center}
 \begin{tabular}{ |c|c|c|c|c|c|c|c|c| }
@@ -862,7 +860,7 @@ L3 THDi & 18/05/2018 & 18:13 & 40,45 & 30,9 & 44,5 & \% & 6:00 & min:s\\
 \hline
 \end{tabular}
 \end{center}
-\caption{Distorsión armónica en corriente y voltaje}
+\caption{Autor - Distorsión armónica en corriente y voltaje}
 \label{tab:distorsion-armonica}
 \end{table}
 
@@ -913,20 +911,15 @@ Aplicando la ecuación \ref{EQ63}
 \begin{align*}
 TDD_{2} = \frac{I_{1a2}*THD_{2}}{I_{L2}} = \frac{0.3760*0.3975}{0.624} = 0.2395 = 23.95\%
 \end{align*}
-
 La corriente de carga (IL3) se toma el promedio de la tabla de datos que se obtiene por medio del CIRCUTOR de la siguiente manera:
-
 \begin{align*}
 &IL3 = L3Irms RMS = 576.5\\
 &I_{1a3} = I_{L3} - (I_{L3} * 0.4045) = 0576 - (0.576 * 0.4045) = 0.2330
 \end{align*}
-
 Aplicando la ecuación \ref{EQ63}
-
 \begin{align*}
 TDD_{3} = \frac{I_{1a3}*THD_{3}}{I_{L3}} = \frac{0.2330*0.4045}{0.576} = 0.1636 = 16.36\%
 \end{align*}\\
-
 \begin{table}[!htbp]
 \begin{center}
 \begin{tabular}{ |c|c| } 
@@ -941,21 +934,17 @@ AL3 & 16.63\%\\
 \hline
 \end{tabular}
 \end{center}
-\caption{TDD de corrientes}
+\caption{Autor - TDD de corrientes}
 \label{tab:tdd-corriente}
 \end{table}
-
 Tomando como referencia la figura \ref{fig:límites-corriente}, la cual está en el estándar IEEE 519 y la tabla \ref{tab:tdd-corriente}, se observa que los resultados de TDD obtenidos en las ecuaciones anteriores están dentro del rango aceptado en el estándar, comprobando que el sistema está trabajando en un estado estable. 
-
 \begin{figure}[H]
 \centering
 \includegraphics{2Marco/limites-distorsion-corriente}
 \caption{Límites de distorsión de corriente para sistemas de distribución general} \cite{A45}
 \label{fig:límites-corriente}
 \end{figure} 
-
 \section{Desarrollo de Software}
-
 El desarrollo de software es un campo de la ciencia computacional dedicado a la creación, diseño, implementación y soporte de software.
 
 El software se compone de una serie de instrucciones o programas que le dicen al computador que debe hacer. Es independiente del hardware y hace a los computadores programables.  \cite{A31}

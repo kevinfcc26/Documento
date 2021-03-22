@@ -14,10 +14,7 @@ Dicho esto, la información se envía a un procesador de datos encargado de admi
 Por lo tanto, el servidor en la nube que se planteó es Heroku ya que tiene la opción de una cuenta gratuita y así alojar la base de datos y la aplicación web sin ningún costo. Por ende las restricciones que tiene este plan, es que no se puede escoger el dominio de la página y hay un límite de espacio de 512MB pero es más que suficiente para el peso que tiene la base de datos de 21.5MB y la aplicación web de 65.2MB.\\\\
 Una vez configurado el servidor, se escogió el framework javascript Angular 7 para el desarrollo de la aplicación web, ya que por medio del lenguaje de programación Typescript, el cual es un lenguaje tipado y robusto, nos permite tener mayor manipulación y consistencia en los datos; la aplicación utiliza una arquitectura RESTful y este permite, realizar peticiones HTTPS a la base de datos.\\\\
 Finalmente, la información se visualiza de forma gráfica y númerica en una página web, en donde se pueden ver los valores de voltaje (V), corriente (A), potencia activa(W), potencia aparente (VA), potencia reactiva(VAR) y porcentaje de distorsión armónica en corriente y voltaje en cada fase.\\\\
-Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
-
-
-
+Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}
 \section{Fase de integración}
     Considerando las fases y la magnitud del proyecto se decidió investigar e integrar un dispositivo que hiciera el análisis de las señales aplicando las ecuaciones del STD IEEE 1459 del 2010. Durante la búsqueda se encontró que los dispositivos más cercanos son los siguientes:\\
     \begin{enumerate}
@@ -90,22 +87,17 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
             \item Opciones de interfaz de host UART, I2C y High-Speed Slave SPI.
             \item 17 pines I/O tolerante a 5V de uso general.
         \end{itemize}
-
     Teniendo encenta las características encontradas en las tres tarjetas, se decidió escoger el dispositivo ADE 7978 ya que cumple con la norma IEEE 1459 y tiene una medición precisa, ademas de esto la resolución del dispositivo es mucho mejor que el de los otros ( 24 bits ).
-
 \section{Desarrollo del Hardware}
     \subsection{Configuración inicial}
-
         La conexión que se realizó, fue una configuración de 3 fases, 4 hilos, distribución estrella. El diagrama de conexión se ve en la figura \ref{fig:configuracion}
-
         \begin{figure}[H]
             \begin{center}
-                \includegraphics[width = 9cm]{3Proyecto/configuration}
+                \includegraphics[width = 7cm]{3Proyecto/configuration}
                 \caption{ Esquema de conexión para una distribución en Y, 3 fases, 4 hilos.} \cite{A49}
                 \label{fig:configuracion}
             \end{center}
         \end{figure}
-
         \subsubsection{Materiales}
             \begin{itemize}
                 \itemsep0em
@@ -131,8 +123,8 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
                 \end{center}
             \end{figure}
         Para configurar la tarjeta fue necesario encontrar una resistencia Shunt que se ajustará a las especificaciones del circuito a implementar, sin embargo este trabajo fue mas complicado, ya que las resistencias Shunt disponibles en el mercado son costosas y la mayoría de ellas vienen con resistencias bajas, elevando el voltaje de salida y ampliando el rango de medición del medidor ($\dfrac{I}{R}=V$), se decidió comprar 4 resistencias Shunt caseras las cuales tenían un costo de tan solo \$4.000 COP muy bajo comparado con las importadas o fabricadas industrialmente, en las que su valor esta entre \$50.000 COP - \$ 200.000 COP.\\
-        Teniendo todos los materiales, se realiza la conexión de la figura \ref{fig:configuracion}, utilizando el cable azul para el pin V1PIN, el cable café para el pin GND, el cable amarillo para el pin IMIN, el cable rojo para el pin IPIN y el cable blanco para conectar las shunt con el bloque de terminales, todo el montaje puesto sobre una lamina de acetato elevando la tarjeta con los 4 postes Met como se muestra en la figura \ref{fig:Cableado}\\
-
+        
+        Teniendo todos los materiales, se realiza la conexión de la figura \ref{fig:configuracion}, utilizando el cable azul para el pin V1PIN, el cable café para el pin GND, el cable amarillo para el pin IMIN, el cable rojo para el pin IPIN y el cable blanco para conectar las shunt con el bloque de terminales, todo el montaje puesto sobre una lamina de acetato elevando la tarjeta con los 4 postes Met como se muestra en la figura \ref{fig:Cableado}
     \subsection{Caracterizaci\'on de la resistencia Shunt}
         Ya que las resistencias que se compraron son caseras o no tienen una procedencia muy confiable, se realizó la caracterización con los siguientes materiales 
         \subsubsection{Materiales}
@@ -204,7 +196,6 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
                 \caption{Corriente vs Voltaje en la resistencia shunt A}
                 \label{tab:shuntA}
             \end{table}
-
             \begin{lstlisting}
                 x = [0.552 0.558 0.565 0.566 0.575 0.583 0.586 0.597 0.609 0.621 0.639 0.651 0.68 0.7 0.73 0.757 0.784 0.813 0.85 0.888 0.935 1.02 1.06 1.12 1.21 1.28 1.38 1.45 1.59 1.63 1.75 1.8 1.75 1.67 1.5 1.42 1.35 1.24 1.18 1.1 1.06 1.01 0.97 0.92 0.879 0.84 0.816 0.777 0.753 0.734 0.71 0.693 0.67 0.652 0.629 0.616 0.605 0.591 0.575 0.555 0.562]
                 y = [0.00105 0.00105 0.00107 0.00107 0.00107 0.00108 0.00109 0.00109 0.00111 0.00113 0.00115 0.00117 0.0012 0.00122 0.00125 0.0013 0.00134 0.00136 0.00143 0.00148 0.00153 0.00162 0.0017 0.00179 0.0019 0.002 0.0022 0.00226 0.00246 0.00254 0.0027 0.00277 0.00269 0.00257 0.00233 0.00222 0.00211 0.00196 0.00187 0.00176 0.00169 0.00163 0.00158 0.00151 0.00145 0.0014 0.00137 0.00131 0.00127 0.00125 0.00122 0.00119 0.00116 0.00115 0.00112 0.00111 0.0011 0.00108 0.00107 0.00105 0.00104]
@@ -212,22 +203,18 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
                 grid,xlabel( 'Corriente ( A )' ), ylabel( 'Voltaje (V)' ),
                 title( 'Caracterización de la resistencia Shunt A' )
             \end{lstlisting}
-
-            \begin{figure}[H]
+            \begin{figure}
                 \begin{center}
-                    \includegraphics[width = 15cm]{3Proyecto/CorrienteVoltaje1.png}
+                    \includegraphics[width = 10cm]{3Proyecto/CorrienteVoltaje1.png}
                     \caption{ Caracterización ShuntA (Gráfica obtenida en MATLAB)} 
                     \label{fig:Muestras ShuntA}
                 \end{center}
             \end{figure}
-
             Con ayuda de matlab se optine la ecuacion de la recta que mas se ajusta a los datos\\
             donde $V_{out}=$ Voltaje de salida de la Shunt, $I=$ Corriente de entrada a la Shunt 
-
             \begin{equation}\label{crt ShuntA}
                 V_{out} = 0.0013805*I + 0.00025643 
             \end{equation}
-
         \subsubsection{Shunt B}    
             \begin{table} [H]
                 \begin{center}
@@ -259,7 +246,7 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
                         \hline
                     \end{tabular}
                 \end{center}
-                \caption{Corriente vs Voltaje en la resistencia shunt B}
+                \caption{Autor - Corriente vs Voltaje en la resistencia shunt B}
                 \label{tab:shuntB}
             \end{table}
 
@@ -273,12 +260,11 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
 
             \begin{figure}[H]
                 \begin{center}
-                    \includegraphics[width = 15cm]{3Proyecto/CorrienteVoltaje2.png}
+                    \includegraphics[width = 9cm]{3Proyecto/CorrienteVoltaje2.png}
                     \caption{ Caracterización ShuntB (Gráfica obtenida en MATLAB)} 
                     \label{fig:Muestras shuntB}
                 \end{center}
             \end{figure}
-
             Con ayuda de matlab se optine la ecuacion de la recta que mas se ajusta a los datos\\
             donde $V_{out}=$ Voltaje de salida de la Shunt, $I=$ Corriente de entrada a la Shunt 
 
@@ -333,7 +319,7 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
 
             \begin{figure}[H]
                 \begin{center}
-                    \includegraphics[width = 15cm]{3Proyecto/CorrienteVoltaje3.png}
+                    \includegraphics[width = 9cm]{3Proyecto/CorrienteVoltaje3.png}
                     \caption{ Caracterización ShuntC (Gráfica obtenida en MATLAB)} 
                     \label{fig:Muestras shuntC}
                 \end{center}
@@ -355,7 +341,7 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
             V1P = \frac{R_{2}}{R_{1} + R_{2}} * V_{in}
         \end{equation}
 
-        Donde $\; R1 = 990150 \ohm$, \;$R2 = 1 K\ohm$.\\
+        Donde $\; R1 = 990150 \ohm$, \;$R2 = 1 K\ohm$.
 
         \begin{equation}\label{divisorVoltaje}
             V1P = 0.00100893 * V_{in}
@@ -367,14 +353,14 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
 
         La relación de entrada y salida del conversor ADE7933, consiste en un voltaje pico de entrada de $0.5 V$, genera una señal de salida de $5.320.000$.\\
 
-        La siguiente ecuación relaciona la señal de salida del conversor con la señal de entrada al medidor:\\
+        La siguiente ecuación relaciona la señal de salida del conversor con la señal de entrada al medidor:
 
         \begin{align*}
             &0,5V \rightarrow 5,320,000.\\
             &V1P \rightarrow DRV
         \end{align*}
 
-        Donde $DRV = Dato\;del\;rango\;de\;voltaje\;del\;conversor$\\
+        Donde $DRV = Dato\;del\;rango\;de\;voltaje\;del\;conversor$
 
         \begin{equation}
             V1P = \frac{DRV * 0.5}{5.320.000}
@@ -397,14 +383,14 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
 
         \begin{figure}[H]
             \centering
-            \includegraphics[width = 10cm]{3Proyecto/divisorVoltaje}
+            \includegraphics[width = 12cm]{3Proyecto/divisorVoltaje}
             \caption{Divisor de voltaje ADC} \cite{A49}
             \label{fig:divisorVolate}
         \end{figure} 
 
         \begin{figure}[H]
             \centering
-            \includegraphics[width = 10cm]{3Proyecto/voltageOutput}
+            \includegraphics[width = 12cm]{3Proyecto/voltageOutput}
             \caption{Salida de voltaje del ADE 7978} \cite{A50}
             \label{fig:voltageOutput}
         \end{figure} 
@@ -412,11 +398,9 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
 
     \subsection{Conversión de corriente}
         Para encontrar la relación que hay entre la entrada de corriente y el convertidor ADC fue necesario utilizar la ecuación de la recta arrojada por las muestras de la caracterización de las shunt y también fue necesario hallar la relación de voltaje entre el pin IP e IM que son los usados por el ADC para convertir la señal figura \ref{fig:CircuitoCorriente}
-
-
-        \begin{figure}[H]
+        \begin{figure}
             \begin{center}
-                \includegraphics[width = 10cm]{3Proyecto/CircuitoCorriente.PNG}
+                \includegraphics[width = 15cm]{3Proyecto/CircuitoCorriente.PNG}
                 \caption{ Circuito de protección para los pines IP e IM } \cite{A49}
                 \label{fig:CircuitoCorriente}
             \end{center}
@@ -438,6 +422,7 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
         \\  
 
         \begin{itemize}
+            \itemsep0em
             \item \textbf{Tensión D} \\
             $\mathbf{i_{1}=i_{2}}$
             \begin{align*}
@@ -455,7 +440,7 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
                     &\frac{D}{ZC} - \frac{B}{ZC} + \frac{V_{i}}{R_{2}}-\frac{B}{R_{2}} = \frac{B}{ZC} - \frac{A}{ZC}\\\\
                     &\frac{D}{ZC}  + \frac{V_{i}}{R_{2}} + \frac{A}{ZC} = B\frac{2}{ZC}  + \frac{B}{R_{2}} \\\\
                     &\frac{D}{ZC}  + \frac{V_{i}}{R_{2}} + \frac{A}{ZC} = B(\frac{2}{ZC}  + \frac{1}{R_{2}}) \\\\
-                    &\frac{D}{ZC}  + \frac{V_{i}}{R_{2}} + \frac{A}{ZC} = B\frac{2R_{2}+ZC}{R_{2}ZC}
+                    &\frac{D}{ZC}  + \frac{V_{i}}{R_{2}} + \frac{A}{ZC} = B\frac{2R_{2}+ZC}{R_{2}ZC} \\\\
                 \end{align*}
                 \begin{equation}\label{Nodo B}
                     D\frac{R_{2}}{2R_{2}+ZC}  + V_{i}\frac{ZC}{2R_{2}+ZC} + A\frac{R_{2}}{2R_{2}+ZC} = B
@@ -500,7 +485,7 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
             &D(\frac{ (R_{1}+ZC)(2R_{2}+ZC) -  2R_{1}R_{2} }{ R_{1}R_{2} }) = V_{i}\frac{ [ZC(2R_{2}+ZC)+ R_{1}ZC][R_{1}+ZC] - R_{1}R_{2}ZC }{ R_{1}R_{2}(R_{1}+ZC)} \\\\
         \end{align*}
         \begin{equation}\label{Final D en funcion de Vi}
-            D = V_{i}\frac{ [ZC(2R_{2}+ZC)+ R_{1}ZC][R_{1}+ZC] - R_{1}R_{2}ZC }{ [(R_{1}+ZC)(2R_{2}+ZC) -  2R_{1}R_{2}][R_{1}+ZC]} \\\\
+            D = V_{i}\frac{ [ZC(2R_{2}+ZC)+ R_{1}ZC][R_{1}+ZC] - R_{1}R_{2}ZC }{ [(R_{1}+ZC)(2R_{2}+ZC) -  2R_{1}R_{2}][R_{1}+ZC]}
         \end{equation}
     
         Remplazando \ref{Final D en funcion de Vi} en la ecuación \ref{Nodo D en A} para obtener A en términos de $V_{i}$
@@ -859,15 +844,13 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
                 }
             }
         \end{lstlisting}
-
         El código anteriormente descrito, se ejecuta cada 50 milisegundos a través de una función de javascript llamada "setInterval(callback,timer)", esa función dispara la función init, la cual lee el archivo db.json y hace una petición PUT al servidor para actualizar los registros.
-
     \subsection{Frontend Solución en Angular}
         
         Para la creación de la página web, se usó el framework javscript Angular 7, ya que implementa el lenguaje de programación 'Typescript' y permite asignar un tipo de variable a las variables de javascript y tener un mayor control del proyecto. De igual manera es necesario saber de HTML5, CSS3 y javascript para la creación de la página.\\
         Para instalar Angular es necesario tener node instalado en el computador. Para instalar node, por medio de la URL https://nodejs.org/es/, se descargó y se siguió el paso a paso del instalador. Figura \ref{fig:node} \\
 
-        \begin{figure}[H]
+        \begin{figure}
             \begin{center}
                 \includegraphics[width = 15cm]{3Proyecto/node}
                 \caption{ Descarga de Node JS } \cite{A51}
@@ -879,22 +862,22 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
 
         Para crear el proyecto en Angular se utlizó el comando 'ng new usta-tesis' y de esta forma, Angular generó todos los archivos y dependencias necesarias para generar la aplicación. Una vez hecha la configuración, se derigió a la raiz de proyecto ejecutando el comando 'cd usta-tesis', depués se ejecutó el comando 'ng serve -o' y este comando levanta un servidor local que por defecto es en la dirección http://localhost:4200 y la aplicación ya queda visible para empezar a trabajar en el proyecto. Figura \ref{fig:ngNew}, \ref{fig:ngServe}\\
 
-        \begin{figure}[H]
+        \begin{figure}
             \begin{center}
                 \includegraphics[width = 15cm]{3Proyecto/ngNew}
-                \caption{ Creación de proyecto en Angular (Terminal del computador)} 
+                \caption{Autor - Creación de proyecto en Angular (Terminal del computador)} 
                 \label{fig:ngNew}
            \end{center}
         \end{figure}
-        \begin{figure}[H]
+        \begin{figure}
             \begin{center}
                 \includegraphics[width = 15cm]{3Proyecto/ngServe}
-                \caption{ Levantar servidor local en Angular (Terminal del computador)} 
+                \caption{Autor - Levantar servidor local en Angular (Terminal del computador)} 
                 \label{fig:ngServe}
            \end{center}
         \end{figure}
         En Angular, un componente hace referencia a una sección visual de la página y estos componentes se crean a través del comando 'ng generate component componentName'. Cada componente cuenta con un archivo .html , .ts y .css. Para el proyectó creamos 4 componentes con los comandos de la figura \ref{fig:ngComponents}.\\
-        \begin{figure}[H]
+        \begin{figure}
             \begin{center}
                 \includegraphics[width = 15cm]{3Proyecto/ngComponents}
                 \caption{ Creación de componentes en Angular (Terminal del computador)} 
@@ -903,7 +886,7 @@ Dicha arquitectura se puede ver en la figura \ref{fig:arquitectura-proyecto}\\\\
         \end{figure}
 
         Con los componentes creados, se empezó a implementar el código necesario para crear la vista, los estilos y la funcionalidad.
-        \begin{figure}[H]
+        \begin{figure}
             \begin{center}
                 \includegraphics[width = 15cm]{3Proyecto/components1}
                 \caption{ Componentes home y navbar} \cite{A52}

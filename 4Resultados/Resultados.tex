@@ -1,8 +1,6 @@
 \newpage{\clearpage}
 \chapter{ Resultados del proyecto}
-
 \section{Primer Prueba}
-
 Se procedió a realizar la primer prueba con nuestro medidor y debido que en ese momento el mundo se encontrabá en la pandemia del COVID-19, tocó realizar pruebas con cargas domésticas las culaes fueron las siguientes:
 \begin{itemize}
     \itemsep0em
@@ -18,7 +16,7 @@ Se procedió a realizar la primer prueba con nuestro medidor y debido que en ese
     \item Plancha de 1000 W.
 \end{itemize}
 \begin{table}
-    \caption{Resultados de la prueba Nº 1}
+    \caption{Autor - Resultados de la prueba Nº 1}
       \begin{tabular}{|l|r|r|r|}
       \toprule
       \multicolumn{1}{|c|}{\multirow{2}[4]{*}{CARGA}} & \multicolumn{1}{c|}{MULTÍMETRO} & \multicolumn{2}{c|}{TARJETA} \\
@@ -26,7 +24,7 @@ Se procedió a realizar la primer prueba con nuestro medidor y debido que en ese
       \midrule
       Bombillo led de 9WT & 0,0772 & 122   & 0,84175682 \\
       \midrule
-      Portatil, osciloscopio, Raspberry, TV(111W), Play 3, Parlantes & 1,4   & 122   & 2,48453856 \\
+      Portatil, osciloscopio, Raspberry, TV, PS3, Parlantes & 1,4   & 122   & 2,48453856 \\
       \midrule
       Licuadora & 2,11  & 122   & 3,10783076 \\
       \midrule
@@ -41,8 +39,6 @@ Se procedió a realizar la primer prueba con nuestro medidor y debido que en ese
       \end{tabular}%
     \label{tab:resultado1-1}%
   \end{table}%
-  
-
   \begin{table}[htbp]
     \centering
       \begin{tabular}{|c|c|r|r|r|r|}
@@ -73,10 +69,10 @@ Se procedió a realizar la primer prueba con nuestro medidor y debido que en ese
 
   **El valor de referencia es el osciloscopio o muiltimetro y el experimental es el valor de la tarjeta\\
 
-  \begin{figure}[H]
+  \begin{figure}
     \begin{center}
-        \includegraphics[width = 10cm]{4Resultados/prueba-1.png}
-        \caption{ Corriente Tarjeta vs Corriente Multímetro (Autoria propia)} 
+        \includegraphics[width = 8cm]{4Resultados/prueba-1.png}
+        \caption{Autor - Corriente Tarjeta vs Corriente Multímetro} 
         \label{fig:prueba1}
    \end{center}
 \end{figure}
@@ -87,17 +83,17 @@ En esta prueba, solo se comparó los registros de corriente y voltaje que entreg
  En la figura \ref{fig:prueba1}, la corriente de la tarjeta, tiene presición en su medición más hace falta ajustar su exactitud tomando cómo referencia otro instrumento de medición que se encuentre calibrado.
 
 Según la tabla \ref{tab:resultado1-1}, el promedio de error de voltaje es de un 2\%. El error de corriente es de 177\%, sin embargo ese valor tan alto es debido a que la medicón de una carga que consume baja energía cómo lo es el bombillo, no está dentro de la tolerancia de energía que admite la tarjeta. En la medición del bombillo hay un error relativo del 990\% con respecto a la corriente del amperimetro; por lo tanto, se procede a realizar pruebas con cargas que consuman más energía.
-\begin{figure}[H]
+\begin{figure}
   \begin{center}
       \includegraphics[width = 5cm]{4Resultados/prueba1.png}
-      \caption{ Cargas utilizadas en la primera prueba (Autoria propia)} 
+      \caption{Autor - Cargas utilizadas en la primera prueba} 
       \label{fig:montaje1}
  \end{center}
 \end{figure}
-\begin{figure}[H]
+\begin{figure}
   \begin{center}
       \includegraphics[width = 8cm]{4Resultados/conexion1.jpeg}
-      \caption{ Esquema de conexión utilizado en la primera prueba (Esquema realizado en MATLAB) } 
+      \caption{Autor - Esquema de conexión utilizado en la primera prueba (Esquema realizado en MATLAB) } 
       \label{fig:conexion1}
  \end{center}
 \end{figure}
@@ -107,12 +103,10 @@ Según la tabla \ref{tab:resultado1-1}, el promedio de error de voltaje es de un
 En esta prueba se decidió medir todo el ciclo de lavado de una lavadora, con el fin de obtener datos en distintos escenarios los cuales seria llenado, lavado y centrifugado y tener una medición más estable.
 
 Carga:
-
 \begin{itemize}
   \itemsep0em
   \item Lavadora whirlpool de 9.8 A.
 \end{itemize}
-
 Ciclos de lavado:
 
 \begin{itemize}
@@ -127,7 +121,7 @@ Ciclos de lavado:
 \begin{figure}[H]
   \begin{center}
       \includegraphics[width = 5cm]{4Resultados/lavadora2.png}
-      \caption{ Carga utilizada en la segunda prueba (Autoria propia)} 
+      \caption{Autor -  Carga utilizada en la segunda prueba } 
       \label{fig:montaje2}
  \end{center}
 \end{figure}
@@ -139,21 +133,20 @@ Ciclos de lavado:
  \end{center}
 \end{figure}
 El análisis se realizó con respecto a las fases de lavado de la lavadora y en todos los ciclos los siguientes datos fueron comunes:
-
 \begin{itemize}
   \itemsep0em
   \item Volatje RMS total con un valor promedio de 121 V en todos los ciclos.
   \item Volatje RMS Fundamental con un valor promedio de 120,97 V en todos los ciclos.
 \end{itemize}
-
-\subsection{Análisis en el ciclo heavy}
+\subsection{Resultados en el ciclo heavy}
 \begin{figure}[H]
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AIRMS-AFIRMS-Heavy.png}}
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AIHRMS_CAL-Heavy.png}}
   \hfill
-  \caption{AIRMS, AFIRMS Y AIHRMS-CAL VS DATETIME EN EL CICLO HEAVY (Autoria propia)}
+  \caption{Autor - AIRMS, AFIRMS Y AIHRMS-CAL VS DATETIME EN EL CICLO HEAVY }
+  \label{fig:AIRMS, AFIRMS Y AIHRMS-CAL VS DATETIME EN EL CICLO HEAVY}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -161,7 +154,8 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/APF-Heavy.png}}
   \hfill
-  \caption{AVHRMS Y APF VS DATETIME EN EL CICLO HEAVY (Autoria propia)}
+  \caption{Autor - AVHRMS Y APF VS DATETIME EN EL CICLO HEAVY }
+  \label{fig:Autor - AVHRMS Y APF VS DATETIME EN EL CICLO HEAVY}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -169,7 +163,8 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVTHD-Heavy.png}}
   \hfill
-  \caption{AITHD Y AVTHD VS DATETIME EN EL CICLO HEAVY (Autoria propia)}
+  \caption{Autor - AITHD Y AVTHD VS DATETIME EN EL CICLO HEAVY }
+  \label{fig:AITHD Y AVTHD VS DATETIME EN EL CICLO HEAVY}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -177,7 +172,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AWATT-Heavy.png}}
   \hfill
-  \caption{APF1-CAL Y AWATT VS DATETIME EN EL CICLO HEAVY (Autoria propia)}
+  \caption{Autor - APF1-CAL Y AWATT VS DATETIME EN EL CICLO HEAVY }
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -185,7 +180,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/APH_CAL-Heavy.png}}
   \hfill
-  \caption{AP1-CAL Y APH-CAL VS DATETIME EN EL CICLO HEAVY (Autoria propia)}
+  \caption{Autor - AP1-CAL Y APH-CAL VS DATETIME EN EL CICLO HEAVY }
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -193,7 +188,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVA-Heavy.png}}
   \hfill
-  \caption{AVAR Y AVA VS DATETIME EN EL CICLO HEAVY (Autoria propia)}
+  \caption{Autor - AVAR Y AVA VS DATETIME EN EL CICLO HEAVY }
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -201,7 +196,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AS1_CAL-Heavy.png}}
   \hfill
-  \caption{ASH-CAL Y AS1-CAL VS DATETIME EN EL CICLO HEAVY (Autoria propia)}
+  \caption{Autor - ASH-CAL Y AS1-CAL VS DATETIME EN EL CICLO HEAVY }
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -209,7 +204,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADI_CAL-Heavy.png}}
   \hfill
-  \caption{ASN-CAL Y ADI-CAL VS DATETIME EN EL CICLO HEAVY (Autoria propia)}
+  \caption{Autor - ASN-CAL Y ADI-CAL VS DATETIME EN EL CICLO HEAVY }
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -217,7 +212,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADH_CAL-Heavy.png}}
   \hfill
-  \caption{ADV-CAL Y ADH-CAL VS DATETIME EN EL CICLO HEAVY (Autoria propia)}
+  \caption{Autor - ADV-CAL Y ADH-CAL VS DATETIME EN EL CICLO HEAVY}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -225,7 +220,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/NIRMS-Heavy.png}}
   \hfill
-  \caption{AN-CAL Y NIRMS VS DATETIME EN EL CICLO HEAVY (Autoria propia)}
+  \caption{Autor - AN-CAL Y NIRMS VS DATETIME EN EL CICLO HEAVY}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -233,7 +228,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AFWATTHR-Heavy.png}}
   \hfill
-  \caption{AFVARHR Y AFWATTHR VS DATETIME EN EL CICLO HEAVY (Autoria propia)}
+  \caption{Autor - AFVARHR Y AFWATTHR VS DATETIME EN EL CICLO HEAVY}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -241,22 +236,24 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVARHR-Heavy.png}}
   \hfill
-  \caption{AVAHR Y AVARHR VS DATETIME EN EL CICLO HEAVY (Autoria propia)}
+  \caption{Autor - AVAHR Y AVARHR VS DATETIME EN EL CICLO HEAVY}
   \end{figure}
 \begin{figure}[H]
-  \hfill
-  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AWATTHR-Heavy.png}}
-  \hfill
-  \caption{AWATTHR VS DATETIME EN EL CICLO HEAVY (Autoria propia)}
-  \end{figure}
-\subsection{Análisis en el ciclo regular}
+  \begin{center}
+    \includegraphics[width=7.5cm]{4Resultados/AWATTHR-Heavy.png}
+    \caption{Autor - AWATTHR VS DATETIME EN EL CICLO HEAVY}
+  \end{center}
+\end{figure}
+\subsection*{Análisis del ciclo heavy}
+  Se ve una diferencia entre la corriente total y la fundamental debido a que existe un componente armónico como se muestra en la figura  \ref{fig:AIRMS, AFIRMS Y AIHRMS-CAL VS DATETIME EN EL CICLO HEAVY}.  El voltaje fundamental y total es el mismo, pero existe una componente armónica que no altera significativamente el resultado total. El factor de potencia indica que tiene componentes inductivos y demuestra que este equipo no está muy bien diseñado para tener un buen consumo energético como se muestra en la figura \ref{fig:Autor - AVHRMS Y APF VS DATETIME EN EL CICLO HEAVY}. Los porcentajes de armónicos demuestran que existe más cantidad de armónicos en corriente que en voltaje debido a que el dispositivo introduce esta cantidad de armónicos como se muestra en la figura\ref{fig:AITHD Y AVTHD VS DATETIME EN EL CICLO HEAVY}. El factor de potencia total y el factor de potencia fundamental tienen el mismo comportamiento y demuestra que no es un dispositivo con buena calidad energética. La potencia activa total tiene el mismo comportamiento que la potencia activa fundamental, pero en algunas muestras la potencia activa fundamental es mayor debido a los valores negativos de la potencia armónica; de igual manera ocurre en la potencia aparente, cuando las velocidades del motor cambian. Las distorsiones armónicas tienen picos altos. Cuando el motor hace más fuerza, los consumos de energía son mayores;  al igual que el consumo de energía total.\\
+\subsection{Resultados en el ciclo regular}
 \begin{figure}[H]
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AIRMS-AFIRMS-Regular.png}}
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AIHRMS_CAL-Regular.png}}
   \hfill
-  \caption{AIRMS, AFIRMS Y AIHRMS-CAL VS DATETIME EN EL CICLO REGULAR (Autoria propia)}
+  \caption{Autor - AIRMS, AFIRMS Y AIHRMS-CAL VS DATETIME EN EL CICLO REGULAR}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -264,7 +261,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/APF-Regular.png}}
   \hfill
-  \caption{AVHRMS Y APF VS DATETIME EN EL CICLO REGULAR (Autoria propia)}
+  \caption{Autor - AVHRMS Y APF VS DATETIME EN EL CICLO REGULAR}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -272,7 +269,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVTHD-Regular.png}}
   \hfill
-  \caption{AITHD Y AVTHD VS DATETIME EN EL CICLO REGULAR (Autoria propia)}
+  \caption{Autor - AITHD Y AVTHD VS DATETIME EN EL CICLO REGULAR}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -280,7 +277,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AWATT-Regular.png}}
   \hfill
-  \caption{APF1-CAL Y AWATT VS DATETIME EN EL CICLO REGULAR (Autoria propia)}
+  \caption{Autor - APF1-CAL Y AWATT VS DATETIME EN EL CICLO REGULAR}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -288,7 +285,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/APH_CAL-Regular.png}}
   \hfill
-  \caption{AP1-CAL Y APH-CAL VS DATETIME EN EL CICLO REGULAR (Autoria propia)}
+  \caption{Autor - AP1-CAL Y APH-CAL VS DATETIME EN EL CICLO REGULAR}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -296,7 +293,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVA-Regular.png}}
   \hfill
-  \caption{AVAR Y AVA VS DATETIME EN EL CICLO REGULAR (Autoria propia)}
+  \caption{Autor - AVAR Y AVA VS DATETIME EN EL CICLO REGULAR}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -304,7 +301,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AS1_CAL-Regular.png}}
   \hfill
-  \caption{ASH-CAL Y AS1-CAL VS DATETIME EN EL CICLO REGULAR (Autoria propia)}
+  \caption{Autor - ASH-CAL Y AS1-CAL VS DATETIME EN EL CICLO REGULAR}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -312,7 +309,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADI_CAL-Regular.png}}
   \hfill
-  \caption{ASN-CAL Y ADI-CAL VS DATETIME EN EL CICLO REGULAR (Autoria propia)}
+  \caption{Autor - ASN-CAL Y ADI-CAL VS DATETIME EN EL CICLO REGULAR}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -320,7 +317,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADH_CAL-Regular.png}}
   \hfill
-  \caption{ADV-CAL Y ADH-CAL VS DATETIME EN EL CICLO REGULAR (Autoria propia)}
+  \caption{Autor - ADV-CAL Y ADH-CAL VS DATETIME EN EL CICLO REGULAR}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -328,7 +325,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/NIRMS-Regular.png}}
   \hfill
-  \caption{AN-CAL Y NIRMS VS DATETIME EN EL CICLO REGULAR (Autoria propia)}
+  \caption{Autor - AN-CAL Y NIRMS VS DATETIME EN EL CICLO REGULAR}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -336,7 +333,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AFWATTHR-Regular.png}}
   \hfill
-  \caption{AFVARHR Y AFWATTHR VS DATETIME EN EL CICLO REGULAR (Autoria propia)}
+  \caption{Autor - AFVARHR Y AFWATTHR VS DATETIME EN EL CICLO REGULAR}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -344,22 +341,25 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVARHR-Regular.png}}
   \hfill
-  \caption{AVAHR Y AVARHR VS DATETIME EN EL CICLO REGULAR (Autoria propia)}
+  \caption{Autor - AVAHR Y AVARHR VS DATETIME EN EL CICLO REGULAR}
   \end{figure}
 \begin{figure}[H]
-  \hfill
-  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AWATTHR-Regular.png}}
-  \hfill
-  \caption{AWATTHR VS DATETIME EN EL CICLO REGULAR (Autoria propia)}
-  \end{figure}
-\subsection{Análisis en el ciclo super wash}
+  \begin{center}
+    \includegraphics[width=7.5cm]{4Resultados/AWATTHR-Regular.png}
+    \caption{Autor - AWATTHR VS DATETIME EN EL CICLO REGULAR}
+  \end{center}
+\end{figure}
+\subsection*{Análisis del ciclo regular}
+Este ciclo tiene una tendencia muy parecida al ciclo heavy. Se refleja que al final del ciclo, los porcentajes de armónicos cambia drásticamente, aunque solo en corriente, esto puede ser debido al cambio de frecuencia en el motor. Este ciclo al igual que el heavy, evidencia que el factor de potencia no es el ideal y no tiene una buena eficiencia energética. De igual manera, se observa que este ciclo consume menos corriente por ende el consumo energético es menor pero igual existen picos de energía en las gráficas de WATTHR.
+\subsection{Resultados en el ciclo super wash}
 \begin{figure}[H]
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AIRMS-AFIRMS-SuperWash.png}}
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AIHRMS_CAL-SuperWash.png}}
   \hfill
-  \caption{AIRMS, AFIRMS Y AIHRMS-CAL VS DATETIME EN EL CICLO SUPER WASH (Autoria propia)}
+  \caption{Autor - AIRMS, AFIRMS Y AIHRMS-CAL VS DATETIME EN EL CICLO SUPER WASH}
+  \label{fig:AIRMS, AFIRMS Y AIHRMS-CAL VS DATETIME EN EL CICLO SUPER WASH}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -367,7 +367,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/APF-SuperWash.png}}
   \hfill
-  \caption{AVHRMS Y APF VS DATETIME EN EL CICLO SUPER WASH (Autoria propia)}
+  \caption{Autor - AVHRMS Y APF VS DATETIME EN EL CICLO SUPER WASH}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -375,7 +375,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVTHD-SuperWash.png}}
   \hfill
-  \caption{AITHD Y AVTHD VS DATETIME EN EL CICLO SUPER WASH (Autoria propia)}
+  \caption{Autor - AITHD Y AVTHD VS DATETIME EN EL CICLO SUPER WASH}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -383,7 +383,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AWATT-SuperWash.png}}
   \hfill
-  \caption{APF1-CAL Y AWATT VS DATETIME EN EL CICLO SUPER WASH (Autoria propia)}
+  \caption{Autor - APF1-CAL Y AWATT VS DATETIME EN EL CICLO SUPER WASH}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -391,7 +391,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/APH_CAL-SuperWash.png}}
   \hfill
-  \caption{AP1-CAL Y APH-CAL VS DATETIME EN EL CICLO SUPER WASH (Autoria propia)}
+  \caption{Autor - AP1-CAL Y APH-CAL VS DATETIME EN EL CICLO SUPER WASH}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -399,7 +399,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVA-SuperWash.png}}
   \hfill
-  \caption{AVAR Y AVA VS DATETIME EN EL CICLO SUPER WASH (Autoria propia)}
+  \caption{Autor - AVAR Y AVA VS DATETIME EN EL CICLO SUPER WASH}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -407,7 +407,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AS1_CAL-SuperWash.png}}
   \hfill
-  \caption{ASH-CAL Y AS1-CAL VS DATETIME EN EL CICLO SUPER WASH (Autoria propia)}
+  \caption{Autor - ASH-CAL Y AS1-CAL VS DATETIME EN EL CICLO SUPER WASH}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -415,7 +415,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADI_CAL-SuperWash.png}}
   \hfill
-  \caption{ASN-CAL Y ADI-CAL VS DATETIME EN EL CICLO SUPER WASH (Autoria propia)}
+  \caption{Autor - ASN-CAL Y ADI-CAL VS DATETIME EN EL CICLO SUPER WASH}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -423,7 +423,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADH_CAL-SuperWash.png}}
   \hfill
-  \caption{ADV-CAL Y ADH-CAL VS DATETIME EN EL CICLO SUPER WASH (Autoria propia)}
+  \caption{Autor - ADV-CAL Y ADH-CAL VS DATETIME EN EL CICLO SUPER WASH}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -431,7 +431,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/NIRMS-SuperWash.png}}
   \hfill
-  \caption{AN-CAL Y NIRMS VS DATETIME EN EL CICLO SUPER WASH (Autoria propia)}
+  \caption{Autor - AN-CAL Y NIRMS VS DATETIME EN EL CICLO SUPER WASH}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -439,7 +439,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AFWATTHR-SuperWash.png}}
   \hfill
-  \caption{AFVARHR Y AFWATTHR VS DATETIME EN EL CICLO SUPER WASH (Autoria propia)}
+  \caption{Autor - AFVARHR Y AFWATTHR VS DATETIME EN EL CICLO SUPER WASH}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -447,22 +447,24 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVARHR-SuperWash.png}}
   \hfill
-  \caption{AVAHR Y AVARHR VS DATETIME EN EL CICLO SUPER WASH (Autoria propia)}
+  \caption{Autor - AVAHR Y AVARHR VS DATETIME EN EL CICLO SUPER WASH}
   \end{figure}
 \begin{figure}[H]
-  \hfill
-  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AWATTHR-SuperWash.png}}
-  \hfill
-  \caption{AWATTHR VS DATETIME EN EL CICLO SUPER WASH (Autoria propia)}
-  \end{figure}
-\subsection{Análisis en el ciclo centrifugado}
+  \begin{center}
+    \includegraphics[width=7.5cm]{4Resultados/AWATTHR-SuperWash.png}
+    \caption{Autor - AWATTHR VS DATETIME EN EL CICLO SUPER WASH}
+  \end{center}
+\end{figure}
+\subsection*{Análisis del ciclo super wash}
+En la grafica \ref{fig:AIRMS, AFIRMS Y AIHRMS-CAL VS DATETIME EN EL CICLO SUPER WASH}, se muestra un valor alto de corriente que conlleva a concluir que este ciclo es el que más energía consume. También se observa presencia de su componente armónico aproximadamente en 2 A y 5V. El factor de potencia es muy parecido a las dos primeras fases. El comportamiento de las potencias también es el mismo que en las primeras fases. El consumo energético tiene picos en los cambios de estado del motor.
+\subsection{Resultados en el ciclo centrifugado}
 \begin{figure}[H]
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AIRMS-AFIRMS-Centrifugado.png}}
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AIHRMS_CAL-Centrifugado.png}}
   \hfill
-  \caption{AIRMS, AFIRMS Y AIHRMS-CAL VS DATETIME EN EL CICLO CENTRIFUGADO (Autoria propia)}
+  \caption{Autor - AIRMS, AFIRMS Y AIHRMS-CAL VS DATETIME EN EL CICLO CENTRIFUGADO}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -470,7 +472,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/APF-Centrifugado.png}}
   \hfill
-  \caption{AVHRMS Y APF VS DATETIME EN EL CICLO CENTRIFUGADO (Autoria propia)}
+  \caption{Autor - AVHRMS Y APF VS DATETIME EN EL CICLO CENTRIFUGADO}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -478,7 +480,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVTHD-Centrifugado.png}}
   \hfill
-  \caption{AITHD Y AVTHD VS DATETIME EN EL CICLO CENTRIFUGADO (Autoria propia)}
+  \caption{Autor - AITHD Y AVTHD VS DATETIME EN EL CICLO CENTRIFUGADO}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -486,7 +488,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AWATT-Centrifugado.png}}
   \hfill
-  \caption{APF1-CAL Y AWATT VS DATETIME EN EL CICLO CENTRIFUGADO (Autoria propia)}
+  \caption{Autor - APF1-CAL Y AWATT VS DATETIME EN EL CICLO CENTRIFUGADO}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -494,7 +496,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/APH_CAL-Centrifugado.png}}
   \hfill
-  \caption{AP1-CAL Y APH-CAL VS DATETIME EN EL CICLO CENTRIFUGADO (Autoria propia)}
+  \caption{Autor - AP1-CAL Y APH-CAL VS DATETIME EN EL CICLO CENTRIFUGADO}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -502,7 +504,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVA-Centrifugado.png}}
   \hfill
-  \caption{AVAR Y AVA VS DATETIME EN EL CICLO CENTRIFUGADO (Autoria propia)}
+  \caption{Autor - AVAR Y AVA VS DATETIME EN EL CICLO CENTRIFUGADO}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -510,7 +512,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AS1_CAL-Centrifugado.png}}
   \hfill
-  \caption{ASH-CAL Y AS1-CAL VS DATETIME EN EL CICLO CENTRIFUGADO (Autoria propia)}
+  \caption{Autor - ASH-CAL Y AS1-CAL VS DATETIME EN EL CICLO CENTRIFUGADO}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -518,7 +520,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADI_CAL-Centrifugado.png}}
   \hfill
-  \caption{ASN-CAL Y ADI-CAL VS DATETIME EN EL CICLO CENTRIFUGADO (Autoria propia)}
+  \caption{Autor - ASN-CAL Y ADI-CAL VS DATETIME EN EL CICLO CENTRIFUGADO}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -526,7 +528,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADH_CAL-Centrifugado.png}}
   \hfill
-  \caption{ADV-CAL Y ADH-CAL VS DATETIME EN EL CICLO CENTRIFUGADO (Autoria propia)}
+  \caption{Autor - ADV-CAL Y ADH-CAL VS DATETIME EN EL CICLO CENTRIFUGADO}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -534,7 +536,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/NIRMS-Centrifugado.png}}
   \hfill
-  \caption{AN-CAL Y NIRMS VS DATETIME EN EL CICLO CENTRIFUGADO (Autoria propia)}
+  \caption{Autor - AN-CAL Y NIRMS VS DATETIME EN EL CICLO CENTRIFUGADO}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -542,7 +544,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AFWATTHR-Centrifugado.png}}
   \hfill
-  \caption{AFVARHR Y AFWATTHR VS DATETIME EN EL CICLO CENTRIFUGADO (Autoria propia)}
+  \caption{Autor - AFVARHR Y AFWATTHR VS DATETIME EN EL CICLO CENTRIFUGADO}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -550,22 +552,24 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVARHR-Centrifugado.png}}
   \hfill
-  \caption{AVAHR Y AVARHR VS DATETIME EN EL CICLO CENTRIFUGADO (Autoria propia)}
+  \caption{Autor - AVAHR Y AVARHR VS DATETIME EN EL CICLO CENTRIFUGADO}
   \end{figure}
 \begin{figure}[H]
-  \hfill
-  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AWATTHR-Centrifugado.png}}
-  \hfill
-  \caption{AWATTHR VS DATETIME EN EL CICLO CENTRIFUGADO (Autoria propia)}
-  \end{figure}
-\subsection{Análisis en el ciclo rinse}
+  \begin{center}
+    \includegraphics[width=7.5cm]{4Resultados/AWATTHR-Centrifugado.png}
+    \caption{Autor - AWATTHR VS DATETIME EN EL CICLO CENTRIFUGADO}
+  \end{center}
+\end{figure}
+\subsection*{Análisis del ciclo centrifugado}
+En este ciclo se aprecia bien cuando el motor hace pausas, también se ve que en esos instantes la cantidad de armónicos en corriente se incrementan drásticamente, generando picos muy elevados. La distorsión en voltaje cambia, no es tan constante como en los anteriores ciclos. Además, se ve un incremento en los armónicos a medida que el ciclo termina. El factor de potencia en este ciclo varia demasiado; hay picos muy altos en el porcentaje de armónicos, algunos llegando a sobrepasar el 400\% en corriente y llegando a casi 6\% en voltaje. Las potencias varían mucho dependiendo del momento del ciclo. De igual forma las distorsiones están presentes y la energía consumida en este ciclo fluctúa mucho dependiendo el momento en que el motor está funcionando. También es uno de los ciclos que más armónicos genera.
+\subsection{Resultados en el ciclo rinse}
 \begin{figure}[H]
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AIRMS-AFIRMS-Rinse.png}}
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AIHRMS_CAL-Rinse.png}}
   \hfill
-  \caption{AIRMS, AFIRMS Y AIHRMS-CAL VS DATETIME EN EL CICLO RINSE (Autoria propia)}
+  \caption{Autor - AIRMS, AFIRMS Y AIHRMS-CAL VS DATETIME EN EL CICLO RINSE}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -573,7 +577,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/APF-Rinse.png}}
   \hfill
-  \caption{AVHRMS Y APF VS DATETIME EN EL CICLO RINSE (Autoria propia)}
+  \caption{Autor - AVHRMS Y APF VS DATETIME EN EL CICLO RINSE}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -581,7 +585,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVTHD-Rinse.png}}
   \hfill
-  \caption{AITHD Y AVTHD VS DATETIME EN EL CICLO RINSE (Autoria propia)}
+  \caption{Autor - AITHD Y AVTHD VS DATETIME EN EL CICLO RINSE}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -589,7 +593,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AWATT-Rinse.png}}
   \hfill
-  \caption{APF1-CAL Y AWATT VS DATETIME EN EL CICLO RINSE (Autoria propia)}
+  \caption{Autor - APF1-CAL Y AWATT VS DATETIME EN EL CICLO RINSE}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -597,7 +601,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/APH_CAL-Rinse.png}}
   \hfill
-  \caption{AP1-CAL Y APH-CAL VS DATETIME EN EL CICLO RINSE (Autoria propia)}
+  \caption{Autor - AP1-CAL Y APH-CAL VS DATETIME EN EL CICLO RINSE}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -605,7 +609,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVA-Rinse.png}}
   \hfill
-  \caption{AVAR Y AVA VS DATETIME EN EL CICLO RINSE (Autoria propia)}
+  \caption{Autor - AVAR Y AVA VS DATETIME EN EL CICLO RINSE}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -613,7 +617,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AS1_CAL-Rinse.png}}
   \hfill
-  \caption{ASH-CAL Y AS1-CAL VS DATETIME EN EL CICLO RINSE (Autoria propia)}
+  \caption{Autor - ASH-CAL Y AS1-CAL VS DATETIME EN EL CICLO RINSE}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -621,7 +625,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADI_CAL-Rinse.png}}
   \hfill
-  \caption{ASN-CAL Y ADI-CAL VS DATETIME EN EL CICLO RINSE (Autoria propia)}
+  \caption{Autor - ASN-CAL Y ADI-CAL VS DATETIME EN EL CICLO RINSE}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -629,7 +633,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADH_CAL-Rinse.png}}
   \hfill
-  \caption{ADV-CAL Y ADH-CAL VS DATETIME EN EL CICLO RINSE (Autoria propia)}
+  \caption{Autor - ADV-CAL Y ADH-CAL VS DATETIME EN EL CICLO RINSE}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -637,7 +641,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/NIRMS-Rinse.png}}
   \hfill
-  \caption{AN-CAL Y NIRMS VS DATETIME EN EL CICLO RINSE (Autoria propia)}
+  \caption{Autor - AN-CAL Y NIRMS VS DATETIME EN EL CICLO RINSE}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -645,7 +649,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AFWATTHR-Rinse.png}}
   \hfill
-  \caption{AFVARHR Y AFWATTHR VS DATETIME EN EL CICLO RINSE (Autoria propia)}
+  \caption{Autor - AFVARHR Y AFWATTHR VS DATETIME EN EL CICLO RINSE}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -653,22 +657,24 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVARHR-Rinse.png}}
   \hfill
-  \caption{AVAHR Y AVARHR VS DATETIME EN EL CICLO RINSE (Autoria propia)}
+  \caption{Autor - AVAHR Y AVARHR VS DATETIME EN EL CICLO RINSE}
   \end{figure}
-\begin{figure}[H]
-  \hfill
-  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AWATTHR-Rinse.png}}
-  \hfill
-  \caption{AWATTHR VS DATETIME EN EL CICLO RINSE (Autoria propia)}
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[width=7.5cm]{4Resultados/AWATTHR-Rinse.png}
+      \caption{Autor - AWATTHR VS DATETIME EN EL CICLO RINSE}
+    \end{center}
   \end{figure}
-\subsection{Análisis en el ciclo llenado}
+\subsection*{Análisis del ciclo rinse}
+Este ciclo se comporta muy parecido a los tres primeros, todos sus valores de corriente, voltaje y armónicos están en un rango similar. Como se ha evidenciado anteriormente, hay picos de energía indicando que se está consumiendo mucha energía en ese instante.
+\subsection{Resultados en el ciclo llenado}
 \begin{figure}[H]
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AIRMS-AFIRMS-Llenado.png}}
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AIHRMS_CAL-Llenado.png}}
   \hfill
-  \caption{AIRMS, AFIRMS Y AIHRMS-CAL VS DATETIME EN EL CICLO LLENADO (Autoria propia)}
+  \caption{Autor - AIRMS, AFIRMS Y AIHRMS-CAL VS DATETIME EN EL CICLO LLENADO}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -676,7 +682,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/APF-Llenado.png}}
   \hfill
-  \caption{AVHRMS Y APF VS DATETIME EN EL CICLO LLENADO (Autoria propia)}
+  \caption{Autor - AVHRMS Y APF VS DATETIME EN EL CICLO LLENADO}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -684,7 +690,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVTHD-Llenado.png}}
   \hfill
-  \caption{AITHD Y AVTHD VS DATETIME EN EL CICLO LLENADO (Autoria propia)}
+  \caption{Autor - AITHD Y AVTHD VS DATETIME EN EL CICLO LLENADO}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -692,7 +698,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AWATT-Llenado.png}}
   \hfill
-  \caption{APF1-CAL Y AWATT VS DATETIME EN EL CICLO LLENADO (Autoria propia)}
+  \caption{Autor - APF1-CAL Y AWATT VS DATETIME EN EL CICLO LLENADO}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -700,7 +706,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/APH_CAL-Llenado.png}}
   \hfill
-  \caption{AP1-CAL Y APH-CAL VS DATETIME EN EL CICLO LLENADO (Autoria propia)}
+  \caption{Autor - AP1-CAL Y APH-CAL VS DATETIME EN EL CICLO LLENADO}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -708,7 +714,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVA-Llenado.png}}
   \hfill
-  \caption{AVAR Y AVA VS DATETIME EN EL CICLO LLENADO (Autoria propia)}
+  \caption{Autor - AVAR Y AVA VS DATETIME EN EL CICLO LLENADO}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -716,7 +722,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AS1_CAL-Llenado.png}}
   \hfill
-  \caption{ASH-CAL Y AS1-CAL VS DATETIME EN EL CICLO LLENADO (Autoria propia)}
+  \caption{Autor - ASH-CAL Y AS1-CAL VS DATETIME EN EL CICLO LLENADO}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -724,7 +730,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADI_CAL-Llenado.png}}
   \hfill
-  \caption{ASN-CAL Y ADI-CAL VS DATETIME EN EL CICLO LLENADO (Autoria propia)}
+  \caption{Autor - ASN-CAL Y ADI-CAL VS DATETIME EN EL CICLO LLENADO}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -732,7 +738,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/ADH_CAL-Llenado.png}}
   \hfill
-  \caption{ADV-CAL Y ADH-CAL VS DATETIME EN EL CICLO LLENADO (Autoria propia)}
+  \caption{Autor - ADV-CAL Y ADH-CAL VS DATETIME EN EL CICLO LLENADO}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -740,7 +746,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/NIRMS-Llenado.png}}
   \hfill
-  \caption{AN-CAL Y NIRMS VS DATETIME EN EL CICLO LLENADO (Autoria propia)}
+  \caption{Autor - AN-CAL Y NIRMS VS DATETIME EN EL CICLO LLENADO}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -748,7 +754,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AFWATTHR-Llenado.png}}
   \hfill
-  \caption{AFVARHR Y AFWATTHR VS DATETIME EN EL CICLO LLENADO (Autoria propia)}
+  \caption{Autor - AFVARHR Y AFWATTHR VS DATETIME EN EL CICLO LLENADO}
   \end{figure}
 \begin{figure}[H]
   \hfill
@@ -756,18 +762,23 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
   \hfill
   \subfigure{\includegraphics[width=7.5cm]{4Resultados/AVARHR-Llenado.png}}
   \hfill
-  \caption{AVAHR Y AVARHR VS DATETIME EN EL CICLO LLENADO (Autoria propia)}
+  \caption{Autor - AVAHR Y AVARHR VS DATETIME EN EL CICLO LLENADO}
   \end{figure}
 \begin{figure}[H]
-  \hfill
-  \subfigure{\includegraphics[width=7.5cm]{4Resultados/AWATTHR-Llenado.png}}
-  \hfill
-  \caption{AWATTHR VS DATETIME EN EL CICLO LLENADO (Autoria propia)}
-  \end{figure}
+  \begin{center}
+    \includegraphics[width=7.5cm]{4Resultados/AWATTHR-Llenado.png}
+    \caption{Autor - AWATTHR VS DATETIME EN EL CICLO LLENADO}
+  \end{center}
+\end{figure}
+\subsection*{Análisis del ciclo de llenado}
+En este ciclo el consumo energético es mínimo, pero aun así se evidencia alto porcentaje de distorsión armónica presente en todo el ciclo. Asimismo, el factor de potencia se acerca mucho a 1, evidenciando un buen consumo energético en el ciclo. Los valores de energía también son mas pequeños que los otros ciclos, igual siguen presentes los valores de distorsiones, aunque N y DH están en 0 en todo el ciclo.\\
 
-  Con esta prueba, se obtuvo una caracterización más del medidor, la cuál para un funcionamiento estable y preciso de la tarjeta, es necesario que las cargas consuman como mínimo 1 Amperio, sin embargo, debido a la alta frecuencia con la que el ADE7978 hace la medición, hay ocasiones en que los datos presentan un valor fuera del rango. \\\\
-  Completada la prueba monofásica, se procedió a realizar la prueba trifásica desbalanceada con el fin de tener cubierto todos los casos de medición que se planteó en este proyecto.
-  \section{Tercer Prueba}
+En todos los ciclos se evidencia que existen armónicos en la señal, tanto de voltaje como de corriente. Estos armónicos tienen una precensia mayor en señales de voltaje, como lo demuestran los gráficos de THD. Las distorsiones en cada ciclo cambian dependiendo de la carga que tenga la lavadora. De igual forma, se evidencia que los cambios de velocidades en el motor generan muchos más armónicos en la señal, llegando a superar el 400\% en su valor. En el ciclo de llenado, a raiz que la corriente es muy pequeña, los datos que obtenemos no son tan precisos, ya que para obtener valores confiables con este medidor, el circuito debe consumir más de 1 A.\\
+
+Con esta prueba, se obtuvo una caracterización más del medidor, la cuál para un funcionamiento estable y preciso de la tarjeta, es necesario que las cargas consuman como mínimo 1 Amperio, sin embargo, debido a la alta frecuencia con la que el ADE7978 hace la medición, hay ocasiones en que los datos presentan un valor fuera del rango. \\
+
+Completada la prueba monofásica, se procedió a realizar la prueba trifásica desbalanceada con el fin de tener cubierto todos los casos de medición que se planteó en este proyecto.
+\section{Tercer Prueba}
 
   Para esta prueba se utilizó una red trifásica doméstica y a cada fase se conectó a una carga. las tres cargas son tienen un consumo distinto para así probar y medir el caso trifásico desbalanceado.\\\\
   A continuación se describe las cargas que se usaron:\\
@@ -780,7 +791,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
     \begin{figure}[H]
       \begin{center}
           \includegraphics[width = 7.5cm]{4Resultados/prueba2.png}
-          \caption{ Cagas utilizadas en la tercera prueba (Autoria propia)} 
+          \caption{Autor -  Cagas utilizadas en la tercera prueba} 
           \label{fig:cargas-3}
      \end{center}
     \end{figure}
@@ -798,7 +809,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
       \hfill
       \subfigure{\includegraphics[width=7.5cm]{4Resultados/corriente-fundamental.png}}
       \hfill
-      \caption{CORRIENTE RMS Y CORRIENTE FUNDAMENTAL (Autoria propia)}
+      \caption{Autor - CORRIENTE RMS Y CORRIENTE FUNDAMENTAL}
       \end{figure}
 
       Las variaciones que se ven en la señal CIRMS es debido a los distintos ciclos que tiene la lavadora mientras realizaba su ciclo de lavado. \\
@@ -810,7 +821,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
       \hfill
       \subfigure{\includegraphics[width=7.5cm]{4Resultados/THDI.png}}
       \hfill
-      \caption{CORRIENTE ARMÓNICA Y DISTORSIÓN ARMÓNICA DE CORRIENTE (Autoria propia)}
+      \caption{Autor - CORRIENTE ARMÓNICA Y DISTORSIÓN ARMÓNICA DE CORRIENTE}
       \label{fig:corriente-armonica}
       \end{figure}
       En la gráfica \ref{fig:Voltaje-armonico}, se ve las distorsiones en corriente que presentan las cargas que en los medidores actuales no tienen en cuenta, sin embargo este medidor lo analiza al momento de medir.
@@ -820,7 +831,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
       \hfill
       \subfigure{\includegraphics[width=7.5cm]{4Resultados/voltaje-fundamental.png}}
       \hfill
-      \caption{VOLTAJE RMS Y VOLTAJE FUNDAMENTAL (Autoria propia)}
+      \caption{Autor - VOLTAJE RMS Y VOLTAJE FUNDAMENTAL}
       \end{figure}
     \begin{figure}[H]
       \hfill
@@ -828,7 +839,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
       \hfill
       \subfigure{\includegraphics[width=7.5cm]{4Resultados/THDV.png}}
       \hfill
-      \caption{VOLTAJE ARMÓNICA Y DISTORSIÓN ARMÓNICA DE VOLTAJE (Autoria propia)}
+      \caption{Autor - VOLTAJE ARMÓNICA Y DISTORSIÓN ARMÓNICA DE VOLTAJE}
       \label{fig:Voltaje-armonico}
       \end{figure}
 
@@ -839,7 +850,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
       \hfill
       \subfigure{\includegraphics[width=7.5cm]{4Resultados/factor-potencia-fundamental.png}}
       \hfill
-      \caption{FACTOR DE POTENCIA TOTAL Y FACTOR DE POTENCIA FUNDAMENTAL (Autoria propia)}
+      \caption{Autor - FACTOR DE POTENCIA TOTAL Y FACTOR DE POTENCIA FUNDAMENTAL}
       \label{fig:factor-potencia}
       \end{figure}
       En la gráfica \ref{fig:factor-potencia}, se evidencia un error en la medición del factor de potencia ya que hay valores superiores a 1.
@@ -850,7 +861,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
       \hfill
       \subfigure{\includegraphics[width=7.5cm]{4Resultados/potencia-aparente-fundamental.png}}
       \hfill
-      \caption{POTENCIA APARENTE TOTAL Y POTENCIA APARENTE FUNDAMENTAL (Autoria propia)}
+      \caption{Autor - POTENCIA APARENTE TOTAL Y POTENCIA APARENTE FUNDAMENTAL}
       \end{figure}
     \begin{figure}[H]
       \hfill
@@ -858,7 +869,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
       \hfill
       \subfigure{\includegraphics[width=7.5cm]{4Resultados/angulo-desfase.png}}
       \hfill
-      \caption{POTENCIA APARENTE ARMÓNICA Y ÁNGULO DE DESFASE ENTRE FASES (Autoria propia)}
+      \caption{Autor - POTENCIA APARENTE ARMÓNICA Y ÁNGULO DE DESFASE ENTRE FASES}
       \end{figure}
 
     En la gráfica de los ángulos de desfase, las etiquetas se interpretan de la siguiente manera:
@@ -874,7 +885,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
       \hfill
       \subfigure{\includegraphics[width=7.5cm]{4Resultados/potencia-activa-armonica.png}}
       \hfill
-      \caption{POTENCIA ACTIVA TOTAL Y POTENCIA ACTIVA ARMÓNICA (Autoria propia)}
+      \caption{Autor - POTENCIA ACTIVA TOTAL Y POTENCIA ACTIVA ARMÓNICA}
       \end{figure}
     \begin{figure}[H]
       \hfill
@@ -882,7 +893,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
       \hfill
       \subfigure{\includegraphics[width=7.5cm]{4Resultados/voltage-distortion-var.png}}
       \hfill
-      \caption{DISTORSIÓN DE POTENCIA (VAR) EN CORRIENTE Y VOLTAJE (Autoria propia)}
+      \caption{Autor - DISTORSIÓN DE POTENCIA (VAR) EN CORRIENTE Y VOLTAJE}
       \end{figure}
     \begin{figure}[H]
       \hfill
@@ -890,7 +901,7 @@ El análisis se realizó con respecto a las fases de lavado de la lavadora y en 
       \hfill
       \subfigure{\includegraphics[width=7.5cm]{4Resultados/potencia-noactiva-var.png}}
       \hfill
-      \caption{CORRIENTE RMS EN NEUTRO Y POTENCIA (VAR) NO ACTIVA (Autoria propia)}
+      \caption{Autor - CORRIENTE RMS EN NEUTRO Y POTENCIA (VAR) NO ACTIVA}
       \end{figure}
 
       En las gráficas de potencia, se analiza que el consumo de energía es acorde a la corriente que consume la carga.
